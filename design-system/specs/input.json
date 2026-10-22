@@ -1,0 +1,38 @@
+{
+  "id": "input",
+  "status": "specified",
+  "description": "输入单行文本",
+  "avoid": "富文本、多行编辑",
+  "implementations": {
+    "react": "experimental",
+    "vue": "planned"
+  },
+  "props": {
+    "size": ["default", "small"],
+    "disabled": "boolean",
+    "invalid": "boolean",
+    "readOnly": "boolean",
+    "nativeSize": ["mini", "small", "medium", "large", "xl"]
+  },
+  "states": [
+    "default",
+    "hover",
+    "focus-visible",
+    "disabled",
+    "invalid",
+    "readonly"
+  ],
+  "appearance": ["light", "dark"],
+  "density": ["comfortable", "compact"],
+  "behavior": [
+    "可见 label 与 input id 关联，错误/说明通过 aria-describedby 关联。",
+    "错误同时提供文字与 aria-invalid；保留用户输入，不仅用颜色提示。",
+    "不拦截系统编辑快捷键、中文输入法组合事件；支持受控与非受控用法。"
+  ],
+  "sources": ["docs/references/sources.md"],
+  "validatedProjects": [],
+  "limitations": [
+    "React 实验实现已接入展示站，完整状态与业务项目验收待完成。",
+    "Vue 尚未实现。"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "menu",
+  "name": "Menu",
+  "title": "菜单",
+  "category": "浮层",
+  "description": "把相关操作放在触手可及的位置。",
+  "source": "dropdown-menu.tsx",
+  "order": 2,
+  "features": ["方向键导航", "Escape 关闭", "焦点返回"]
+}

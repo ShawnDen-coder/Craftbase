@@ -1,0 +1,39 @@
+{
+  "id": "button",
+  "status": "specified",
+  "description": "触发即时操作",
+  "avoid": "导航链接",
+  "implementations": {
+    "react": "experimental",
+    "vue": "planned"
+  },
+  "props": {
+    "variant": ["primary", "secondary", "quiet", "danger"],
+    "size": ["default", "small"],
+    "disabled": "boolean",
+    "loading": "boolean",
+    "nativeSize": ["mini", "small", "medium", "large", "xl"],
+    "context": ["content", "over-glass"]
+  },
+  "states": [
+    "default",
+    "hover",
+    "focus-visible",
+    "disabled",
+    "loading",
+    "pressed"
+  ],
+  "appearance": ["light", "dark"],
+  "density": ["comfortable", "compact"],
+  "behavior": [
+    "使用原生 button，默认 type=button；表单提交显式声明 submit。",
+    "Enter / Space 激活；disabled 不响应，loading 阻止重复操作并保留可访问名称。",
+    "loading 保持宽度，aria-busy=true；图标按钮必须有 accessible name。"
+  ],
+  "sources": ["docs/references/sources.md"],
+  "validatedProjects": [],
+  "limitations": [
+    "React 实验实现已接入展示站，完整状态与业务项目验收待完成。",
+    "Vue 尚未实现。"
+  ]
+}

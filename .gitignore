@@ -1,0 +1,11 @@
+node_modules/
+.DS_Store
+coverage/
+.pnpm-store/
+
+dist/
+
+# Local browser verification artifacts
+artifacts/
+
+.taste-skill/

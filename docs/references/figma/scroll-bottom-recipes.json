@@ -1,0 +1,18 @@
+{
+  "fileKey": "OU1BDEU71XD2Dc5l2ZAAVD",
+  "retrieved": "2026-10-22",
+  "entries": [
+    {
+      "nodeId": "4363:18595",
+      "code": "type ScrollEdgeEffectHardProps = {\n  className?: string;\n  edge?: \"Bottom\";\n  mode?: \"Light\";\n};\n\nfunction ScrollEdgeEffectHard({ className, edge = \"Bottom\", mode = \"Light\" }: ScrollEdgeEffectHardProps) {\n  return <div className={className || \"backdrop-blur-[3px] bg-[rgba(255,255,255,0.85)] border-[rgba(0,0,0,0.05)] border-solid border-t-[0.67px] relative size-[200px]\"} data-node-id=\"4363:18595\" />;\n}"
+    },
+    {
+      "nodeId": "4363:18597",
+      "code": "type ScrollEdgeEffectHardProps = {\n  className?: string;\n  edge?: \"Bottom\";\n  mode?: \"Dark\";\n};\n\nfunction ScrollEdgeEffectHard({ className, edge = \"Bottom\", mode = \"Dark\" }: ScrollEdgeEffectHardProps) {\n  return <div className={className || \"backdrop-blur-[3px] bg-[rgba(31,31,31,0.55)] border-[rgba(255,255,255,0.1)] border-solid border-t-[0.67px] relative size-[200px]\"} data-node-id=\"4363:18597\" />;\n}"
+    },
+    {
+      "nodeId": "4363:18555",
+      "code": "const imgBlur = \"https://www.figma.com/api/mcp/asset/9b564f2f-3b41-49ff-8711-84fa6f125e7e.svg\";\n\ntype ScrollEdgeEffectSoftProps = {\n  className?: string;\n  edge?: \"Bottom\";\n};\n\nfunction ScrollEdgeEffectSoft({ className, edge = \"Bottom\" }: ScrollEdgeEffectSoftProps) {\n  return (\n    <div className={className || \"backdrop-blur-[5px] relative size-[200px]\"} data-node-id=\"4363:18555\">\n      <div className=\"absolute backdrop-blur-[50px] bg-black inset-0 mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-size-[100%_100%] mix-blend-screen opacity-90\" data-node-id=\"4363:18557\" style={{ maskImage: `url(\"${imgBlur}\")` }} data-name=\"Blur\" />\n    </div>\n  );\n}"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.6.2/schema.json",
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
+  "files": {
+    "includes": [
+      "**",
+      "!!design-system/styles/tokens.css",
+      "!!design-system/tailwind/theme.css",
+      "!!design-system/registry/catalog.json",
+      "!!pnpm-lock.yaml",
+      "!!design-system/styles/assets/scroll-edge-mask.svg",
+      "!!design-system/styles/assets/scroll-edge-bottom-mask.svg",
+      "!!apps/lab/public/figma/**/*.svg"
+    ]
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "preset": "recommended"
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single"
+    }
+  },
+  "css": {
+    "parser": {
+      "tailwindDirectives": true
+    }
+  }
+}

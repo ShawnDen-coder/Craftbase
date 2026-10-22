@@ -1,0 +1,210 @@
+@custom-variant dark (&:where(.dark, .dark *));
+@theme inline {
+  --color-background: var(--cb-surface-panel);
+  --color-foreground: var(--cb-text-primary);
+  --color-primary: var(--cb-action-primary);
+  --color-primary-foreground: var(--cb-action-on-primary);
+  --color-secondary: var(--cb-surface-canvas);
+  --color-secondary-foreground: var(--cb-text-primary);
+  --color-muted: var(--cb-surface-canvas);
+  --color-muted-foreground: var(--cb-text-secondary);
+  --color-accent: var(--cb-selection-background);
+  --color-accent-foreground: var(--cb-selection-text);
+  --color-popover: var(--cb-surface-overlay);
+  --color-popover-foreground: var(--cb-text-primary);
+  --color-border: var(--cb-border-subtle);
+  --color-input: var(--cb-field-border);
+  --color-ring: var(--cb-focus-ring);
+  --color-destructive-foreground: var(--cb-status-on-danger);
+  --color-destructive: var(--cb-status-danger);
+  --radius-md: var(--cb-radius-control);
+  --radius-lg: var(--cb-radius-panel);
+}
+[data-cb-button],
+[data-slot="input"] {
+  height: var(--cb-control-height);
+  border-radius: var(--cb-radius-control);
+  padding-inline: var(--cb-control-padding-inline);
+  font-size: 14px;
+  box-shadow: none;
+}
+[data-slot="input"] {
+  background: var(--cb-field-fill);
+}
+[data-cb-button]:focus-visible {
+  outline: 2px solid var(--cb-focus-ring);
+  outline-offset: 3px;
+  box-shadow: none;
+}
+[data-slot="dialog-content"] {
+  border-radius: var(--cb-radius-panel);
+  background: var(--cb-surface-overlay);
+  box-shadow: var(--cb-material-window-shadow);
+}
+[data-slot="dialog-footer"] {
+  margin-top: 24px;
+}
+
+[data-cb-button][data-size="small"],
+[data-cb-button][data-size="sm"],
+[data-slot="input"][data-size="small"] {
+  height: var(--cb-control-height-small);
+}
+[data-cb-button][data-variant="default"]:hover:not(:disabled),
+[data-cb-button][data-variant="primary"]:hover:not(:disabled) {
+  background: var(--cb-action-hover);
+}
+[data-cb-button]:active:not(:disabled) {
+  transform: translateY(1px);
+}
+[data-cb-button][aria-busy="true"] {
+  cursor: progress;
+  text-decoration: underline dotted;
+  text-underline-offset: 4px;
+}
+[data-slot="dropdown-menu-item"],
+[data-slot="dropdown-menu-checkbox-item"],
+[data-slot="dropdown-menu-radio-item"] {
+  min-height: var(--cb-control-height);
+}
+[data-slot="dialog-content"] {
+  max-height: calc(100dvh - 2rem);
+  overflow-y: auto;
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-cb-button]:active:not(:disabled) {
+    transform: none;
+  }
+}
+:where([data-motion="reduced"]) [data-cb-button]:active:not(:disabled) {
+  transform: none;
+}
+@media (forced-colors: active) {
+  [data-cb-button],
+  [data-slot="input"] {
+    border: 1px solid ButtonText;
+  }
+  [data-cb-button]:focus-visible,
+  [data-slot="input"]:focus-visible {
+    outline-color: Highlight;
+  }
+  [data-slot="dialog-content"],
+  [data-slot="dropdown-menu-content"] {
+    background: Canvas;
+    color: CanvasText;
+    box-shadow: none;
+    border: 1px solid CanvasText;
+  }
+}
+
+[data-cb-button][data-variant="secondary"] {
+  background: var(--cb-button-secondary-fill);
+  border: 1px solid transparent;
+}
+
+[data-cb-button] {
+  border-radius: var(--cb-button-radius-xl);
+  padding-inline: var(--cb-button-padding-inline);
+}
+[data-slot="input"] {
+  border-radius: var(--cb-input-radius-xl);
+  padding-inline: var(--cb-input-padding-inline);
+}
+[data-cb-button][data-variant="secondary"]:hover:not(:disabled) {
+  background: var(--cb-button-secondary-hover);
+}
+:where([data-activity="inactive"]) [data-cb-button]:not(:disabled) {
+  color: var(--cb-text-primary);
+  background: var(--cb-button-secondary-fill);
+}
+[data-cb-button][data-native-size="mini"],
+[data-slot="input"][data-native-size="mini"] {
+  height: var(--cb-control-size-mini);
+  font-size: 13px;
+  padding-block: 0;
+}
+[data-cb-button][data-native-size="mini"] {
+  border-radius: var(--cb-button-radius-mini);
+}
+[data-slot="input"][data-native-size="mini"] {
+  border-radius: var(--cb-input-radius-mini);
+}
+[data-cb-button][data-native-size="small"],
+[data-slot="input"][data-native-size="small"] {
+  height: var(--cb-control-size-small);
+  font-size: 13px;
+  padding-block: 0;
+}
+[data-cb-button][data-native-size="small"] {
+  border-radius: var(--cb-button-radius-small);
+}
+[data-slot="input"][data-native-size="small"] {
+  border-radius: var(--cb-input-radius-small);
+}
+[data-cb-button][data-native-size="medium"],
+[data-slot="input"][data-native-size="medium"] {
+  height: var(--cb-control-size-medium);
+  font-size: 13px;
+  padding-block: 0;
+}
+[data-cb-button][data-native-size="medium"] {
+  border-radius: var(--cb-button-radius-medium);
+}
+[data-slot="input"][data-native-size="medium"] {
+  border-radius: var(--cb-input-radius-medium);
+}
+[data-cb-button][data-native-size="large"],
+[data-slot="input"][data-native-size="large"] {
+  height: var(--cb-control-size-large);
+  font-size: 13px;
+  padding-block: 0;
+}
+[data-cb-button][data-native-size="large"] {
+  border-radius: var(--cb-button-radius-large);
+}
+[data-slot="input"][data-native-size="large"] {
+  border-radius: var(--cb-input-radius-large);
+}
+[data-cb-button][data-native-size="xl"],
+[data-slot="input"][data-native-size="xl"] {
+  height: var(--cb-control-size-xl);
+  font-size: 13px;
+  padding-block: 0;
+}
+[data-cb-button][data-native-size="xl"] {
+  border-radius: var(--cb-button-radius-xl);
+}
+[data-slot="input"][data-native-size="xl"] {
+  border-radius: var(--cb-input-radius-xl);
+}
+@media (forced-colors: active) {
+  [data-cb-button][data-variant="secondary"] {
+    border-color: ButtonText;
+    background: ButtonFace;
+    color: ButtonText;
+  }
+}
+
+@media (prefers-contrast: more) {
+  [data-slot="input"] {
+    border-color: var(--cb-border-control);
+  }
+}
+
+/* Figma input focus is one contiguous translucent ring, not an offset outline. */
+[data-slot="input"]:focus-visible {
+  outline: 3.5px solid
+    color-mix(in srgb, var(--cb-control-accent) 50%, transparent);
+  outline-offset: 0;
+  border-color: color-mix(in srgb, var(--cb-control-accent) 50%, transparent);
+  box-shadow: none;
+}
+[data-slot="input"][aria-invalid="true"] {
+  border-color: var(--cb-status-danger);
+}
+@media (forced-colors: active) {
+  [data-slot="input"]:focus-visible {
+    outline-color: Highlight;
+    border-color: Highlight;
+  }
+}
