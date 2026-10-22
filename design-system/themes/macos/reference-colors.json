@@ -1,0 +1,271 @@
+{
+  "source": "OU1BDEU71XD2Dc5l2ZAAVD",
+  "groups": [
+    {
+      "id": "accents",
+      "nodeId": "485:9769",
+      "rows": [
+        {
+          "name": "Red",
+          "light": "#ff383c",
+          "dark": "#ff4245"
+        },
+        {
+          "name": "Orange",
+          "light": "#ff8d28",
+          "dark": "#ff9230"
+        },
+        {
+          "name": "Yellow",
+          "light": "#fc0",
+          "dark": "#ffd600"
+        },
+        {
+          "name": "Green",
+          "light": "#34c759",
+          "dark": "#30d158"
+        },
+        {
+          "name": "Mint",
+          "light": "#00c8b3",
+          "dark": "#00dac3"
+        },
+        {
+          "name": "Teal",
+          "light": "#00c3d0",
+          "dark": "#00d2e0"
+        },
+        {
+          "name": "Cyan",
+          "light": "#00c0e8",
+          "dark": "#3cd3fe"
+        },
+        {
+          "name": "Blue",
+          "light": "#08f",
+          "dark": "#0091ff"
+        },
+        {
+          "name": "Indigo",
+          "light": "#6155f5",
+          "dark": "#6d7cff"
+        },
+        {
+          "name": "Purple",
+          "light": "#cb30e0",
+          "dark": "#db34f2"
+        },
+        {
+          "name": "Pink",
+          "light": "#ff2d55",
+          "dark": "#ff375f"
+        },
+        {
+          "name": "Brown",
+          "light": "#ac7f5e",
+          "dark": "#b78a66"
+        },
+        {
+          "name": "Gray",
+          "light": "#8e8e93",
+          "dark": "#98989f"
+        }
+      ]
+    },
+    {
+      "id": "vibrantAccents",
+      "nodeId": "485:9770",
+      "rows": [
+        {
+          "name": "Red",
+          "light": "#f52f32",
+          "dark": "#ff4747"
+        },
+        {
+          "name": "Orange",
+          "light": "#f58625",
+          "dark": "#ff9e33"
+        },
+        {
+          "name": "Yellow",
+          "light": "#f5c200",
+          "dark": "#ffe014"
+        },
+        {
+          "name": "Green",
+          "light": "#26bf4d",
+          "dark": "#3bdb63"
+        },
+        {
+          "name": "Mint",
+          "light": "#00bda9",
+          "dark": "#2de0cd"
+        },
+        {
+          "name": "Teal",
+          "light": "#00b3bf",
+          "dark": "#2dd7e0"
+        },
+        {
+          "name": "Cyan",
+          "light": "#00abcf",
+          "dark": "#47d8fc"
+        },
+        {
+          "name": "Blue",
+          "light": "#0078f0",
+          "dark": "#0a99ff"
+        },
+        {
+          "name": "Indigo",
+          "light": "#5c50e6",
+          "dark": "#7163ff"
+        },
+        {
+          "name": "Purple",
+          "light": "#b72bc9",
+          "dark": "#e647fc"
+        },
+        {
+          "name": "Pink",
+          "light": "#f5234b",
+          "dark": "#ff4169"
+        },
+        {
+          "name": "Brown",
+          "light": "#9e7354",
+          "dark": "#c29672"
+        }
+      ]
+    },
+    {
+      "id": "fills",
+      "nodeId": "486:10039",
+      "rows": [
+        {
+          "name": "Primary",
+          "light": "rgba(0,0,0,0.1)",
+          "dark": "rgba(255,255,255,0.1)"
+        },
+        {
+          "name": "Secondary",
+          "light": "rgba(0,0,0,0.08)",
+          "dark": "rgba(255,255,255,0.08)"
+        },
+        {
+          "name": "Tertiary",
+          "light": "rgba(0,0,0,0.05)",
+          "dark": "rgba(255,255,255,0.05)"
+        },
+        {
+          "name": "Quaternary",
+          "light": "rgba(0,0,0,0.03)",
+          "dark": "rgba(255,255,255,0.03)"
+        },
+        {
+          "name": "Quinary",
+          "light": "rgba(0,0,0,0.02)",
+          "dark": "rgba(255,255,255,0.02)"
+        }
+      ]
+    },
+    {
+      "id": "vibrantFills",
+      "nodeId": "486:10038",
+      "rows": [
+        {
+          "name": "Primary",
+          "light": "#d9d9d9",
+          "dark": "#242424"
+        },
+        {
+          "name": "Secondary",
+          "light": "#d9d9d9",
+          "dark": "#141414"
+        },
+        {
+          "name": "Tertiary",
+          "light": "#f2f2f2",
+          "dark": "#0d0d0d"
+        },
+        {
+          "name": "Quaternary",
+          "light": "#f7f7f7",
+          "dark": "#090909"
+        },
+        {
+          "name": "Quinary",
+          "light": "#fbfbfb",
+          "dark": "#070707"
+        }
+      ]
+    },
+    {
+      "id": "labels",
+      "nodeId": "486:10164",
+      "rows": [
+        {
+          "name": "Primary",
+          "dark": "/figma/colors/labels-primary-dark.svg",
+          "light": "/figma/colors/labels-primary-light.svg"
+        },
+        {
+          "name": "Secondary",
+          "dark": "/figma/colors/labels-secondary-dark.svg",
+          "light": "/figma/colors/labels-secondary-light.svg"
+        },
+        {
+          "name": "Tertiary",
+          "dark": "/figma/colors/labels-tertiary-dark.svg",
+          "light": "/figma/colors/labels-tertiary-light.svg"
+        },
+        {
+          "name": "Quaternary",
+          "dark": "/figma/colors/labels-quaternary-dark.svg",
+          "light": "/figma/colors/labels-quaternary-light.svg"
+        },
+        {
+          "name": "Quinary",
+          "dark": "/figma/colors/labels-quinary-dark.svg",
+          "light": "/figma/colors/labels-quinary-light.svg"
+        },
+        {
+          "name": "Seximal",
+          "dark": "/figma/colors/labels-seximal-dark.svg",
+          "light": "/figma/colors/labels-seximal-light.svg"
+        }
+      ]
+    },
+    {
+      "id": "vibrantLabels",
+      "nodeId": "486:10236",
+      "rows": [
+        {
+          "name": "Primary",
+          "dark": "/figma/colors/vibrantLabels-primary-dark.svg",
+          "light": "/figma/colors/vibrantLabels-primary-light.svg"
+        },
+        {
+          "name": "Secondary",
+          "dark": "/figma/colors/vibrantLabels-secondary-dark.svg",
+          "light": "/figma/colors/vibrantLabels-secondary-light.svg"
+        },
+        {
+          "name": "Tertiary",
+          "dark": "/figma/colors/vibrantLabels-tertiary-dark.svg",
+          "light": "/figma/colors/vibrantLabels-tertiary-light.svg"
+        },
+        {
+          "name": "Quaternary",
+          "dark": "/figma/colors/vibrantLabels-quaternary-dark.svg",
+          "light": "/figma/colors/vibrantLabels-quaternary-light.svg"
+        },
+        {
+          "name": "Quinary",
+          "dark": "/figma/colors/vibrantLabels-quinary-dark.svg",
+          "light": "/figma/colors/vibrantLabels-quinary-light.svg"
+        }
+      ]
+    }
+  ]
+}

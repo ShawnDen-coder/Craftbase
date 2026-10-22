@@ -1,0 +1,29 @@
+{
+  "id": "dialog",
+  "status": "specified",
+  "description": "需要集中处理的确认或编辑",
+  "avoid": "普通提示、非阻断信息",
+  "implementations": {
+    "react": "experimental",
+    "vue": "planned"
+  },
+  "props": {
+    "open": "boolean",
+    "dismissible": "boolean"
+  },
+  "states": ["default", "hover", "focus-visible", "disabled", "open", "closed"],
+  "appearance": ["light", "dark"],
+  "density": ["comfortable", "compact"],
+  "behavior": [
+    "提供可访问标题；根据内容选择初始焦点，危险确认默认聚焦取消。",
+    "模态打开时背景不可交互，Tab/Shift+Tab 限制在对话框内。",
+    "Escape 在允许取消时关闭；关闭后恢复触发器，已移除时转移至合理位置。",
+    "提交失败保持打开并展示错误；有未保存数据时不允许遮罩点击静默丢弃。"
+  ],
+  "sources": ["docs/references/sources.md"],
+  "validatedProjects": [],
+  "limitations": [
+    "React 实验实现已接入展示站，完整状态与业务项目验收待完成。",
+    "Vue 尚未实现。"
+  ]
+}

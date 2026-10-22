@@ -1,0 +1,31 @@
+{
+  "id": "menu",
+  "status": "specified",
+  "description": "呈现一组操作",
+  "avoid": "普通站点导航、表单选项选择",
+  "implementations": {
+    "react": "experimental",
+    "vue": "planned"
+  },
+  "props": {
+    "open": "boolean",
+    "disabled": "boolean"
+  },
+  "states": ["default", "hover", "focus-visible", "disabled", "open", "closed"],
+  "appearance": ["light", "dark"],
+  "density": ["comfortable", "compact"],
+  "behavior": [
+    "触发器提供 aria-haspopup=menu 与 aria-expanded；菜单具有名称。",
+    "打开后焦点进入首个可用项；上下键、Home/End 和字符查找移动焦点。",
+    "Escape 关闭并返回触发器；Tab 关闭并按文档顺序移出，禁用项不执行。",
+    "外部点击关闭；指针与键盘使用同一激活路径；嵌套菜单留到后续。",
+    "选择指示与操作图标使用独立槽位；显示的快捷键必须实际执行对应操作，且声明作用范围。"
+  ],
+  "sources": ["docs/references/sources.md"],
+  "validatedProjects": [],
+  "limitations": [
+    "React 实验实现已接入展示站，完整状态与业务项目验收待完成。",
+    "Vue 尚未实现。"
+  ],
+  "contentSlots": ["selection indicator", "icon", "label", "shortcut"]
+}

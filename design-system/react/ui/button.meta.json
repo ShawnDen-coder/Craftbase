@@ -1,0 +1,10 @@
+{
+  "id": "button",
+  "name": "Button",
+  "title": "按钮",
+  "category": "操作",
+  "description": "区分主要、次要与危险操作。",
+  "source": "button.tsx",
+  "order": 0,
+  "features": ["原生按钮语义", "加载与禁用", "两档尺寸"]
+}

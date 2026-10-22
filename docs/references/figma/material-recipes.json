@@ -1,0 +1,55 @@
+{
+  "fileKey": "OU1BDEU71XD2Dc5l2ZAAVD",
+  "retrieved": "2026-10-22",
+  "note": "Generated context code; original screenshots inspected separately. Not runtime CSS.",
+  "entries": [
+    {
+      "nodeId": "483:9270",
+      "code": "type LiquidGlassSmallProps = {\n  className?: string;\n  active?: \"True\";\n  mode?: \"Light\";\n  state?: \"Default\";\n};\n\nfunction LiquidGlassSmall({ className, active = \"True\", mode = \"Light\", state = \"Default\" }: LiquidGlassSmallProps) {\n  return (\n    <div className={className || \"relative size-[48px]\"} data-node-id=\"483:9270\">\n      <div className=\"absolute inset-0 rounded-[1000px] shadow-[1.25px_0px_0px_-0.75px_#d0d0d0,-1.25px_0px_0px_-0.75px_#d0d0d0,0px_0px_0px_0.5px_#e8e8e8,0px_8px_15px_0px_rgba(0,0,0,0.02)]\" data-node-id=\"4311:12241\" data-name=\"Fill + Shadow\">\n        <div aria-hidden className=\"absolute inset-0 pointer-events-none rounded-[1000px]\">\n          <div className=\"absolute inset-0 rounded-[1000px]\" style={{ backgroundImage: \"linear-gradient(90deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 100%), linear-gradient(90deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%)\" }} />\n          <div className=\"absolute bg-[rgba(68,68,68,0.6)] inset-0 mix-blend-plus-lighter rounded-[1000px]\" />\n          <div className=\"absolute bg-[rgba(248,248,248,0.2)] inset-0 mix-blend-luminosity rounded-[1000px]\" />\n        </div>\n      </div>\n      <div className=\"absolute inset-0 pointer-events-none rounded-[1000px]\" data-node-id=\"4311:12242\" data-name=\"Glass Effect\">\n        <div aria-hidden className=\"absolute bg-white inset-0 mix-blend-multiply rounded-[1000px]\" />\n        <div className=\"absolute inset-0 rounded-[inherit] shadow-[inset_0px_40px_10px_-40px_#282828,inset_0px_-40px_10px_-40px_#282828,inset_0px_40px_30px_-40px_#e6e6e6]\" />\n      </div>\n    </div>\n  );\n}"
+    },
+    {
+      "nodeId": "483:9282",
+      "code": "type LiquidGlassSmallProps = {\n  className?: string;\n  active?: \"True\";\n  mode?: \"Dark\";\n  state?: \"Default\";\n};\n\nfunction LiquidGlassSmall({ className, active = \"True\", mode = \"Dark\", state = \"Default\" }: LiquidGlassSmallProps) {\n  return (\n    <div className={className || \"relative size-[48px]\"} data-node-id=\"483:9282\">\n      <div className=\"absolute bg-[rgba(153,153,153,0.17)] inset-0 mix-blend-luminosity rounded-[1000px] shadow-[1.25px_0px_0px_-0.75px_#a6a6a6,-1.25px_0px_0px_-0.75px_#a6a6a6,0px_0px_0px_0.5px_#a6a6a6,0px_8px_15px_0px_rgba(0,0,0,0.04)]\" data-node-id=\"4311:12522\" data-name=\"Fill + Shadow\" />\n      <div className=\"absolute inset-0 pointer-events-none rounded-[1000px]\" data-node-id=\"483:9287\" data-name=\"Glass Effect\">\n        <div aria-hidden className=\"absolute bg-white inset-0 mix-blend-multiply rounded-[1000px]\" />\n        <div className=\"absolute inset-0 rounded-[inherit] shadow-[inset_0px_40px_10px_-40px_#1a1a1a,inset_0px_-40px_10px_-40px_#1a1a1a,inset_0px_40px_30px_-40px_#e6e6e6]\" />\n      </div>\n    </div>\n  );\n}"
+    },
+    {
+      "nodeId": "483:9244",
+      "code": "type LiquidGlassLargeProps = {\n  className?: string;\n  mode?: \"Light\";\n};\n\nfunction LiquidGlassLarge({ className, mode = \"Light\" }: LiquidGlassLargeProps) {\n  return (\n    <div className={className || \"relative size-[160px]\"} data-node-id=\"483:9244\">\n      <div className=\"absolute inset-0 rounded-[34px] shadow-[1.25px_0px_0px_-0.75px_#dbdbdb,-1.25px_0px_0px_-0.75px_#dbdbdb,0px_0px_0px_0.5px_#dbdbdb,0px_18px_48px_0px_rgba(0,0,0,0.25)]\" data-node-id=\"4311:12662\" data-name=\"Fill + Shadow\">\n        <div aria-hidden className=\"absolute inset-0 pointer-events-none rounded-[34px]\">\n          <div className=\"absolute bg-[rgba(255,255,255,0.7)] inset-0 mix-blend-lighten rounded-[34px]\" />\n          <div className=\"absolute bg-[rgba(191,191,191,0.1)] inset-0 mix-blend-darken rounded-[34px]\" />\n        </div>\n      </div>\n      <div className=\"absolute inset-0 pointer-events-none rounded-[34px]\" data-node-id=\"4311:12663\" data-name=\"Glass Effect\">\n        <div aria-hidden className=\"absolute bg-white inset-0 mix-blend-multiply rounded-[34px]\" />\n        <div className=\"absolute inset-0 rounded-[inherit] shadow-[inset_0px_40px_10px_-40px_#282828,inset_0px_-40px_10px_-40px_#282828]\" />\n      </div>\n    </div>\n  );\n}"
+    },
+    {
+      "nodeId": "483:9238",
+      "code": "type LiquidGlassLargeProps = {\n  className?: string;\n  mode?: \"Dark\";\n};\n\nfunction LiquidGlassLarge({ className, mode = \"Dark\" }: LiquidGlassLargeProps) {\n  return (\n    <div className={className || \"relative size-[160px]\"} data-node-id=\"483:9238\">\n      <div className=\"absolute inset-0 rounded-[34px] shadow-[1.25px_0px_0px_-0.75px_#a6a6a6,-1.25px_0px_0px_-0.75px_#a6a6a6,0px_0px_0px_0.5px_#a6a6a6,0px_18px_48px_0px_rgba(0,0,0,0.45)]\" data-node-id=\"4311:12667\" data-name=\"Fill + Shadow\">\n        <div aria-hidden className=\"absolute inset-0 pointer-events-none rounded-[34px]\">\n          <div className=\"absolute bg-[rgba(26,26,26,0.7)] inset-0 mix-blend-luminosity rounded-[34px]\" />\n          <div className=\"absolute bg-[rgba(26,26,26,0.9)] inset-0 mix-blend-luminosity rounded-[34px]\" />\n          <div className=\"absolute bg-[#1a1a1a] inset-0 mix-blend-lighten rounded-[34px]\" />\n        </div>\n      </div>\n      <div className=\"absolute inset-0 pointer-events-none rounded-[34px]\" data-node-id=\"4311:12668\" data-name=\"Glass Effect\">\n        <div aria-hidden className=\"absolute bg-white inset-0 mix-blend-multiply rounded-[34px]\" />\n        <div className=\"absolute inset-0 rounded-[inherit] shadow-[inset_0px_40px_10px_-40px_#1a1a1a,inset_0px_-40px_10px_-40px_#1a1a1a]\" />\n      </div>\n    </div>\n  );\n}"
+    },
+    {
+      "nodeId": "4331:12156",
+      "code": "type MaterialsProps = {\n  className?: string;\n  mode?: \"Light\";\n  type?: \"Ultra Thick\";\n};\n\nfunction Materials({ className, mode = \"Light\", type = \"Ultra Thick\" }: MaterialsProps) {\n  return (\n    <div className={className || \"relative size-[100px]\"} data-node-id=\"4331:12156\">\n      <div aria-hidden className=\"absolute inset-0 pointer-events-none\">\n        <div className=\"absolute bg-[#333] inset-0 mix-blend-plus-lighter\" />\n        <div className=\"absolute backdrop-blur-[30px] bg-[rgba(236,236,236,0.88)] inset-0\" />\n      </div>\n    </div>\n  );\n}"
+    },
+    {
+      "nodeId": "4331:12155",
+      "code": "type MaterialsProps = {\n  className?: string;\n  mode?: \"Light\";\n  type?: \"Thick\";\n};\n\nfunction Materials({ className, mode = \"Light\", type = \"Thick\" }: MaterialsProps) {\n  return <div className={className || \"backdrop-blur-[30px] bg-[rgba(246,246,246,0.72)] relative size-[100px]\"} data-node-id=\"4331:12155\" />;\n}"
+    },
+    {
+      "nodeId": "4331:12153",
+      "code": "type MaterialsProps = {\n  className?: string;\n  mode?: \"Light\";\n  type?: \"Thin\";\n};\n\nfunction Materials({ className, mode = \"Light\", type = \"Thin\" }: MaterialsProps) {\n  return <div className={className || \"backdrop-blur-[30px] bg-[rgba(246,246,246,0.48)] relative size-[100px]\"} data-node-id=\"4331:12153\" />;\n}"
+    },
+    {
+      "nodeId": "4331:12152",
+      "code": "type MaterialsProps = {\n  className?: string;\n  mode?: \"Light\";\n  type?: \"Ultra Thin\";\n};\n\nfunction Materials({ className, mode = \"Light\", type = \"Ultra Thin\" }: MaterialsProps) {\n  return <div className={className || \"backdrop-blur-[30px] bg-[rgba(246,246,246,0.36)] relative size-[100px]\"} data-node-id=\"4331:12152\" />;\n}"
+    },
+    {
+      "nodeId": "4331:12151",
+      "code": "type MaterialsProps = {\n  className?: string;\n  mode?: \"Dark\";\n  type?: \"Ultra Thick\";\n};\n\nfunction Materials({ className, mode = \"Dark\", type = \"Ultra Thick\" }: MaterialsProps) {\n  return <div className={className || \"backdrop-blur-[30px] bg-[rgba(0,0,0,0.5)] relative size-[100px]\"} data-node-id=\"4331:12151\" />;\n}"
+    },
+    {
+      "nodeId": "4331:12150",
+      "code": "type MaterialsProps = {\n  className?: string;\n  mode?: \"Dark\";\n  type?: \"Thick\";\n};\n\nfunction Materials({ className, mode = \"Dark\", type = \"Thick\" }: MaterialsProps) {\n  return <div className={className || \"backdrop-blur-[30px] bg-[rgba(0,0,0,0.4)] relative size-[100px]\"} data-node-id=\"4331:12150\" />;\n}"
+    },
+    {
+      "nodeId": "4331:12148",
+      "code": "type MaterialsProps = {\n  className?: string;\n  mode?: \"Dark\";\n  type?: \"Thin\";\n};\n\nfunction Materials({ className, mode = \"Dark\", type = \"Thin\" }: MaterialsProps) {\n  return <div className={className || \"backdrop-blur-[30px] bg-[rgba(0,0,0,0.2)] relative size-[100px]\"} data-node-id=\"4331:12148\" />;\n}"
+    },
+    {
+      "nodeId": "4331:12147",
+      "code": "type MaterialsProps = {\n  className?: string;\n  mode?: \"Dark\";\n  type?: \"Ultra Thin\";\n};\n\nfunction Materials({ className, mode = \"Dark\", type = \"Ultra Thin\" }: MaterialsProps) {\n  return <div className={className || \"backdrop-blur-[30px] bg-[rgba(0,0,0,0.1)] relative size-[100px]\"} data-node-id=\"4331:12147\" />;\n}"
+    }
+  ]
+}

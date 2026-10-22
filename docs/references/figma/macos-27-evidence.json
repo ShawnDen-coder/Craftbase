@@ -1,0 +1,1007 @@
+{
+  "source": {
+    "fileKey": "OU1BDEU71XD2Dc5l2ZAAVD",
+    "url": "https://www.figma.com/design/OU1BDEU71XD2Dc5l2ZAAVD/macOS-27--Community-",
+    "inspectedAt": "2026-10-22",
+    "kitVersion": "27.0.1",
+    "kitVersionDate": "2026-10-16",
+    "figmaVersionId": null,
+    "method": "Figma MCP read-only Plugin API and screenshots",
+    "scope": "Local style inventory; selected variables and component samples. Not a full file export."
+  },
+  "inventory": {
+    "collections": [
+      {
+        "id": "VariableCollectionId:1:12195",
+        "name": "Colors",
+        "modes": [
+          {
+            "name": "Light",
+            "modeId": "1:0"
+          },
+          {
+            "name": "Dark",
+            "modeId": "207:0"
+          }
+        ],
+        "count": 63
+      },
+      {
+        "id": "VariableCollectionId:465:54",
+        "name": "Sizes",
+        "modes": [
+          {
+            "name": "Medium",
+            "modeId": "465:2"
+          },
+          {
+            "name": "Mini",
+            "modeId": "465:0"
+          },
+          {
+            "name": "Small",
+            "modeId": "465:1"
+          },
+          {
+            "name": "Large",
+            "modeId": "465:3"
+          },
+          {
+            "name": "XL",
+            "modeId": "465:4"
+          }
+        ],
+        "count": 65
+      },
+      {
+        "id": "VariableCollectionId:474:101",
+        "name": "Kit",
+        "modes": [
+          {
+            "name": "Mode 1",
+            "modeId": "474:0"
+          }
+        ],
+        "count": 18
+      },
+      {
+        "id": "VariableCollectionId:478:857",
+        "name": "Context",
+        "modes": [
+          {
+            "name": "Content Area",
+            "modeId": "478:0"
+          },
+          {
+            "name": "Over-glass",
+            "modeId": "478:2"
+          }
+        ],
+        "count": 1
+      }
+    ],
+    "variableCount": 147,
+    "textStyleCount": 22,
+    "paintStyleCount": 10,
+    "effectStyleCount": 0
+  },
+  "variables": [
+    {
+      "id": "VariableID:207:14837",
+      "name": "Accents/Blue",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:1:12195",
+      "values": {
+        "1:0": {
+          "r": 0,
+          "g": 0.5333333611488342,
+          "b": 1,
+          "a": 1
+        },
+        "207:0": {
+          "r": 0,
+          "g": 0.5686274766921997,
+          "b": 1,
+          "a": 1
+        }
+      }
+    },
+    {
+      "id": "VariableID:207:14853",
+      "name": "Labels/Primary",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:1:12195",
+      "values": {
+        "1:0": {
+          "r": 0,
+          "g": 0,
+          "b": 0,
+          "a": 0.8500000238418579
+        },
+        "207:0": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 0.8500000238418579
+        }
+      }
+    },
+    {
+      "id": "VariableID:207:14854",
+      "name": "Labels/Secondary",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:1:12195",
+      "values": {
+        "1:0": {
+          "r": 0,
+          "g": 0,
+          "b": 0,
+          "a": 0.5
+        },
+        "207:0": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 0.550000011920929
+        }
+      }
+    },
+    {
+      "id": "VariableID:465:61",
+      "name": "Global/Height",
+      "type": "FLOAT",
+      "collection": "VariableCollectionId:465:54",
+      "values": {
+        "465:0": 16,
+        "465:1": 20,
+        "465:2": 24,
+        "465:3": 28,
+        "465:4": 36
+      }
+    },
+    {
+      "id": "VariableID:465:62",
+      "name": "Global/Radius",
+      "type": "FLOAT",
+      "collection": "VariableCollectionId:465:54",
+      "values": {
+        "465:0": 4,
+        "465:1": 5,
+        "465:2": 6,
+        "465:3": 7,
+        "465:4": 9
+      }
+    },
+    {
+      "id": "VariableID:465:63",
+      "name": "Button/Padding - Horizontal",
+      "type": "FLOAT",
+      "collection": "VariableCollectionId:465:54",
+      "values": {
+        "465:0": 7,
+        "465:1": 10,
+        "465:2": 16,
+        "465:3": 16,
+        "465:4": 16
+      }
+    },
+    {
+      "id": "VariableID:465:65",
+      "name": "Button/Radius",
+      "type": "FLOAT",
+      "collection": "VariableCollectionId:465:54",
+      "values": {
+        "465:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:465:62"
+        },
+        "465:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:465:62"
+        },
+        "465:2": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:465:62"
+        },
+        "465:3": 1000,
+        "465:4": 1000
+      }
+    },
+    {
+      "id": "VariableID:479:5625",
+      "name": "Global/Font Size",
+      "type": "FLOAT",
+      "collection": "VariableCollectionId:465:54",
+      "values": {
+        "465:0": 10,
+        "465:1": 11,
+        "465:2": 13,
+        "465:3": 13,
+        "465:4": 13
+      }
+    },
+    {
+      "id": "VariableID:480:1026",
+      "name": "Fields/Inset - Left",
+      "type": "FLOAT",
+      "collection": "VariableCollectionId:465:54",
+      "values": {
+        "465:0": 6,
+        "465:1": 6,
+        "465:2": 8,
+        "465:3": 8,
+        "465:4": 10
+      }
+    },
+    {
+      "id": "VariableID:480:1027",
+      "name": "Fields/Inset - Right",
+      "type": "FLOAT",
+      "collection": "VariableCollectionId:465:54",
+      "values": {
+        "465:0": 6,
+        "465:1": 6,
+        "465:2": 8,
+        "465:3": 8,
+        "465:4": 10
+      }
+    },
+    {
+      "id": "VariableID:483:7699",
+      "name": "Menu/Height",
+      "type": "FLOAT",
+      "collection": "VariableCollectionId:465:54",
+      "values": {
+        "465:0": 19,
+        "465:1": 22,
+        "465:2": 24,
+        "465:3": 24,
+        "465:4": 24
+      }
+    },
+    {
+      "id": "VariableID:4311:12202",
+      "name": "Window Background",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:1:12195",
+      "values": {
+        "1:0": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "207:0": {
+          "r": 0.11764705926179886,
+          "g": 0.11764705926179886,
+          "b": 0.11764705926179886,
+          "a": 1
+        }
+      }
+    },
+    {
+      "id": "VariableID:4356:10110",
+      "name": "Miscellaneous/Tables/BG - Selected + Inactive",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:1:12195",
+      "values": {
+        "1:0": {
+          "r": 0,
+          "g": 0,
+          "b": 0,
+          "a": 0.14000000059604645
+        },
+        "207:0": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 0.18000000715255737
+        }
+      }
+    },
+    {
+      "id": "VariableID:4356:10117",
+      "name": "Miscellaneous/Tables/BG - Selected + Active",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:1:12195",
+      "values": {
+        "1:0": {
+          "r": 0.003921568859368563,
+          "g": 0.3960784375667572,
+          "b": 0.886274516582489,
+          "a": 1
+        },
+        "207:0": {
+          "r": 0.003921568859368563,
+          "g": 0.3450980484485626,
+          "b": 0.8235294222831726,
+          "a": 1
+        }
+      }
+    }
+  ],
+  "textStyles": [
+    {
+      "id": "S:123547524bc4ad9cea461ffa08fd9eca5e9da45a,",
+      "name": "Large Title/Regular",
+      "fontName": {
+        "family": "SF Pro",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400,
+          "wdth": 100
+        }
+      },
+      "fontSize": 26,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 32
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      }
+    },
+    {
+      "id": "S:f42bd3a10591e9428f3c0044bbe296bef0cbcf68,",
+      "name": "Large Title/Emphasized",
+      "fontName": {
+        "family": "SF Pro",
+        "style": "Bold",
+        "variationSettings": {
+          "wght": 700,
+          "wdth": 100
+        }
+      },
+      "fontSize": 26,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 32
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      }
+    },
+    {
+      "id": "S:89d9f36d0c255d07b4e34391b510be2b8fc025e0,",
+      "name": "Title 1/Regular",
+      "fontName": {
+        "family": "SF Pro",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400,
+          "wdth": 100
+        }
+      },
+      "fontSize": 22,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 26
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      }
+    },
+    {
+      "id": "S:9ac99a5fca16f9d2ecc41dfe7cba6e232b552f21,",
+      "name": "Title 1/Emphasized",
+      "fontName": {
+        "family": "SF Pro",
+        "style": "Bold",
+        "variationSettings": {
+          "wght": 700,
+          "wdth": 100
+        }
+      },
+      "fontSize": 22,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 26
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      }
+    },
+    {
+      "id": "S:cdef0c16a50574d226e1240e3100e422f0b5c704,",
+      "name": "Title 2/Regular",
+      "fontName": {
+        "family": "SF Pro",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400,
+          "wdth": 100
+        }
+      },
+      "fontSize": 17,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 22
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      }
+    },
+    {
+      "id": "S:1233b3df19a8774111594633cfbb2fb2b499f4a2,",
+      "name": "Title 2/Emphasized",
+      "fontName": {
+        "family": "Inter",
+        "style": "Bold",
+        "variationSettings": {
+          "wght": 700,
+          "slnt": 0
+        }
+      },
+      "fontSize": 17,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 22
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      }
+    },
+    {
+      "id": "S:91f3d234cfcfeac93c7f86c064fac173bfac9923,",
+      "name": "Title 3/Regular",
+      "fontName": {
+        "family": "SF Pro",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400,
+          "wdth": 100
+        }
+      },
+      "fontSize": 15,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 20
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      }
+    },
+    {
+      "id": "S:ecb1edb4c99ee095cbd0fcd4450ee5fcb82c13c6,",
+      "name": "Title 3/Emphasized",
+      "fontName": {
+        "family": "SF Pro",
+        "style": "Semibold",
+        "variationSettings": {
+          "wght": 590,
+          "wdth": 100
+        }
+      },
+      "fontSize": 15,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 20
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      }
+    },
+    {
+      "id": "S:b40d3937dca37e4cafe45e836acfa9e1eade6218,",
+      "name": "Headline/Regular",
+      "fontName": {
+        "family": "SF Pro",
+        "style": "Bold",
+        "variationSettings": {
+          "wght": 700,
+          "wdth": 100
+        }
+      },
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 16
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      }
+    },
+    {
+      "id": "S:0d9c41b79a56d3628fd57c0a1b55278290cc67b6,",
+      "name": "Headline/Emphasized",
+      "fontName": {
+        "family": "SF Pro",
+        "style": "Heavy",
+        "variationSettings": {
+          "wght": 860,
+          "wdth": 100
+        }
+      },
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 16
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      }
+    },
+    {
+      "id": "S:84cfe13b4ef68a80b32c053c913191779a873e3f,",
+      "name": "Body/Regular",
+      "fontName": {
+        "family": "SF Pro",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400,
+          "wdth": 100
+        }
+      },
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 16
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      }
+    },
+    {
+      "id": "S:0c10534b7b59d9aa13967203ffc74864fd0142e9,",
+      "name": "Body/Emphasized",
+      "fontName": {
+        "family": "SF Pro",
+        "style": "Semibold",
+        "variationSettings": {
+          "wght": 590,
+          "wdth": 100
+        }
+      },
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 16
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      }
+    },
+    {
+      "id": "S:fdfba40a530c0f0670732ddbc559a4c795a3e1a8,",
+      "name": "Callout/Regular",
+      "fontName": {
+        "family": "SF Pro",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400,
+          "wdth": 100
+        }
+      },
+      "fontSize": 12,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 15
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      }
+    },
+    {
+      "id": "S:6212455ed21d5781f6c343e31a0f388e5649cdf3,",
+      "name": "Callout/Emphasized",
+      "fontName": {
+        "family": "SF Pro",
+        "style": "Semibold",
+        "variationSettings": {
+          "wght": 590,
+          "wdth": 100
+        }
+      },
+      "fontSize": 12,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 15
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      }
+    },
+    {
+      "id": "S:da2ad7c410d2af95d2ecb24a1d4123f52ef5c849,",
+      "name": "Subheadline/Regular",
+      "fontName": {
+        "family": "SF Pro",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400,
+          "wdth": 100
+        }
+      },
+      "fontSize": 11,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 14
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      }
+    },
+    {
+      "id": "S:e3d7dcec72a9d90e8374c2179208613bf0e88714,",
+      "name": "Subheadline/Emphasized",
+      "fontName": {
+        "family": "SF Pro",
+        "style": "Semibold",
+        "variationSettings": {
+          "wght": 590,
+          "wdth": 100
+        }
+      },
+      "fontSize": 11,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 14
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      }
+    },
+    {
+      "id": "S:e17497725dcfa1bd765f0e88fbb74c28e21db081,",
+      "name": "Footnote/Regular",
+      "fontName": {
+        "family": "SF Pro",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400,
+          "wdth": 100
+        }
+      },
+      "fontSize": 10,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 13
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      }
+    },
+    {
+      "id": "S:c53f4f6f9c4b386e0684e52c2354c9a4795fafee,",
+      "name": "Footnote/Emphasized",
+      "fontName": {
+        "family": "SF Pro",
+        "style": "Semibold",
+        "variationSettings": {
+          "wght": 590,
+          "wdth": 100
+        }
+      },
+      "fontSize": 10,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 13
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      }
+    },
+    {
+      "id": "S:02d778ceb438ca293e673e737455389a5e94256c,",
+      "name": "Caption 1/Regular",
+      "fontName": {
+        "family": "SF Pro",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400,
+          "wdth": 100
+        }
+      },
+      "fontSize": 10,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 13
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      }
+    },
+    {
+      "id": "S:1629a2441c0568fec1e15452c17b1f5055c4e8c1,",
+      "name": "Caption 1/Emphasized",
+      "fontName": {
+        "family": "SF Pro",
+        "style": "Medium",
+        "variationSettings": {
+          "wght": 510,
+          "wdth": 100
+        }
+      },
+      "fontSize": 10,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 13
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      }
+    },
+    {
+      "id": "S:4d23249d7988f7933178574a16a7364ae161166b,",
+      "name": "Caption 2/Regular",
+      "fontName": {
+        "family": "SF Pro",
+        "style": "Medium",
+        "variationSettings": {
+          "wght": 510,
+          "wdth": 100
+        }
+      },
+      "fontSize": 10,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 13
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      }
+    },
+    {
+      "id": "S:565b58c8e226b549a2e35ba603181a8cacf18d87,",
+      "name": "Caption 2/Emphasized",
+      "fontName": {
+        "family": "SF Pro",
+        "style": "Semibold",
+        "variationSettings": {
+          "wght": 590,
+          "wdth": 100
+        }
+      },
+      "fontSize": 10,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 13
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      }
+    }
+  ],
+  "componentSets": [
+    {
+      "page": "Buttons",
+      "id": "483:5553",
+      "name": "Arrow Buttons",
+      "variantCount": 3,
+      "axes": {
+        "State": ["Idle", "Clicked", "Disabled"]
+      }
+    },
+    {
+      "page": "Buttons",
+      "id": "121:11923",
+      "name": "Buttons",
+      "variantCount": 72,
+      "axes": {
+        "Active": ["True", "False"],
+        "Context": ["Content Area", "Over-Glass"],
+        "State": ["Idle", "Clicked", "Disabled"],
+        "Style": [
+          "Bordered",
+          "Bordered - Tinted",
+          "Bordered - Destructive",
+          "Bordered - Prominent (Default) Destructive",
+          "Borderless",
+          "Bordered - Prominent (Default) D"
+        ],
+        "On": ["False"]
+      }
+    },
+    {
+      "page": "Buttons",
+      "id": "4341:8462",
+      "name": "Buttons - Toggle",
+      "variantCount": 24,
+      "axes": {
+        "Active": ["True", "False"],
+        "Context": ["Content Area", "Over-Glass"],
+        "State": ["Idle", "Clicked", "Disabled"],
+        "On": ["False", "True"]
+      }
+    },
+    {
+      "page": "Text Fields",
+      "id": "121:12220",
+      "name": "Text Field",
+      "variantCount": 6,
+      "axes": {
+        "State": ["Idle", "Focused", "Disabled"],
+        "Show Text": ["False", "True"]
+      }
+    },
+    {
+      "page": "Menus",
+      "id": "4353:2293",
+      "name": "Menu Background",
+      "variantCount": 2,
+      "axes": {
+        "Mode": ["Dark", "Light"]
+      }
+    },
+    {
+      "page": "Menus",
+      "id": "4353:3147",
+      "name": "Headers",
+      "variantCount": 4,
+      "axes": {
+        "Mode": ["Light", "Dark"],
+        "Inset": ["True", "False"]
+      }
+    },
+    {
+      "page": "Menus",
+      "id": "4353:3151",
+      "name": "Separators",
+      "variantCount": 2,
+      "axes": {
+        "Mode": ["Light", "Dark"]
+      }
+    },
+    {
+      "page": "Menus",
+      "id": "121:12600",
+      "name": "Menu Items",
+      "variantCount": 32,
+      "axes": {
+        "Mode": ["Light", "Dark"],
+        "State": ["Idle", "Hover + Key", "Hover", "Disabled"],
+        "Menu has Selection": ["False", "True"],
+        "Type": ["Action", "Submenu"]
+      }
+    },
+    {
+      "page": "Materials",
+      "id": "4363:18594",
+      "name": "Scroll Edge Effect - Hard",
+      "variantCount": 4,
+      "axes": {
+        "Mode": ["Dark", "Light"],
+        "Edge": ["Bottom", "Top"]
+      }
+    },
+    {
+      "page": "Materials",
+      "id": "4363:18554",
+      "name": "Scroll Edge Effect - Soft",
+      "variantCount": 2,
+      "axes": {
+        "Edge": ["Bottom", "Top"]
+      }
+    },
+    {
+      "page": "Materials",
+      "id": "4331:12157",
+      "name": "Materials",
+      "variantCount": 10,
+      "axes": {
+        "Mode": ["Light", "Dark"],
+        "Type": ["Ultra Thick", "Thick", "Medium", "Thin", "Ultra Thin"]
+      }
+    },
+    {
+      "page": "Materials",
+      "id": "483:9237",
+      "name": "Liquid Glass - Large",
+      "variantCount": 2,
+      "axes": {
+        "Mode": ["Light", "Dark"]
+      }
+    },
+    {
+      "page": "Materials",
+      "id": "483:9250",
+      "name": "Liquid Glass - Medium",
+      "variantCount": 2,
+      "axes": {
+        "Mode": ["Light", "Dark"]
+      }
+    },
+    {
+      "page": "Materials",
+      "id": "483:9263",
+      "name": "Liquid Glass - Small",
+      "variantCount": 8,
+      "axes": {
+        "Mode": ["Light", "Dark"],
+        "Active": ["True", "False"],
+        "State": ["Default", "Primary"]
+      }
+    },
+    {
+      "page": "Sidebars",
+      "id": "655:2306",
+      "name": "Item",
+      "variantCount": 90,
+      "axes": {
+        "Size": ["Large", "Medium", "Small"],
+        "Active": ["True", "False"],
+        "State": ["Disabled", "Idle", "Selected"],
+        "Level": ["0", "1", "2", "3", "4"]
+      }
+    },
+    {
+      "page": "Sidebars",
+      "id": "195:8503",
+      "name": "Section Header",
+      "variantCount": 24,
+      "axes": {
+        "Mode": ["Light", "Dark"],
+        "Size": ["Small", "Medium", "Large"],
+        "First Section": ["True", "False"],
+        "Active": ["True", "False"]
+      }
+    },
+    {
+      "page": "Sidebars",
+      "id": "656:3559",
+      "name": "Sidebars - Composed",
+      "variantCount": 3,
+      "axes": {
+        "Size": ["Small", "Medium", "Large"]
+      }
+    },
+    {
+      "page": "Sidebars",
+      "id": "4358:9901",
+      "name": "Window Controls",
+      "variantCount": 2,
+      "axes": {
+        "Toolbar Style": ["Default", "Compact"]
+      }
+    },
+    {
+      "page": "Sidebars",
+      "id": "4362:1751",
+      "name": "BG",
+      "variantCount": 2,
+      "axes": {
+        "Active": ["True", "False"]
+      }
+    }
+  ],
+  "visualSamples": [
+    {
+      "nodeId": "4341:4872",
+      "name": "Buttons – Light, Content Area"
+    },
+    {
+      "nodeId": "483:9316",
+      "name": "Liquid Glass – Light"
+    },
+    {
+      "nodeId": "4358:6073",
+      "name": "Sidebars – Light Examples"
+    },
+    {
+      "nodeId": "171:9049",
+      "name": "Save Dialog – Small"
+    }
+  ]
+}
