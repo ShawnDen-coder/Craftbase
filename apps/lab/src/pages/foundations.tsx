@@ -1,4 +1,4 @@
-import macos from '../../../../design-system/themes/macos/tokens.json';
+import semantic from '../../../../design-system/tokens/semantic.json';
 import type { Preferences } from '../lib/preferences';
 import { ReferenceColors } from '../sections/reference-colors';
 
@@ -27,12 +27,11 @@ export function Foundations({
   prefs: Preferences;
   appearance: 'light' | 'dark';
 }) {
-  const tokens = macos.appearance[appearance];
+  const tokens = semantic.appearance[appearance];
   return (
     <>
       <h1>设计基础</h1>
       <p className="page-description">色彩、文字角色与间距。</p>{' '}
-      <ReferenceColors />
       <section id="colors">
         <div className="section-heading">
           <div>
@@ -79,8 +78,8 @@ export function Foundations({
             </span>
           </div>
           <p className="muted">
-            左侧为原稿字号／行高，右侧为 Web 调整。字体跟随当前设置，未分发 SF
-            Pro。
+            左侧为 macOS 参考字号／行高，右侧为当前 Web
+            设计值。字体跟随当前设置，未分发 SF Pro。
           </p>
           <div className="type-role-list">
             {(
@@ -139,6 +138,7 @@ export function Foundations({
           </p>
         </div>
       </section>
+      <ReferenceColors />
     </>
   );
 }

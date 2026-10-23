@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { GlassSwatch } from '../../../../design-system/react/material-swatch';
 import { Button } from '../../../../design-system/react/ui/button';
 import { Input } from '../../../../design-system/react/ui/input';
+import { PreferenceSelect } from '../components/preference-select';
 import { Preview } from '../components/preview';
 import { materials, type Preferences } from '../lib/preferences';
 import './catalog.css';
@@ -28,71 +29,50 @@ export function Catalog({
     <main className="specimen-layout" id="main" tabIndex={-1}>
       <aside className="specimen-settings" aria-label="ShowCase 外观">
         <h1>ShowCase</h1>
-        <p>macOS · {materials[prefs.material]}</p>
+        <p>基础设计 · {materials[prefs.material]}</p>
         <div className="specimen-setting">
-          <span>风格</span>
-          <strong>macOS</strong>
+          <span>设计基础</span>
+          <strong>Craftbase</strong>
         </div>
-        <label className="specimen-setting">
-          材质
-          <select
-            aria-label="网站材质"
-            value={prefs.material}
-            onChange={(e) => update('material', e.target.value)}
-          >
-            {Object.entries(materials).map(([value, label]) => (
-              <option key={value} value={value}>
-                {label}
-              </option>
-            ))}
-          </select>
-        </label>
-        <label className="specimen-setting">
-          配色
-          <select
-            aria-label="ShowCase 外观"
-            value={prefs.appearance}
-            onChange={(e) => update('appearance', e.target.value)}
-          >
-            <option value="system">跟随系统</option>
-            <option value="light">浅色</option>
-            <option value="dark">深色</option>
-          </select>
-        </label>
-        <label className="specimen-setting">
-          密度
-          <select
-            aria-label="ShowCase 密度"
-            value={prefs.density}
-            onChange={(e) => update('density', e.target.value)}
-          >
-            <option value="comfortable">舒适</option>
-            <option value="compact">紧凑</option>
-          </select>
-        </label>
-        <label className="specimen-setting">
-          英文字体
-          <select
-            aria-label="英文字体"
-            value={prefs.fontLatin}
-            onChange={(e) => update('fontLatin', e.target.value)}
-          >
-            <option value="system">System</option>
-            <option value="jetbrains">JetBrains Mono</option>
-            <option value="sarasa">Sarasa Term SC</option>
-          </select>
-        </label>
-        <label className="specimen-setting">
-          中文字体
-          <select
-            aria-label="中文字体"
-            value={prefs.fontCjk}
-            onChange={(e) => update('fontCjk', e.target.value)}
-          >
-            <option value="system">System</option>
-            <option value="sarasa">Sarasa Term SC</option>
-          </select>
-        </label>
+        <PreferenceSelect
+          label="材质"
+          ariaLabel="网站材质"
+          value={prefs.material}
+          onValueChange={(value) => update('material', value)}
+          options={materials}
+        />
+        <PreferenceSelect
+          label="配色"
+          ariaLabel="ShowCase 外观"
+          value={prefs.appearance}
+          onValueChange={(value) => update('appearance', value)}
+          options={{ system: '跟随系统', light: '浅色', dark: '深色' }}
+        />
+        <PreferenceSelect
+          label="密度"
+          ariaLabel="ShowCase 密度"
+          value={prefs.density}
+          onValueChange={(value) => update('density', value)}
+          options={{ comfortable: '舒适', compact: '紧凑' }}
+        />
+        <PreferenceSelect
+          label="英文字体"
+          ariaLabel="英文字体"
+          value={prefs.fontLatin}
+          onValueChange={(value) => update('fontLatin', value)}
+          options={{
+            system: 'System',
+            jetbrains: 'JetBrains Mono',
+            sarasa: 'Sarasa Term SC',
+          }}
+        />
+        <PreferenceSelect
+          label="中文字体"
+          ariaLabel="中文字体"
+          value={prefs.fontCjk}
+          onValueChange={(value) => update('fontCjk', value)}
+          options={{ system: 'System', sarasa: 'Sarasa Term SC' }}
+        />
         <nav aria-label="设计参考">
           <a href="#/docs/materials">材质与层级 ↗</a>
           <a href="#/docs/foundations">色彩与文字 ↗</a>
@@ -194,7 +174,11 @@ export function Catalog({
               <label className="specimen-check" htmlFor="specimen-readonly">
                 只读字段
               </label>
-              <Input id="specimen-readonly" readOnly value="macOS 样式参考" />
+              <Input
+                id="specimen-readonly"
+                readOnly
+                value="Craftbase 设计基础"
+              />
             </section>
           </div>
           <div className="specimen-column">

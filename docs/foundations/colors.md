@@ -1,6 +1,6 @@
 # 色彩与色板
 
-当前提供 15 组浅色／深色语义颜色，源文件是 [macOS 主题](../../design-system/themes/macos/tokens.json)。这些值是 Craftbase 的 Web 提案；Figma 原稿颜色另存于 [参考证据](../references/figma/macos-27-evidence.json)，两者不可混用为同一套已验证参数。
+当前提供 15 组浅色／深色语义颜色，源文件是 [基础语义变量](../../design-system/tokens/semantic.json)。这些值是 Craftbase 的 Web 提案；Figma 原稿颜色另存于 [参考证据](../references/figma/macos-27-evidence.json)，两者不可混用为同一套已验证参数。
 
 ## 当前语义色板
 

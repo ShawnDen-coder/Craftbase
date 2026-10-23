@@ -9,14 +9,13 @@
 在 `.cb-root` 应用根元素上集中设置属性：
 
 ```html
-<main class="cb-root" data-theme="macos" data-appearance="dark" data-density="compact">
+<main class="cb-root" data-appearance="dark" data-density="compact">
   <!-- 页面内容 -->
 </main>
 ```
 
 | 属性                | 取值与作用                                      |
 | ------------------- | ----------------------------------------------- |
-| `data-theme`        | 仅 `macos`，省略时为 macos                      |
 | `data-appearance`   | `light` / `dark`，省略时为 light                |
 | `data-density`      | `comfortable` / `compact`，省略时为 comfortable |
 | `data-motion`       | `reduced` 将动效时长变量归零                    |
@@ -58,7 +57,7 @@
 
 ## 修改变量
 
-变量定义见 [基础变量](../design-system/tokens/base.json) 和 [主题源](../design-system/themes/macos/tokens.json)。要维护自己的变体，应修改源后重新生成，流程见 [开发指南](development.md)。复制到业务项目的文件不会自动随本仓库更新。
+变量定义见 [基础变量](../design-system/tokens/base.json) 和 [语义变量](../design-system/tokens/semantic.json)；macOS 材质参考单独保存在 [风格配方](../design-system/themes/macos/tokens.json)。要维护自己的变体，应修改源后重新生成，流程见 [开发指南](development.md)。复制到业务项目的文件不会自动随本仓库更新。
 
 原稿依据与 Web 调整理由见 [macOS 落地契约](foundations/macos.md) 和 [Figma 原稿审查](references/figma/macos-27-review.md)。
 
@@ -66,7 +65,7 @@
 
 源码和依赖说明见 [React 入口](../design-system/react/README.md)。展示站的可运行示例位于 `apps/lab/`；这不是 npm 包或 Registry 安装命令。
 
-将 `design-system/react/` 与基础样式一起复制到项目后，还需引入 `react/theme.css` 并让 Tailwind 扫描 React 源码。不要仅复制 TSX 而遗漏主题适配。对有 Portal 的应用，将主题属性放在 `html` 上，避免浮层脱离主题容器；`.dark` 与 `data-appearance="dark"` 应保持同步。
+将 `design-system/react/`、`design-system/adapters/` 与基础样式一起复制到项目后，还需引入 `react/theme.css` 并让 Tailwind 扫描 React 源码。不要仅复制 TSX 而遗漏主题适配。对有 Portal 的应用，将主题属性放在 `html` 上，避免浮层脱离主题容器；`.dark` 与 `data-appearance="dark"` 应保持同步。
 
 | 共享规格                                    | React 对应接口                                                    |
 | ------------------------------------------- | ----------------------------------------------------------------- |

@@ -37,16 +37,16 @@ export function Docs({
       <main className="docs-content" id="main" tabIndex={-1}>
         {topic === 'introduction' && (
           <>
-            <h1>macOS 设计语言</h1>
+            <h1>个人设计基础</h1>
             <p className="page-description">材质、色彩、字体与空间。</p>
             <section className="prose">
               <h2>内容索引</h2>
               <p>
-                Craftbase 是面向桌面网页的 macOS
-                样式参考。这里整理材质、语义色彩、字体、间距与状态规则，帮助你判断界面应该呈现怎样的视觉层级。
+                Craftbase
+                用来沉淀个人基础设计：语义色彩、文字层级、空间尺度、尺寸、状态与材质规则。展示站帮助观察设计选择，适配层让这些规则应用到现有组件库。
               </p>
               <p>
-                右上角的外观设置会同步改变整站。切换浅色、深色或密度，观察同一套规则如何作用于表面、文字与控件。
+                展示页左侧的外观设置会同步改变整站。切换浅色、深色或密度，观察同一套规则如何作用于表面、文字与控件。
               </p>
               <div className="reading-index">
                 <a href="#/docs/materials">
@@ -65,17 +65,22 @@ export function Docs({
                   <strong>ShowCase</strong>
                   <span>用按钮、输入框、菜单和对话框观察当前外观。</span>
                 </a>
+                <a href="#/shadcn">
+                  <strong>样式适配</strong>
+                  <span>观察基础设计在 shadcn/ui 组件上的表现。</span>
+                </a>
               </div>
-              <h2>如何理解原稿与网页的差异</h2>
+              <h2>基础设计、参考研究与组件适配</h2>
               <p>
-                macOS 27 Community 原稿是材质和样式的研究来源。本站主要表面使用
-                Ultra
+                macOS 27 Community
+                是当前材质与控件外观的一项参考，不代表项目只服务于
+                macOS。参考值与自己的 Web 设计值分开保留。当前展板默认使用 Ultra
                 Thin，通过降低背景对比保持文字清晰；原稿样片保留各自的材质参数。Liquid
                 Glass 通过透色、模糊、高光与阴影呈现 Web 近似。
               </p>
               <p>
-                每个示例用于说明视觉规则。站点不提供组件安装、接入教程或 API
-                文档。
+                组件样例用于验证设计规则与状态。当前提供 shadcn/ui
+                样式适配；未来可根据实际需要扩展其他组件库，基础设计不绑定某个组件实现。
               </p>
               <a
                 className="text-link"

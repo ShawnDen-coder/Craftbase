@@ -7,7 +7,6 @@ export const materials = {
 } as const;
 
 export type Preferences = {
-  theme: 'macos';
   material: keyof typeof materials;
   fontLatin: 'system' | 'jetbrains' | 'sarasa';
   fontCjk: 'system' | 'sarasa';
@@ -15,7 +14,6 @@ export type Preferences = {
   density: 'comfortable' | 'compact';
 };
 const defaults: Preferences = {
-  theme: 'macos',
   material: 'ultra-thin',
   fontLatin: 'system',
   fontCjk: 'system',
@@ -26,7 +24,6 @@ function readPreferences(): Preferences {
   try {
     const p = JSON.parse(localStorage.getItem('craftbase-preferences') ?? '{}');
     return {
-      theme: 'macos',
       material: Object.hasOwn(materials, p.material)
         ? p.material
         : 'ultra-thin',

@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import "../../../design-system/styles/index.css";
 @import "../../../design-system/tailwind/theme.css";
-@import "../../../design-system/react/theme.css";
+@import "../../../design-system/adapters/shadcn/theme.css";
 @import "./pages/foundations.css";
 @import "./fonts.css";
 @source "../../../design-system/react";
@@ -16,6 +16,15 @@ body {
   font: 16px / 1.6 var(--cb-font-body);
   color: var(--cb-text-primary);
   background: var(--cb-surface-panel);
+}
+#root {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+#root > main {
+  flex: 1;
+  width: 100%;
 }
 a {
   color: inherit;
@@ -217,6 +226,10 @@ select {
   text-underline-offset: 4px;
 }
 .site-footer {
+  width: 100%;
+  flex-shrink: 0;
+}
+.site-footer-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;

@@ -5,9 +5,10 @@
 ```text
 craftbase/
 ├── design-system/            # 可复用的设计系统资产
+│   ├── adapters/             # 组件库样式适配（当前 shadcn/ui）
 │   ├── react/                # shadcn / Radix 实验组件及主题适配
-│   ├── tokens/               # 框架无关的基础变量源
-│   ├── themes/               # 主题源：仅 macOS
+│   ├── tokens/               # 框架无关的尺度、语义颜色与密度源
+│   ├── themes/               # 参考风格配方：当前收录 macOS 材质
 │   ├── specs/                # 框架无关的组件行为与状态规格
 │   ├── styles/               # 手写 CSS 配方与生成的 tokens.css
 │   ├── tailwind/             # 生成的 Tailwind v4 映射
