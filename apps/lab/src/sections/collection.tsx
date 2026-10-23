@@ -163,7 +163,7 @@ export function Collection() {
           ) : (
             <div className="collection-empty">
               <p>没有匹配的设计记录。</p>
-              <Button variant="quiet" onClick={() => setQuery('')}>
+              <Button variant="ghost" onClick={() => setQuery('')}>
                 清除搜索
               </Button>
             </div>
@@ -175,8 +175,8 @@ export function Collection() {
               <div className="detail-heading">
                 <h3>{entry.title}</h3>
                 <Button
-                  variant="quiet"
-                  size="small"
+                  variant="ghost"
+                  size="sm"
                   disabled={saving}
                   onClick={() => request(null)}
                 >
@@ -219,10 +219,15 @@ export function Collection() {
                   </p>
                 )}
                 <div className="demo-row">
-                  <Button type="submit" loading={saving} disabled={!dirty}>
+                  <Button
+                    type="submit"
+                    aria-busy={saving}
+                    disabled={saving || !dirty}
+                  >
                     {error ? '重试保存' : '保存说明'}
                   </Button>
                   <Button
+                    type="button"
                     variant="secondary"
                     disabled={!dirty || saving}
                     onClick={() => {
@@ -278,7 +283,7 @@ export function Collection() {
               继续编辑
             </Button>
             <Button
-              variant="danger"
+              variant="destructive"
               onClick={() => {
                 if (pending) choose(pending.id);
                 setPending(null);

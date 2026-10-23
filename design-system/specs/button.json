@@ -1,11 +1,11 @@
 {
   "id": "button",
-  "status": "specified",
+  "status": "historical",
   "description": "触发即时操作",
   "avoid": "导航链接",
   "implementations": {
-    "react": "experimental",
-    "vue": "planned"
+    "react": "upstream",
+    "vue": "not-in-scope"
   },
   "props": {
     "variant": ["primary", "secondary", "quiet", "danger"],
@@ -33,7 +33,6 @@
   "sources": ["docs/references/sources.md"],
   "validatedProjects": [],
   "limitations": [
-    "React 实验实现已接入展示站，完整状态与业务项目验收待完成。",
-    "Vue 尚未实现。"
+    "历史设计研究记录，不再约束官方组件 API 或交互。当前基线见 adapters/shadcn/upstream-lock.json。"
   ]
 }

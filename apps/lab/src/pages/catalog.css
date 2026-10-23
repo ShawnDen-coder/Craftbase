@@ -1,507 +1,84 @@
-/* 1440px: 48px margins + 192px controls + 32px gutter + 1168px canvas.
-   Canvas: three equal columns with two 20px gutters. Desktop only. */
-.specimen-layout {
-  width: 100%;
-  max-width: 1728px;
-  margin-inline: auto;
-  padding: 24px 32px 48px;
-  display: grid;
-  grid-template-columns: 192px minmax(0, 1fr);
-  gap: 32px;
-  align-content: start;
-}
-.specimen-settings {
-  position: sticky;
-  top: 32px;
-  align-self: start;
-  max-height: calc(100dvh - 64px);
-  overflow-y: auto;
-  scrollbar-width: thin;
-  scrollbar-gutter: stable;
-}
-.specimen-settings h1 {
-  font-size: 22px;
-  letter-spacing: -0.5px;
-}
-.specimen-settings > p {
-  font-size: 13px;
-  color: var(--cb-text-secondary);
-  margin: 12px 0 28px;
-  line-height: 1.8;
-}
-.specimen-setting {
-  display: grid;
-  gap: 8px;
-  padding-block: 16px;
-  margin: 0;
-  font-size: 13px;
-  color: var(--cb-text-secondary);
-}
-.specimen-setting strong {
-  color: var(--cb-text-primary);
-  font-weight: 500;
-}
-.specimen-setting label {
-  margin: 0;
-}
-.preference-select {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-  min-height: var(--cb-control-height);
-  border: 1px solid var(--cb-field-border);
-  border-radius: var(--cb-radius-control);
-  padding: 6px 8px;
-  background: var(--cb-button-secondary-fill);
-  color: var(--cb-text-primary);
-  font-size: 13px;
-  width: 100%;
-  text-align: left;
-}
-.preference-menu {
-  z-index: 50;
-  min-width: var(--radix-select-trigger-width);
-  max-height: var(--radix-select-content-available-height);
-  overflow: hidden;
-  padding: 4px;
-  border: 1px solid var(--cb-field-border);
-  border-radius: var(--cb-radius-control);
-  background: var(--cb-surface-overlay);
-  color: var(--cb-text-primary);
-  box-shadow: var(--cb-material-overlay-shadow);
-  font: 13px / 1.6 var(--cb-font-body);
-}
-.preference-option {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  min-height: 32px;
-  padding: 6px 8px;
-  border-radius: 4px;
-  cursor: pointer;
-  outline: none;
-}
-.preference-option[data-highlighted] {
-  background: var(--cb-selection-background);
-  color: var(--cb-selection-text);
-}
-.preference-scroll {
-  display: grid;
-  place-items: center;
-  height: 24px;
-}
-.specimen-settings nav {
-  display: grid;
-  gap: 16px;
-  margin-top: 28px;
-  font-size: 13px;
-}
-.specimen-settings nav a:hover {
-  color: var(--cb-action-primary);
-}
-.specimen-settings .specimen-note {
-  margin-top: 32px;
-}
-.specimen-heading {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin-bottom: 24px;
-}
-.specimen-heading h2 {
-  font-size: 20px;
-  font-weight: 500;
-}
-.specimen-heading > span {
-  font-size: 12px;
-  color: var(--cb-text-secondary);
-}
-.specimen-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
-  align-items: stretch;
-}
-.specimen-panel {
-  min-width: 0;
-  margin: 0;
-  padding: 24px;
-  background: var(--cb-surface-canvas);
-  border-radius: var(--cb-radius-panel);
-  font-size: 13px;
-}
-.specimen-panel header {
-  margin-bottom: 24px;
-}
-.specimen-panel header h2 {
-  font-size: 15px;
-  letter-spacing: 0;
-}
-.specimen-panel :where(header) p {
-  font-size: 12px;
-  color: var(--cb-text-secondary);
-  margin-top: 6px;
-}
-.specimen-panel .example-surface {
-  width: 100%;
-  padding: 0;
-  background: transparent;
-  border-radius: 0;
-}
-.specimen-panel .example-copy {
-  display: none;
-}
-.specimen-panel .field-example {
-  width: 100%;
-}
-.specimen-panel .demo-feedback {
-  font-size: 12px;
-}
-.specimen-tabs > [role="tablist"] {
-  display: flex;
-  padding: 2px;
-  background: var(--cb-button-secondary-fill);
-  border-radius: var(--cb-radius-control);
-  margin-bottom: 16px;
-}
-.specimen-tabs [role="tab"] {
-  flex: 1;
-  padding: 4px 12px;
-  min-height: calc(var(--cb-control-height) - 4px);
-  border-radius: 6px;
-}
-.specimen-tabs [role="tab"][data-state="active"] {
-  background: var(--cb-action-primary);
-  color: var(--cb-action-on-primary);
-  font-weight: 600;
-}
-.specimen-tabs [role="tabpanel"] {
-  min-height: 136px;
-}
-.specimen-switch-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-block: 12px;
-  gap: 16px;
-}
-.specimen-switch-row label {
-  margin: 0;
-}
-.specimen-switch-row :where(label) span {
-  display: block;
-  font-size: 12px;
-  color: var(--cb-text-secondary);
-  margin-top: 3px;
-}
-.specimen-switch {
-  width: var(--cb-switch-track-width);
-  height: var(--cb-switch-track-height);
-  flex-shrink: 0;
-  padding: 2px;
-  border-radius: 100px;
-  background: var(--cb-border-control);
-}
-.specimen-switch[data-state="checked"] {
-  background: var(--cb-control-accent);
-}
-.specimen-switch > span {
-  display: block;
-  width: var(--cb-switch-thumb-width);
-  height: var(--cb-switch-thumb-height);
-  border-radius: 100px;
-  background: var(--cb-control-thumb-fill);
-  box-shadow: var(--cb-switch-thumb-shadow);
-  transition: transform var(--cb-motion-fast) var(--cb-motion-ease);
-}
-.specimen-switch > span[data-state="checked"] {
-  transform: translateX(var(--cb-switch-thumb-travel));
-}
-.specimen-volume {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  margin-top: 20px;
-}
-.specimen-volume output {
-  margin-left: auto;
-  font-variant-numeric: tabular-nums;
-}
-.specimen-slider {
-  display: flex;
-  position: relative;
-  align-items: center;
-  height: 24px;
-  margin-top: 8px;
-  touch-action: none;
-}
-.specimen-slider > [data-orientation="horizontal"] {
-  position: relative;
-  flex: 1;
-  height: 4px;
-  background: var(--cb-border-control);
-  border-radius: 4px;
-}
-.specimen-slider :where([data-orientation="horizontal"]) > span {
-  position: absolute;
-  height: 100%;
-  background: var(--cb-action-primary);
-  border-radius: 4px;
-}
-.specimen-slider [role="slider"] {
-  display: block;
-  width: var(--cb-slider-thumb-width);
-  height: var(--cb-slider-thumb-height);
-  border-radius: 100px;
-  background: var(--cb-control-thumb-fill);
-  box-shadow: var(--cb-slider-thumb-shadow);
-  border: 0.5px solid var(--cb-border-control);
-}
-.specimen-slider [role="slider"]:focus-visible {
-  outline: 3.5px solid
-    color-mix(in srgb, var(--cb-control-accent) 50%, transparent);
-  outline-offset: 0;
-}
-.specimen-glass-stage {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  padding: 24px;
-  border-radius: 12px;
-  margin-bottom: 12px;
-  background: linear-gradient(130deg, #6b8795, #c6a78b);
-}
-.specimen-glass-caption {
-  padding: 16px;
-  flex: 1;
-}
-.specimen-glass-caption strong,
-.specimen-glass-caption span {
-  display: block;
-}
-.specimen-glass-caption span {
-  font-size: 12px;
-  margin-top: 4px;
-}
-.specimen-search {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.specimen-file-list {
-  display: grid;
-  gap: 4px;
-  margin-top: 16px;
-}
-.specimen-file-list > button {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 12px;
-  text-align: left;
-  border-radius: 8px;
-}
-.specimen-file-list > :where(button) span {
-  flex: 1;
-}
-.specimen-file-list > button:hover {
-  background: var(--cb-surface-panel);
-}
-.specimen-file-list > button[aria-pressed="true"] {
-  background: var(--cb-selection-background);
-  color: var(--cb-selection-text);
-}
-.specimen-selection {
-  font-size: 12px;
-  color: var(--cb-text-secondary);
-  margin-top: 20px;
-}
-.specimen-check {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  margin: 0;
-  font-size: 12px;
-}
-.specimen-checkbox {
-  display: grid;
-  place-items: center;
-  width: 16px;
-  height: 16px;
-  border-radius: 4px;
-  border: 1px solid var(--cb-border-control);
-  background: var(--cb-surface-panel);
-}
-.specimen-checkbox[data-state="checked"] {
-  background: var(--cb-action-primary);
-  color: var(--cb-action-on-primary);
-  border-color: var(--cb-action-primary);
-}
-.specimen-secondary-actions {
-  display: grid;
-  gap: 24px;
-  margin-top: 24px;
-  justify-items: start;
-}
-.specimen-folder {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-  margin-top: 24px;
-  padding-top: 24px;
-  border-top: 1px solid var(--cb-border-subtle);
-}
-.specimen-folder div {
-  flex: 1;
-}
-.specimen-folder strong,
-.specimen-folder span {
-  display: block;
-}
-.specimen-folder span {
-  font-size: 12px;
-  color: var(--cb-text-secondary);
-  margin-top: 4px;
-}
-.specimen-feedback {
-  min-height: 18px;
-  font-size: 12px;
-  color: var(--cb-text-secondary);
-  margin-top: 12px;
-}
-.specimen-empty {
-  padding: 24px 0;
-}
-.specimen-explanation {
-  margin-block: 20px;
-  color: var(--cb-text-secondary);
-}
-@media (max-width: 1200px) {
-  .specimen-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-body:has(.specimen-layout) .site-header-inner,
-body:has(.specimen-layout) .site-footer-inner {
-  max-width: 1728px;
-}
-body:has(.specimen-layout) .site-footer {
-  margin-top: auto;
-}
-.specimen-notes {
-  margin-top: 20px;
-}
-.specimen-panel textarea {
-  display: block;
-  width: 100%;
-  resize: vertical;
-  padding: 10px 12px;
-  border: 1px solid var(--cb-field-border);
-  border-radius: var(--cb-radius-control);
-  background: var(--cb-field-fill);
-  font: inherit;
-  line-height: 1.7;
-  margin-bottom: 16px;
-}
-.specimen-panel textarea:focus-visible {
-  outline: 3.5px solid
-    color-mix(in srgb, var(--cb-control-accent) 50%, transparent);
-  outline-offset: 0;
-}
-.specimen-size-row {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 24px;
-}
-.specimen-window-copy {
-  padding: 20px;
-  background: var(--cb-surface-panel);
-  border-radius: var(--cb-radius-control);
-  margin-bottom: 20px;
-}
-.specimen-window-copy strong {
-  font-size: 15px;
-}
-.specimen-window-copy p {
-  color: var(--cb-text-secondary);
-  font-size: 13px;
-  line-height: 1.8;
-  margin-top: 8px;
-}
-
-/* Column groups keep specimen positions stable when tabs or search change height. */
-.specimen-grid {
-  align-items: start;
-}
-.specimen-column {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  min-width: 0;
-}
-.specimen-panel {
-  margin-bottom: 0;
-}
-body:has(.specimen-layout) .site-header-inner {
-  min-height: 72px;
-  padding-block: 16px;
-}
-.specimen-file-list > button {
-  min-height: var(--cb-row-height);
-  padding-block: calc((var(--cb-row-height) - 20px) / 2);
-}
-@media (max-width: 1200px) {
-  .specimen-column:last-child {
-    grid-column: 1 / -1;
+@layer preview {
+  .specimen-layout {
+    width: 100%;
+    max-width: 1728px;
+    margin-inline: auto;
+    padding: 24px 32px 48px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 192px minmax(0, 1fr);
+    gap: 32px;
+    align-content: start;
   }
-}
-@media (forced-colors: active) {
-  .specimen-switch,
-  .specimen-checkbox,
-  .specimen-slider [role="slider"] {
-    border: 1px solid ButtonText;
+  .specimen-settings {
+    position: sticky;
+    top: 32px;
+    align-self: start;
+    max-height: calc(100dvh - 64px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-gutter: stable;
   }
-  .specimen-switch[data-state="checked"],
-  .specimen-tabs [role="tab"][data-state="active"] {
-    background: Highlight;
-    color: HighlightText;
+  .specimen-settings h1 {
+    font-size: 22px;
+    letter-spacing: -0.5px;
   }
-  .specimen-switch > span,
-  .specimen-slider [role="slider"] {
-    background: ButtonText;
+  .specimen-settings > p {
+    font-size: 13px;
+    color: var(--cb-text-secondary);
+    margin: 12px 0 28px;
+    line-height: 1.8;
   }
-  .specimen-tabs [role="tab"][data-state="active"] {
-    outline: 1px solid Highlight;
+  .specimen-setting {
+    display: grid;
+    gap: 8px;
+    padding-block: 16px;
+    margin: 0;
+    font-size: 13px;
+    color: var(--cb-text-secondary);
   }
-}
-
-.shadcn-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
-  align-items: start;
-}
-.shadcn-actions {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 12px;
-}
-.shadcn-fields {
-  display: grid;
-  gap: 8px;
-  margin-top: 24px;
-}
-.shadcn-fields label {
-  margin: 8px 0 0;
-}
-.specimen-canvas {
-  min-width: 0;
+  .specimen-setting label {
+    margin: 0;
+  }
+  .specimen-settings nav {
+    display: grid;
+    gap: 16px;
+    margin-top: 28px;
+    font-size: 13px;
+  }
+  .specimen-settings nav a:hover {
+    color: var(--cb-action-primary);
+  }
+  .specimen-settings .specimen-note {
+    margin-top: 32px;
+  }
+  .specimen-canvas {
+    min-width: 0;
+  }
+  .specimen-panel {
+    min-width: 0;
+    margin: 0;
+    padding: 24px;
+    background: var(--cb-surface-canvas);
+    border-radius: var(--cb-radius-panel);
+    font-size: 13px;
+  }
+  .specimen-panel header {
+    margin-bottom: 24px;
+  }
+  .specimen-panel header h2 {
+    font-size: 15px;
+    letter-spacing: 0;
+  }
+  .specimen-panel :where(header) p {
+    font-size: 12px;
+    color: var(--cb-text-secondary);
+    margin-top: 6px;
+  }
+  body:has(.specimen-layout) .site-header-inner,
+  body:has(.specimen-layout) .site-footer-inner {
+    max-width: 1728px;
+  }
+  body:has(.specimen-layout) .site-footer {
+    margin-top: auto;
+  }
 }

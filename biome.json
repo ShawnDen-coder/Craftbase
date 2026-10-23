@@ -14,7 +14,11 @@
       "!!pnpm-lock.yaml",
       "!!design-system/styles/assets/scroll-edge-mask.svg",
       "!!design-system/styles/assets/scroll-edge-bottom-mask.svg",
-      "!!apps/lab/public/figma/**/*.svg"
+      "!!apps/lab/public/figma/**/*.svg",
+      "!!design-system/react/ui",
+      "!!design-system/react/hooks",
+      "!!apps/lab/src/examples/upstream",
+      "!!design-system/react/lib/highlighter.tsx"
     ]
   },
   "formatter": {

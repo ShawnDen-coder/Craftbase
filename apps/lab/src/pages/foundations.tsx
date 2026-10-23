@@ -23,14 +23,16 @@ const labels: Record<string, string> = {
 export function Foundations({
   prefs,
   appearance,
+  reference = false,
 }: {
+  reference?: boolean;
   prefs: Preferences;
   appearance: 'light' | 'dark';
 }) {
   const tokens = semantic.appearance[appearance];
   return (
     <>
-      <h1>设计基础</h1>
+      <h1>{reference ? 'macOS 色彩与字号参考' : '设计基础'}</h1>
       <p className="page-description">色彩、文字角色与间距。</p>{' '}
       <section id="colors">
         <div className="section-heading">
@@ -78,8 +80,9 @@ export function Foundations({
             </span>
           </div>
           <p className="muted">
-            左侧为 macOS 参考字号／行高，右侧为当前 Web
-            设计值。字体跟随当前设置，未分发 SF Pro。
+            {reference
+              ? '左侧为 macOS 参考字号／行高，右侧为当前 Web 设计值。未分发 SF Pro。'
+              : '文字角色使用统一的 Web 字号与行高，字体跟随当前设置。'}
           </p>
           <div className="type-role-list">
             {(
@@ -97,16 +100,18 @@ export function Foundations({
             ).map(([role, label, native, web]) => (
               <div className="type-role-row" key={role}>
                 <strong className="type-role-label">{label}</strong>
-                <div className="type-role-value">
-                  <p
-                    className="cb-type"
-                    data-type-role={role}
-                    data-type-scale="native"
-                  >
-                    清晰的设计基础
-                  </p>
-                  <span className="type-role-measure">原稿 {native}</span>
-                </div>
+                {reference && (
+                  <div className="type-role-value">
+                    <p
+                      className="cb-type"
+                      data-type-role={role}
+                      data-type-scale="native"
+                    >
+                      清晰的设计基础
+                    </p>
+                    <span className="type-role-measure">原稿 {native}</span>
+                  </div>
+                )}
                 <div className="type-role-value">
                   <p className="cb-type" data-type-role={role}>
                     清晰的设计基础
@@ -138,7 +143,7 @@ export function Foundations({
           </p>
         </div>
       </section>
-      <ReferenceColors />
+      {reference && <ReferenceColors />}
     </>
   );
 }

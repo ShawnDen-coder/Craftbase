@@ -68,7 +68,9 @@ export default function DialogExample() {
             )}
             <DialogFooter>
               <DialogClose asChild>
-                <Button variant="secondary">取消</Button>
+                <Button type="button" variant="secondary">
+                  取消
+                </Button>
               </DialogClose>
               <Button type="submit">保存修改</Button>
             </DialogFooter>

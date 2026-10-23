@@ -20,6 +20,13 @@
   --color-control-accent: var(--cb-control-accent);
   --color-field-border: var(--cb-field-border);
   --color-field-fill: var(--cb-field-fill);
+  --color-chart-1: var(--cb-chart-1);
+  --color-chart-2: var(--cb-chart-2);
+  --color-chart-3: var(--cb-chart-3);
+  --color-chart-4: var(--cb-chart-4);
+  --color-chart-5: var(--cb-chart-5);
+  --color-status-success: var(--cb-status-success);
+  --color-status-warning: var(--cb-status-warning);
   --spacing-cb-1: var(--cb-space-1);
   --spacing-cb-2: var(--cb-space-2);
   --spacing-cb-3: var(--cb-space-3);

@@ -1,21 +1,14 @@
-> 项目以样式适配为主；本目录组件用于交互预览。独立接入已有 shadcn/ui 项目见 [样式适配说明](../adapters/shadcn/README.md)。
+# 官方 shadcn/ui 源码
 
-# React 实验组件
+此目录保存官方 **radix-nova** 组件、依赖 hook 和工具文件，供展示站直接引用。Craftbase 不扩展组件 API 或交互；外观由 [shadcn 适配层](../adapters/shadcn/README.md) 提供。
 
-四个组件来自 shadcn 官方 `new-york-v4` registry，读取于 2026-10-22。原始入口：`https://ui.shadcn.com/r/styles/new-york-v4/{button,input,dialog,dropdown-menu}.json`。保留 [MIT 许可](LICENSE.shadcn.md)。组件交互基于 Radix；不是仅模仿外观的静态样例。
+组件清单、来源 URL、获取日期、原始与本地 SHA-256 见 [upstream-lock.json](../adapters/shadcn/upstream-lock.json)。保留 [MIT 许可](LICENSE.shadcn.md)。安装转换仅处理路径与 Lucide 图标选择；源码不做业务修改。
+- 导入具体文件，如 `design-system/react/ui/button`。`index.ts` 仅保留原有四个入口的转发，不是完整发行 API。
+- 使用官方 `variant`、`size`、`asChild`、`open` 等接口；非提交按钮在表单中显式设置 `type="button"`。
+- 加载由调用方组合 Spinner、`aria-busy` 和 `disabled`；确认流程由页面状态管理。
+- `loading`、`nativeSize`、`controlSize`、`dismissible` 和 primary/quiet/danger 别名已移除。历史菜单 Tab 改写已移除。
+- 依赖以根 package.json 和 pnpm-lock.yaml 为准。Radix 目录的 Combobox 按官方实现依赖 Base UI；Sonner 按官方实现依赖 next-themes，展示站通过公开 `theme` 属性传入现有外观。
 
-当前调整：本地 import、Button 默认 type=button、中文关闭标签、通过 `theme.css` 映射 Craftbase Token 与控件密度。展示站将主题应用在 html 根节点，使 Portal 浮层继承主题。
+`pnpm check:upstream` 检查文件是否偏离锁定源码。显式升级使用 `node scripts/sync-shadcn.mjs --refresh`，审阅来源清单和全部差异，并重新运行静态与浏览器验收。升级不会在构建中自动发生。
 
-源码入口：`ui/button.tsx`、`ui/input.tsx`、`ui/dropdown-menu.tsx`、`ui/dialog.tsx`。消费端需要 React、radix-ui、lucide-react、class-variance-authority、clsx、tailwind-merge、tabbable 和 Tailwind v4，版本见根 package.json。
-
-复制本目录时同时保留相邻的 `adapters/` 目录，`theme.css` 通过相对路径转发到其中的样式适配文件。
-
-在 Tailwind 主样式中依次引入 Craftbase `styles/index.css`、`tailwind/theme.css` 和本目录 `theme.css`，并通过 `@source` 包含本目录源码；完整接入示例见 `apps/lab/src/styles.css`。组件需与主题适配样式一同使用。
-
-状态为 experimental：已补加载阻断、危险操作配对、独立小尺寸和 dismissible 控制，展示站包含保存失败／重试及未保存确认。强制颜色、辅助技术与真实业务项目仍需扩大验收。Vue 与可安装 Registry 尚未提供。
-
-Button 支持规格名称 primary / secondary / quiet / danger，并保留 shadcn 的 variant 别名。`loading` 保持内容和宽度、设置 aria-busy 并禁用重复操作。Button `size="small"`、Input `controlSize="small"` 与根节点 density 独立。DialogContent `dismissible={false}` 阻止 Escape／遮罩和关闭图标，显式提交或取消按钮由调用方控制。
-
-Menu 的 Tab 行为经过适配：Radix 默认拦截 Tab，本项目按共享规格使用 tabbable 计算触发器前后的可聚焦元素，关闭菜单后将焦点移出；Escape 仍返回触发器。已在展示站验证 Tab → 后一按钮、Shift+Tab → 前一输入框。
-
-Button 按共享规格固定为原生 `<button>`，不暴露上游 Button 的 `asChild`：导航使用链接，避免嵌套子元素点击先于 loading 阻断。DialogTrigger / DropdownMenuTrigger 的 `asChild` 仍可组合 Button，不改变其原生按钮语义。
+此目录不是独立发布的组件库。不对 Base UI / React Aria 的其他风格基线作兼容承诺。

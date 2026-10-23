@@ -1,0 +1,1190 @@
+[
+  {
+    "id": "accordion",
+    "kind": "component",
+    "source": "design-system/react/ui/accordion.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/accordion",
+    "example": "upstream/accordion-example",
+    "name": "Accordion",
+    "title": "手风琴",
+    "category": "导航与浮层",
+    "description": "观察手风琴的层级、尺寸与交互状态。",
+    "order": 0,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "alert",
+    "kind": "component",
+    "source": "design-system/react/ui/alert.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/alert",
+    "example": "upstream/alert-example",
+    "name": "Alert",
+    "title": "提示",
+    "category": "操作与反馈",
+    "description": "观察提示的层级、尺寸与交互状态。",
+    "order": 1,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "alert-dialog",
+    "kind": "component",
+    "source": "design-system/react/ui/alert-dialog.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/alert-dialog",
+    "example": "upstream/alert-dialog-example",
+    "name": "Alert Dialog",
+    "title": "确认弹窗",
+    "category": "操作与反馈",
+    "description": "观察确认弹窗的层级、尺寸与交互状态。",
+    "order": 2,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "aspect-ratio",
+    "kind": "component",
+    "source": "design-system/react/ui/aspect-ratio.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/aspect-ratio",
+    "example": "upstream/aspect-ratio-example",
+    "name": "Aspect Ratio",
+    "title": "宽高比",
+    "category": "布局与数据",
+    "description": "观察宽高比的层级、尺寸与交互状态。",
+    "order": 3,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "avatar",
+    "kind": "component",
+    "source": "design-system/react/ui/avatar.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/avatar",
+    "example": "upstream/avatar-example",
+    "name": "Avatar",
+    "title": "头像",
+    "category": "布局与数据",
+    "description": "观察头像的层级、尺寸与交互状态。",
+    "order": 4,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "badge",
+    "kind": "component",
+    "source": "design-system/react/ui/badge.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/badge",
+    "example": "upstream/badge-example",
+    "name": "Badge",
+    "title": "徽标",
+    "category": "操作与反馈",
+    "description": "观察徽标的层级、尺寸与交互状态。",
+    "order": 5,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "breadcrumb",
+    "kind": "component",
+    "source": "design-system/react/ui/breadcrumb.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/breadcrumb",
+    "example": "upstream/breadcrumb-example",
+    "name": "Breadcrumb",
+    "title": "面包屑",
+    "category": "导航与浮层",
+    "description": "观察面包屑的层级、尺寸与交互状态。",
+    "order": 6,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "button",
+    "kind": "component",
+    "source": "design-system/react/ui/button.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/button",
+    "example": "upstream/button-example",
+    "name": "Button",
+    "title": "按钮",
+    "category": "操作与反馈",
+    "description": "观察按钮的层级、尺寸与交互状态。",
+    "order": 7,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "button-group",
+    "kind": "component",
+    "source": "design-system/react/ui/button-group.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/button-group",
+    "example": "upstream/button-group-example",
+    "name": "Button Group",
+    "title": "按钮组",
+    "category": "操作与反馈",
+    "description": "观察按钮组的层级、尺寸与交互状态。",
+    "order": 8,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "calendar",
+    "kind": "component",
+    "source": "design-system/react/ui/calendar.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/calendar",
+    "example": "upstream/calendar-example",
+    "name": "Calendar",
+    "title": "日历",
+    "category": "表单与输入",
+    "description": "观察日历的层级、尺寸与交互状态。",
+    "order": 9,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "card",
+    "kind": "component",
+    "source": "design-system/react/ui/card.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/card",
+    "example": "upstream/card-example",
+    "name": "Card",
+    "title": "卡片",
+    "category": "布局与数据",
+    "description": "观察卡片的层级、尺寸与交互状态。",
+    "order": 10,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "carousel",
+    "kind": "component",
+    "source": "design-system/react/ui/carousel.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/carousel",
+    "example": "upstream/carousel-example",
+    "name": "Carousel",
+    "title": "轮播",
+    "category": "布局与数据",
+    "description": "观察轮播的层级、尺寸与交互状态。",
+    "order": 11,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "chart",
+    "kind": "component",
+    "source": "design-system/react/ui/chart.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/chart",
+    "example": "local/chart",
+    "name": "Chart",
+    "title": "图表",
+    "category": "布局与数据",
+    "description": "观察图表的层级、尺寸与交互状态。",
+    "order": 12,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "checkbox",
+    "kind": "component",
+    "source": "design-system/react/ui/checkbox.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/checkbox",
+    "example": "upstream/checkbox-example",
+    "name": "Checkbox",
+    "title": "复选框",
+    "category": "表单与输入",
+    "description": "观察复选框的层级、尺寸与交互状态。",
+    "order": 13,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "collapsible",
+    "kind": "component",
+    "source": "design-system/react/ui/collapsible.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/collapsible",
+    "example": "upstream/collapsible-example",
+    "name": "Collapsible",
+    "title": "折叠",
+    "category": "导航与浮层",
+    "description": "观察折叠的层级、尺寸与交互状态。",
+    "order": 14,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "combobox",
+    "kind": "component",
+    "source": "design-system/react/ui/combobox.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/combobox",
+    "example": "upstream/combobox-example",
+    "name": "Combobox",
+    "title": "组合选择",
+    "category": "表单与输入",
+    "description": "观察组合选择的层级、尺寸与交互状态。",
+    "order": 15,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "command",
+    "kind": "component",
+    "source": "design-system/react/ui/command.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/command",
+    "example": "upstream/command-example",
+    "name": "Command",
+    "title": "命令菜单",
+    "category": "导航与浮层",
+    "description": "观察命令菜单的层级、尺寸与交互状态。",
+    "order": 16,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "context-menu",
+    "kind": "component",
+    "source": "design-system/react/ui/context-menu.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/context-menu",
+    "example": "upstream/context-menu-example",
+    "name": "Context Menu",
+    "title": "右键菜单",
+    "category": "导航与浮层",
+    "description": "观察右键菜单的层级、尺寸与交互状态。",
+    "order": 17,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "dialog",
+    "kind": "component",
+    "source": "design-system/react/ui/dialog.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/dialog",
+    "example": "upstream/dialog-example",
+    "name": "Dialog",
+    "title": "对话框",
+    "category": "导航与浮层",
+    "description": "观察对话框的层级、尺寸与交互状态。",
+    "order": 18,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "drawer",
+    "kind": "component",
+    "source": "design-system/react/ui/drawer.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/drawer",
+    "example": "upstream/drawer-example",
+    "name": "Drawer",
+    "title": "抽屉",
+    "category": "导航与浮层",
+    "description": "观察抽屉的层级、尺寸与交互状态。",
+    "order": 19,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "dropdown-menu",
+    "kind": "component",
+    "source": "design-system/react/ui/dropdown-menu.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/dropdown-menu",
+    "example": "upstream/dropdown-menu-example",
+    "name": "Dropdown Menu",
+    "title": "下拉菜单",
+    "category": "导航与浮层",
+    "description": "观察下拉菜单的层级、尺寸与交互状态。",
+    "order": 20,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "empty",
+    "kind": "component",
+    "source": "design-system/react/ui/empty.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/empty",
+    "example": "upstream/empty-example",
+    "name": "Empty",
+    "title": "空状态",
+    "category": "布局与数据",
+    "description": "观察空状态的层级、尺寸与交互状态。",
+    "order": 21,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "field",
+    "kind": "component",
+    "source": "design-system/react/ui/field.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/field",
+    "example": "upstream/field-example",
+    "name": "Field",
+    "title": "表单字段",
+    "category": "表单与输入",
+    "description": "观察表单字段的层级、尺寸与交互状态。",
+    "order": 22,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "hover-card",
+    "kind": "component",
+    "source": "design-system/react/ui/hover-card.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/hover-card",
+    "example": "upstream/hover-card-example",
+    "name": "Hover Card",
+    "title": "悬浮卡片",
+    "category": "导航与浮层",
+    "description": "观察悬浮卡片的层级、尺寸与交互状态。",
+    "order": 23,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "input",
+    "kind": "component",
+    "source": "design-system/react/ui/input.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/input",
+    "example": "upstream/input-example",
+    "name": "Input",
+    "title": "输入框",
+    "category": "表单与输入",
+    "description": "观察输入框的层级、尺寸与交互状态。",
+    "order": 24,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "input-group",
+    "kind": "component",
+    "source": "design-system/react/ui/input-group.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/input-group",
+    "example": "upstream/input-group-example",
+    "name": "Input Group",
+    "title": "输入组",
+    "category": "表单与输入",
+    "description": "观察输入组的层级、尺寸与交互状态。",
+    "order": 25,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "input-otp",
+    "kind": "component",
+    "source": "design-system/react/ui/input-otp.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/input-otp",
+    "example": "upstream/input-otp-example",
+    "name": "Input Otp",
+    "title": "验证码",
+    "category": "表单与输入",
+    "description": "观察验证码的层级、尺寸与交互状态。",
+    "order": 26,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "item",
+    "kind": "component",
+    "source": "design-system/react/ui/item.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/item",
+    "example": "upstream/item-example",
+    "name": "Item",
+    "title": "条目",
+    "category": "布局与数据",
+    "description": "观察条目的层级、尺寸与交互状态。",
+    "order": 27,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "label",
+    "kind": "component",
+    "source": "design-system/react/ui/label.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/label",
+    "example": "upstream/label-example",
+    "name": "Label",
+    "title": "标签",
+    "category": "表单与输入",
+    "description": "观察标签的层级、尺寸与交互状态。",
+    "order": 28,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "menubar",
+    "kind": "component",
+    "source": "design-system/react/ui/menubar.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/menubar",
+    "example": "upstream/menubar-example",
+    "name": "Menubar",
+    "title": "菜单栏",
+    "category": "导航与浮层",
+    "description": "观察菜单栏的层级、尺寸与交互状态。",
+    "order": 29,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "navigation-menu",
+    "kind": "component",
+    "source": "design-system/react/ui/navigation-menu.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/navigation-menu",
+    "example": "upstream/navigation-menu-example",
+    "name": "Navigation Menu",
+    "title": "导航菜单",
+    "category": "导航与浮层",
+    "description": "观察导航菜单的层级、尺寸与交互状态。",
+    "order": 30,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "pagination",
+    "kind": "component",
+    "source": "design-system/react/ui/pagination.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/pagination",
+    "example": "upstream/pagination-example",
+    "name": "Pagination",
+    "title": "分页",
+    "category": "导航与浮层",
+    "description": "观察分页的层级、尺寸与交互状态。",
+    "order": 31,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "popover",
+    "kind": "component",
+    "source": "design-system/react/ui/popover.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/popover",
+    "example": "upstream/popover-example",
+    "name": "Popover",
+    "title": "弹出层",
+    "category": "导航与浮层",
+    "description": "观察弹出层的层级、尺寸与交互状态。",
+    "order": 32,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "progress",
+    "kind": "component",
+    "source": "design-system/react/ui/progress.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/progress",
+    "example": "upstream/progress-example",
+    "name": "Progress",
+    "title": "进度",
+    "category": "操作与反馈",
+    "description": "观察进度的层级、尺寸与交互状态。",
+    "order": 33,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "radio-group",
+    "kind": "component",
+    "source": "design-system/react/ui/radio-group.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/radio-group",
+    "example": "upstream/radio-group-example",
+    "name": "Radio Group",
+    "title": "单选组",
+    "category": "表单与输入",
+    "description": "观察单选组的层级、尺寸与交互状态。",
+    "order": 34,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "resizable",
+    "kind": "component",
+    "source": "design-system/react/ui/resizable.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/resizable",
+    "example": "upstream/resizable-example",
+    "name": "Resizable",
+    "title": "可调整面板",
+    "category": "布局与数据",
+    "description": "观察可调整面板的层级、尺寸与交互状态。",
+    "order": 35,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "scroll-area",
+    "kind": "component",
+    "source": "design-system/react/ui/scroll-area.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/scroll-area",
+    "example": "upstream/scroll-area-example",
+    "name": "Scroll Area",
+    "title": "滚动区域",
+    "category": "布局与数据",
+    "description": "观察滚动区域的层级、尺寸与交互状态。",
+    "order": 36,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "select",
+    "kind": "component",
+    "source": "design-system/react/ui/select.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/select",
+    "example": "upstream/select-example",
+    "name": "Select",
+    "title": "选择器",
+    "category": "表单与输入",
+    "description": "观察选择器的层级、尺寸与交互状态。",
+    "order": 37,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "separator",
+    "kind": "component",
+    "source": "design-system/react/ui/separator.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/separator",
+    "example": "upstream/separator-example",
+    "name": "Separator",
+    "title": "分隔线",
+    "category": "布局与数据",
+    "description": "观察分隔线的层级、尺寸与交互状态。",
+    "order": 38,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "sheet",
+    "kind": "component",
+    "source": "design-system/react/ui/sheet.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/sheet",
+    "example": "upstream/sheet-example",
+    "name": "Sheet",
+    "title": "侧边面板",
+    "category": "导航与浮层",
+    "description": "观察侧边面板的层级、尺寸与交互状态。",
+    "order": 39,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "sidebar",
+    "kind": "component",
+    "source": "design-system/react/ui/sidebar.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/sidebar",
+    "example": "local/sidebar",
+    "name": "Sidebar",
+    "title": "侧栏",
+    "category": "导航与浮层",
+    "description": "观察侧栏的层级、尺寸与交互状态。",
+    "order": 40,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "skeleton",
+    "kind": "component",
+    "source": "design-system/react/ui/skeleton.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/skeleton",
+    "example": "upstream/skeleton-example",
+    "name": "Skeleton",
+    "title": "骨架",
+    "category": "操作与反馈",
+    "description": "观察骨架的层级、尺寸与交互状态。",
+    "order": 41,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "slider",
+    "kind": "component",
+    "source": "design-system/react/ui/slider.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/slider",
+    "example": "upstream/slider-example",
+    "name": "Slider",
+    "title": "滑块",
+    "category": "表单与输入",
+    "description": "观察滑块的层级、尺寸与交互状态。",
+    "order": 42,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "sonner",
+    "kind": "component",
+    "source": "design-system/react/ui/sonner.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/sonner",
+    "example": "upstream/sonner-example",
+    "name": "Sonner",
+    "title": "通知",
+    "category": "操作与反馈",
+    "description": "观察通知的层级、尺寸与交互状态。",
+    "order": 43,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "spinner",
+    "kind": "component",
+    "source": "design-system/react/ui/spinner.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/spinner",
+    "example": "upstream/spinner-example",
+    "name": "Spinner",
+    "title": "加载",
+    "category": "操作与反馈",
+    "description": "观察加载的层级、尺寸与交互状态。",
+    "order": 44,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "switch",
+    "kind": "component",
+    "source": "design-system/react/ui/switch.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/switch",
+    "example": "upstream/switch-example",
+    "name": "Switch",
+    "title": "开关",
+    "category": "表单与输入",
+    "description": "观察开关的层级、尺寸与交互状态。",
+    "order": 45,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "table",
+    "kind": "component",
+    "source": "design-system/react/ui/table.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/table",
+    "example": "upstream/table-example",
+    "name": "Table",
+    "title": "表格",
+    "category": "布局与数据",
+    "description": "观察表格的层级、尺寸与交互状态。",
+    "order": 46,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "tabs",
+    "kind": "component",
+    "source": "design-system/react/ui/tabs.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/tabs",
+    "example": "upstream/tabs-example",
+    "name": "Tabs",
+    "title": "标签页",
+    "category": "导航与浮层",
+    "description": "观察标签页的层级、尺寸与交互状态。",
+    "order": 47,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "textarea",
+    "kind": "component",
+    "source": "design-system/react/ui/textarea.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/textarea",
+    "example": "upstream/textarea-example",
+    "name": "Textarea",
+    "title": "多行输入",
+    "category": "表单与输入",
+    "description": "观察多行输入的层级、尺寸与交互状态。",
+    "order": 48,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "toggle",
+    "kind": "component",
+    "source": "design-system/react/ui/toggle.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/toggle",
+    "example": "upstream/toggle-example",
+    "name": "Toggle",
+    "title": "切换按钮",
+    "category": "操作与反馈",
+    "description": "观察切换按钮的层级、尺寸与交互状态。",
+    "order": 49,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "toggle-group",
+    "kind": "component",
+    "source": "design-system/react/ui/toggle-group.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/toggle-group",
+    "example": "upstream/toggle-group-example",
+    "name": "Toggle Group",
+    "title": "切换组",
+    "category": "操作与反馈",
+    "description": "观察切换组的层级、尺寸与交互状态。",
+    "order": 50,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "tooltip",
+    "kind": "component",
+    "source": "design-system/react/ui/tooltip.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/tooltip",
+    "example": "upstream/tooltip-example",
+    "name": "Tooltip",
+    "title": "工具提示",
+    "category": "导航与浮层",
+    "description": "观察工具提示的层级、尺寸与交互状态。",
+    "order": 51,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "kbd",
+    "kind": "component",
+    "source": "design-system/react/ui/kbd.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/kbd",
+    "example": "upstream/kbd-example",
+    "name": "Kbd",
+    "title": "快捷键",
+    "category": "布局与数据",
+    "description": "观察快捷键的层级、尺寸与交互状态。",
+    "order": 52,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "native-select",
+    "kind": "component",
+    "source": "design-system/react/ui/native-select.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/native-select",
+    "example": "upstream/native-select-example",
+    "name": "Native Select",
+    "title": "原生选择",
+    "category": "表单与输入",
+    "description": "观察原生选择的层级、尺寸与交互状态。",
+    "order": 53,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "direction",
+    "kind": "component",
+    "source": "design-system/react/ui/direction.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/direction",
+    "example": "local/direction",
+    "name": "Direction",
+    "title": "文字方向",
+    "category": "布局与数据",
+    "description": "观察文字方向的层级、尺寸与交互状态。",
+    "order": 54,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "attachment",
+    "kind": "component",
+    "source": "design-system/react/ui/attachment.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/attachment",
+    "example": "upstream/attachment-example",
+    "name": "Attachment",
+    "title": "附件",
+    "category": "内容展示",
+    "description": "观察附件的层级、尺寸与交互状态。",
+    "order": 55,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "bubble",
+    "kind": "component",
+    "source": "design-system/react/ui/bubble.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/bubble",
+    "example": "upstream/bubble-example",
+    "name": "Bubble",
+    "title": "气泡",
+    "category": "内容展示",
+    "description": "观察气泡的层级、尺寸与交互状态。",
+    "order": 56,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "message-scroller",
+    "kind": "component",
+    "source": "design-system/react/ui/message-scroller.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/message-scroller",
+    "example": "local/message-scroller",
+    "name": "Message Scroller",
+    "title": "消息滚动",
+    "category": "内容展示",
+    "description": "观察消息滚动的层级、尺寸与交互状态。",
+    "order": 57,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "questionnaire",
+    "kind": "component",
+    "source": "design-system/react/ui/questionnaire.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/questionnaire",
+    "example": "upstream/questionnaire-example",
+    "name": "Questionnaire",
+    "title": "问卷",
+    "category": "表单与输入",
+    "description": "观察问卷的层级、尺寸与交互状态。",
+    "order": 58,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "marker",
+    "kind": "component",
+    "source": "design-system/react/ui/marker.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/marker",
+    "example": "upstream/marker-example",
+    "name": "Marker",
+    "title": "标记",
+    "category": "内容展示",
+    "description": "观察标记的层级、尺寸与交互状态。",
+    "order": 59,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "trace",
+    "kind": "component",
+    "source": "design-system/react/ui/trace.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/trace",
+    "example": "local/trace",
+    "name": "Trace",
+    "title": "过程记录",
+    "category": "内容展示",
+    "description": "观察过程记录的层级、尺寸与交互状态。",
+    "order": 60,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "code-block",
+    "kind": "component",
+    "source": "design-system/react/ui/code-block.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/code-block",
+    "example": "local/code-block",
+    "name": "Code Block",
+    "title": "代码块",
+    "category": "内容展示",
+    "description": "观察代码块的层级、尺寸与交互状态。",
+    "order": 61,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "message",
+    "kind": "component",
+    "source": "design-system/react/ui/message.tsx",
+    "docs": "https://ui.shadcn.com/docs/components/radix/message",
+    "example": "local/message",
+    "name": "Message",
+    "title": "消息",
+    "category": "内容展示",
+    "description": "观察消息的层级、尺寸与交互状态。",
+    "order": 62,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "date-picker",
+    "kind": "composition",
+    "docs": "https://ui.shadcn.com/docs/components/date-picker",
+    "example": "local/date-picker",
+    "source": "",
+    "name": "Date Picker",
+    "title": "日期选择",
+    "category": "表单与输入",
+    "description": "观察日期选择的层级、尺寸与交互状态。",
+    "order": 63,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "data-table",
+    "kind": "composition",
+    "docs": "https://ui.shadcn.com/docs/components/data-table",
+    "example": "local/data-table",
+    "source": "",
+    "name": "Data Table",
+    "title": "数据表格",
+    "category": "布局与数据",
+    "description": "观察数据表格的层级、尺寸与交互状态。",
+    "order": 64,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  },
+  {
+    "id": "typography",
+    "kind": "composition",
+    "docs": "https://ui.shadcn.com/docs/components/typography",
+    "example": "local/typography",
+    "source": "",
+    "name": "Typography",
+    "title": "文字排版",
+    "category": "布局与数据",
+    "description": "观察文字排版的层级、尺寸与交互状态。",
+    "order": 65,
+    "features": ["官方组件", "Craftbase 样式"],
+    "observations": [
+      "比较浅色与深色下的文字、边界及表面层级。",
+      "操作控件，检查焦点、选中、展开与不可用状态。"
+    ],
+    "status": "integrated"
+  }
+]

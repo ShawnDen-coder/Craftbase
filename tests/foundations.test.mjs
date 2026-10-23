@@ -94,9 +94,9 @@ test('generated CSS resolves all emitted references and catalog is honest', asyn
   assert.ok(
     catalog.items.every(
       (i) =>
-        i.status === 'specified' &&
-        i.implementations.react === 'experimental' &&
-        i.implementations.vue === 'planned',
+        i.status === 'historical' &&
+        i.implementations.react === 'upstream' &&
+        i.implementations.vue === 'not-in-scope',
     ),
   );
 });

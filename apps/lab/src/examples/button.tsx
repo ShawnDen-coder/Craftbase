@@ -13,7 +13,7 @@ export default function ButtonExample() {
         <Button variant="secondary" onClick={() => setCount(0)}>
           重置
         </Button>
-        <Button variant="quiet" disabled>
+        <Button variant="ghost" disabled>
           已同步
         </Button>
       </div>

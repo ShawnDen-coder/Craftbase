@@ -12,38 +12,26 @@ export function StateGallery() {
           <p>尺寸与密度独立；状态通过文字、边界与行为共同表达。</p>
         </div>
       </div>
-      <article className="native-size-gallery">
-        <h3>原稿尺寸</h3>
-        <p>Mini 到 XL 是明确尺寸，不随密度改变；小尺寸用于原稿对照。</p>
-        <div className="demo-row">
-          {(['mini', 'small', 'medium', 'large', 'xl'] as const).map((size) => (
-            <Button
-              key={size}
-              nativeSize={size}
-              variant="secondary"
-              onClick={() => setCount((c) => c + 1)}
-            >
-              {size}
-            </Button>
-          ))}
-        </div>
-      </article>
       <div className="component-grid">
         <article>
           <h3>操作状态</h3>
           <div className="demo-row">
             <Button
-              variant="primary"
-              size="small"
+              variant="default"
+              size="sm"
               onClick={() => setCount((c) => c + 1)}
             >
               小尺寸
             </Button>
-            <Button variant="danger" onClick={() => setCount((c) => c + 1)}>
+            <Button
+              variant="destructive"
+              onClick={() => setCount((c) => c + 1)}
+            >
               危险操作示例
             </Button>
             <Button
-              loading={loading}
+              aria-busy={loading}
+              disabled={loading}
               onClick={() => {
                 setLoading(true);
                 setCount((c) => c + 1);
@@ -52,7 +40,7 @@ export function StateGallery() {
               提交示例
             </Button>
             <Button
-              variant="quiet"
+              variant="ghost"
               disabled={!loading}
               onClick={() => setLoading(false)}
             >
@@ -73,7 +61,7 @@ export function StateGallery() {
               小尺寸
               <Input
                 id="state-small"
-                controlSize="small"
+                className="cb-input-small"
                 defaultValue="可编辑"
               />
             </label>

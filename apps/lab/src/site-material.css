@@ -1,113 +1,153 @@
-/* Material recipes resolve from the shared macOS theme tokens. */
-:root[data-site-material="ultra-thin"] {
-  --site-material-fill: var(--cb-material-regular-ultra-thin);
-}
-:root[data-site-material="thin"] {
-  --site-material-fill: var(--cb-material-regular-thin);
-}
-:root[data-site-material="medium"] {
-  --site-material-fill: var(--cb-material-regular-medium);
-}
-:root[data-site-material="thick"] {
-  --site-material-fill: var(--cb-material-regular-thick);
-}
-:root[data-site-material="ultra-thick"] {
-  --site-material-fill: var(--cb-material-regular-ultra-thick);
-}
-:root[data-site-material] {
-  --site-backdrop-wash: rgb(245 245 247 / 82%);
-  --site-wallpaper: url("/figma/materials/wallpaper-light.webp");
-}
-:root[data-site-material][data-appearance="dark"] {
-  --site-backdrop-wash: rgb(24 25 28 / 80%);
-  --site-wallpaper: url("/figma/materials/wallpaper-dark.webp");
-}
-:root[data-site-material] body {
-  background: var(--cb-surface-panel);
-  isolation: isolate;
-}
-:root[data-site-material] body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  background:
-    linear-gradient(var(--site-backdrop-wash), var(--site-backdrop-wash)),
-    var(--site-wallpaper) center / cover;
-}
-:root[data-site-material]
-  :is(
-    .site-header,
-    .site-footer,
-    .specimen-panel,
-    .docs-content,
-    [data-slot="dialog-content"],
-    [data-slot="dropdown-menu-content"]
-  ) {
-  background: var(--cb-surface-overlay);
-}
-:root[data-site-material] .docs-content {
-  padding: 28px;
-  border-radius: var(--cb-radius-panel);
-}
-@supports (backdrop-filter: blur(1px)) {
-  :root[data-site-material]
+@layer preview {
+  /* Material recipes resolve from the shared macOS theme tokens. */
+  :root[data-site-material="ultra-thin"] {
+    --site-material-fill: var(--cb-material-regular-ultra-thin);
+  }
+  :root[data-site-material="thin"] {
+    --site-material-fill: var(--cb-material-regular-thin);
+  }
+  :root[data-site-material="medium"] {
+    --site-material-fill: var(--cb-material-regular-medium);
+  }
+  :root[data-site-material="thick"] {
+    --site-material-fill: var(--cb-material-regular-thick);
+  }
+  :root[data-site-material="ultra-thick"] {
+    --site-material-fill: var(--cb-material-regular-ultra-thick);
+  }
+  :root[data-site-material]:not([data-site-material="solid"]) {
+    --site-backdrop-wash: rgb(245 245 247 / 82%);
+    --site-wallpaper: url("/figma/materials/wallpaper-light.webp");
+  }
+  :root[data-site-material]:not(
+    [data-site-material="solid"]
+  )[data-appearance="dark"] {
+    --site-backdrop-wash: rgb(24 25 28 / 80%);
+    --site-wallpaper: url("/figma/materials/wallpaper-dark.webp");
+  }
+  :root[data-site-material]:not([data-site-material="solid"]) body {
+    background: var(--cb-surface-panel);
+    isolation: isolate;
+  }
+  :root[data-site-material]:not([data-site-material="solid"]) body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+      linear-gradient(var(--site-backdrop-wash), var(--site-backdrop-wash)),
+      var(--site-wallpaper) center / cover;
+  }
+  :root[data-site-material]:not([data-site-material="solid"])
     :is(
       .site-header,
       .site-footer,
       .specimen-panel,
       .docs-content,
       [data-slot="dialog-content"],
-      [data-slot="dropdown-menu-content"]
-    ) {
-    background: var(--site-material-fill);
-    backdrop-filter: blur(var(--cb-material-regular-blur));
-  }
-  :root[data-site-material] .specimen-window-copy {
-    background: var(--site-material-fill);
-  }
-}
-:root[data-site-material]
-  :is([data-slot="dialog-content"], [data-slot="dropdown-menu-content"]) {
-  border-color: var(--cb-field-border);
-}
-@media (prefers-reduced-transparency: reduce), (prefers-contrast: more),
-  (forced-colors: active) {
-  :root[data-site-material] body::before {
-    display: none;
-  }
-  :root[data-site-material]
-    :is(
-      .site-header,
-      .site-footer,
-      .specimen-panel,
-      .docs-content,
-      .specimen-window-copy,
-      [data-slot="dialog-content"],
-      [data-slot="dropdown-menu-content"]
+      [data-slot="dropdown-menu-content"],
+      [data-slot="popover-content"],
+      [data-slot="select-content"],
+      [data-slot="context-menu-content"],
+      [data-slot="hover-card-content"],
+      [data-slot="sheet-content"],
+      [data-slot="alert-dialog-content"]
     ) {
     background: var(--cb-surface-overlay);
-    backdrop-filter: none;
   }
-}
-@media (forced-colors: active) {
-  :root[data-site-material]
+  :root[data-site-material]:not([data-site-material="solid"]) .docs-content {
+    padding: 28px;
+    border-radius: var(--cb-radius-panel);
+  }
+  @supports (backdrop-filter: blur(1px)) {
+    :root[data-site-material]:not([data-site-material="solid"])
+      :is(
+        .site-header,
+        .site-footer,
+        .specimen-panel,
+        .docs-content,
+        [data-slot="dialog-content"],
+        [data-slot="dropdown-menu-content"],
+        [data-slot="popover-content"],
+        [data-slot="select-content"],
+        [data-slot="context-menu-content"],
+        [data-slot="hover-card-content"],
+        [data-slot="sheet-content"],
+        [data-slot="alert-dialog-content"]
+      ) {
+      background: var(--site-material-fill);
+      backdrop-filter: blur(var(--cb-material-regular-blur));
+    }
+    :root[data-site-material]:not([data-site-material="solid"])
+      .specimen-window-copy {
+      background: var(--site-material-fill);
+    }
+  }
+  :root[data-site-material]:not([data-site-material="solid"])
     :is(
-      .site-header,
-      .site-footer,
-      .specimen-panel,
-      .docs-content,
-      .specimen-window-copy,
       [data-slot="dialog-content"],
-      [data-slot="dropdown-menu-content"]
+      [data-slot="dropdown-menu-content"],
+      [data-slot="popover-content"],
+      [data-slot="select-content"],
+      [data-slot="context-menu-content"],
+      [data-slot="hover-card-content"],
+      [data-slot="sheet-content"],
+      [data-slot="alert-dialog-content"]
     ) {
-    background: Canvas;
-    color: CanvasText;
+    border-color: var(--cb-field-border);
   }
-}
+  @media (prefers-reduced-transparency: reduce), (prefers-contrast: more),
+    (forced-colors: active) {
+    :root[data-site-material]:not([data-site-material="solid"]) body::before {
+      display: none;
+    }
+    :root[data-site-material]:not([data-site-material="solid"])
+      :is(
+        .site-header,
+        .site-footer,
+        .specimen-panel,
+        .docs-content,
+        .specimen-window-copy,
+        [data-slot="dialog-content"],
+        [data-slot="dropdown-menu-content"],
+        [data-slot="popover-content"],
+        [data-slot="select-content"],
+        [data-slot="context-menu-content"],
+        [data-slot="hover-card-content"],
+        [data-slot="sheet-content"],
+        [data-slot="alert-dialog-content"]
+      ) {
+      background: var(--cb-surface-overlay);
+      backdrop-filter: none;
+    }
+  }
+  @media (forced-colors: active) {
+    :root[data-site-material]:not([data-site-material="solid"])
+      :is(
+        .site-header,
+        .site-footer,
+        .specimen-panel,
+        .docs-content,
+        .specimen-window-copy,
+        [data-slot="dialog-content"],
+        [data-slot="dropdown-menu-content"],
+        [data-slot="popover-content"],
+        [data-slot="select-content"],
+        [data-slot="context-menu-content"],
+        [data-slot="hover-card-content"],
+        [data-slot="sheet-content"],
+        [data-slot="alert-dialog-content"]
+      ) {
+      background: Canvas;
+      color: CanvasText;
+    }
+  }
 
-:root[data-site-material][data-appearance="light"]
-  [data-slot="dialog-overlay"] {
-  background: rgb(0 0 0 / 12%);
+  :root[data-site-material]:not(
+      [data-site-material="solid"]
+    )[data-appearance="light"]
+    [data-slot="dialog-overlay"] {
+    background: rgb(0 0 0 / 12%);
+  }
 }

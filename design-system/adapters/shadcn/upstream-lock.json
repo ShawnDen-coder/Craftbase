@@ -1,0 +1,1316 @@
+{
+  "schemaVersion": 1,
+  "style": "radix-nova",
+  "retrievedAt": "2026-10-23T05:17:54.425Z",
+  "registrySha256": "2c43e40258d50d1293f961c56bcd203ce6c5999db16eaa710b17e6de346673e5",
+  "transformVersion": 1,
+  "components": [
+    {
+      "id": "accordion",
+      "kind": "component",
+      "source": "design-system/react/ui/accordion.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/accordion",
+      "example": "upstream"
+    },
+    {
+      "id": "alert",
+      "kind": "component",
+      "source": "design-system/react/ui/alert.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/alert",
+      "example": "upstream"
+    },
+    {
+      "id": "alert-dialog",
+      "kind": "component",
+      "source": "design-system/react/ui/alert-dialog.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/alert-dialog",
+      "example": "upstream"
+    },
+    {
+      "id": "aspect-ratio",
+      "kind": "component",
+      "source": "design-system/react/ui/aspect-ratio.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/aspect-ratio",
+      "example": "upstream"
+    },
+    {
+      "id": "avatar",
+      "kind": "component",
+      "source": "design-system/react/ui/avatar.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/avatar",
+      "example": "upstream"
+    },
+    {
+      "id": "badge",
+      "kind": "component",
+      "source": "design-system/react/ui/badge.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/badge",
+      "example": "upstream"
+    },
+    {
+      "id": "breadcrumb",
+      "kind": "component",
+      "source": "design-system/react/ui/breadcrumb.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/breadcrumb",
+      "example": "upstream"
+    },
+    {
+      "id": "button",
+      "kind": "component",
+      "source": "design-system/react/ui/button.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/button",
+      "example": "upstream"
+    },
+    {
+      "id": "button-group",
+      "kind": "component",
+      "source": "design-system/react/ui/button-group.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/button-group",
+      "example": "upstream"
+    },
+    {
+      "id": "calendar",
+      "kind": "component",
+      "source": "design-system/react/ui/calendar.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/calendar",
+      "example": "upstream"
+    },
+    {
+      "id": "card",
+      "kind": "component",
+      "source": "design-system/react/ui/card.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/card",
+      "example": "upstream"
+    },
+    {
+      "id": "carousel",
+      "kind": "component",
+      "source": "design-system/react/ui/carousel.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/carousel",
+      "example": "upstream"
+    },
+    {
+      "id": "chart",
+      "kind": "component",
+      "source": "design-system/react/ui/chart.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/chart",
+      "example": "local"
+    },
+    {
+      "id": "checkbox",
+      "kind": "component",
+      "source": "design-system/react/ui/checkbox.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/checkbox",
+      "example": "upstream"
+    },
+    {
+      "id": "collapsible",
+      "kind": "component",
+      "source": "design-system/react/ui/collapsible.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/collapsible",
+      "example": "upstream"
+    },
+    {
+      "id": "combobox",
+      "kind": "component",
+      "source": "design-system/react/ui/combobox.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/combobox",
+      "example": "upstream"
+    },
+    {
+      "id": "command",
+      "kind": "component",
+      "source": "design-system/react/ui/command.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/command",
+      "example": "upstream"
+    },
+    {
+      "id": "context-menu",
+      "kind": "component",
+      "source": "design-system/react/ui/context-menu.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/context-menu",
+      "example": "upstream"
+    },
+    {
+      "id": "dialog",
+      "kind": "component",
+      "source": "design-system/react/ui/dialog.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/dialog",
+      "example": "upstream"
+    },
+    {
+      "id": "drawer",
+      "kind": "component",
+      "source": "design-system/react/ui/drawer.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/drawer",
+      "example": "upstream"
+    },
+    {
+      "id": "dropdown-menu",
+      "kind": "component",
+      "source": "design-system/react/ui/dropdown-menu.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/dropdown-menu",
+      "example": "upstream"
+    },
+    {
+      "id": "empty",
+      "kind": "component",
+      "source": "design-system/react/ui/empty.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/empty",
+      "example": "upstream"
+    },
+    {
+      "id": "field",
+      "kind": "component",
+      "source": "design-system/react/ui/field.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/field",
+      "example": "upstream"
+    },
+    {
+      "id": "hover-card",
+      "kind": "component",
+      "source": "design-system/react/ui/hover-card.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/hover-card",
+      "example": "upstream"
+    },
+    {
+      "id": "input",
+      "kind": "component",
+      "source": "design-system/react/ui/input.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/input",
+      "example": "upstream"
+    },
+    {
+      "id": "input-group",
+      "kind": "component",
+      "source": "design-system/react/ui/input-group.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/input-group",
+      "example": "upstream"
+    },
+    {
+      "id": "input-otp",
+      "kind": "component",
+      "source": "design-system/react/ui/input-otp.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/input-otp",
+      "example": "upstream"
+    },
+    {
+      "id": "item",
+      "kind": "component",
+      "source": "design-system/react/ui/item.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/item",
+      "example": "upstream"
+    },
+    {
+      "id": "label",
+      "kind": "component",
+      "source": "design-system/react/ui/label.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/label",
+      "example": "upstream"
+    },
+    {
+      "id": "menubar",
+      "kind": "component",
+      "source": "design-system/react/ui/menubar.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/menubar",
+      "example": "upstream"
+    },
+    {
+      "id": "navigation-menu",
+      "kind": "component",
+      "source": "design-system/react/ui/navigation-menu.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/navigation-menu",
+      "example": "upstream"
+    },
+    {
+      "id": "pagination",
+      "kind": "component",
+      "source": "design-system/react/ui/pagination.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/pagination",
+      "example": "upstream"
+    },
+    {
+      "id": "popover",
+      "kind": "component",
+      "source": "design-system/react/ui/popover.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/popover",
+      "example": "upstream"
+    },
+    {
+      "id": "progress",
+      "kind": "component",
+      "source": "design-system/react/ui/progress.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/progress",
+      "example": "upstream"
+    },
+    {
+      "id": "radio-group",
+      "kind": "component",
+      "source": "design-system/react/ui/radio-group.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/radio-group",
+      "example": "upstream"
+    },
+    {
+      "id": "resizable",
+      "kind": "component",
+      "source": "design-system/react/ui/resizable.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/resizable",
+      "example": "upstream"
+    },
+    {
+      "id": "scroll-area",
+      "kind": "component",
+      "source": "design-system/react/ui/scroll-area.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/scroll-area",
+      "example": "upstream"
+    },
+    {
+      "id": "select",
+      "kind": "component",
+      "source": "design-system/react/ui/select.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/select",
+      "example": "upstream"
+    },
+    {
+      "id": "separator",
+      "kind": "component",
+      "source": "design-system/react/ui/separator.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/separator",
+      "example": "upstream"
+    },
+    {
+      "id": "sheet",
+      "kind": "component",
+      "source": "design-system/react/ui/sheet.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/sheet",
+      "example": "upstream"
+    },
+    {
+      "id": "sidebar",
+      "kind": "component",
+      "source": "design-system/react/ui/sidebar.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/sidebar",
+      "example": "local"
+    },
+    {
+      "id": "skeleton",
+      "kind": "component",
+      "source": "design-system/react/ui/skeleton.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/skeleton",
+      "example": "upstream"
+    },
+    {
+      "id": "slider",
+      "kind": "component",
+      "source": "design-system/react/ui/slider.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/slider",
+      "example": "upstream"
+    },
+    {
+      "id": "sonner",
+      "kind": "component",
+      "source": "design-system/react/ui/sonner.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/sonner",
+      "example": "upstream"
+    },
+    {
+      "id": "spinner",
+      "kind": "component",
+      "source": "design-system/react/ui/spinner.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/spinner",
+      "example": "upstream"
+    },
+    {
+      "id": "switch",
+      "kind": "component",
+      "source": "design-system/react/ui/switch.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/switch",
+      "example": "upstream"
+    },
+    {
+      "id": "table",
+      "kind": "component",
+      "source": "design-system/react/ui/table.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/table",
+      "example": "upstream"
+    },
+    {
+      "id": "tabs",
+      "kind": "component",
+      "source": "design-system/react/ui/tabs.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/tabs",
+      "example": "upstream"
+    },
+    {
+      "id": "textarea",
+      "kind": "component",
+      "source": "design-system/react/ui/textarea.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/textarea",
+      "example": "upstream"
+    },
+    {
+      "id": "toggle",
+      "kind": "component",
+      "source": "design-system/react/ui/toggle.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/toggle",
+      "example": "upstream"
+    },
+    {
+      "id": "toggle-group",
+      "kind": "component",
+      "source": "design-system/react/ui/toggle-group.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/toggle-group",
+      "example": "upstream"
+    },
+    {
+      "id": "tooltip",
+      "kind": "component",
+      "source": "design-system/react/ui/tooltip.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/tooltip",
+      "example": "upstream"
+    },
+    {
+      "id": "kbd",
+      "kind": "component",
+      "source": "design-system/react/ui/kbd.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/kbd",
+      "example": "upstream"
+    },
+    {
+      "id": "native-select",
+      "kind": "component",
+      "source": "design-system/react/ui/native-select.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/native-select",
+      "example": "upstream"
+    },
+    {
+      "id": "direction",
+      "kind": "component",
+      "source": "design-system/react/ui/direction.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/direction",
+      "example": "upstream"
+    },
+    {
+      "id": "attachment",
+      "kind": "component",
+      "source": "design-system/react/ui/attachment.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/attachment",
+      "example": "upstream"
+    },
+    {
+      "id": "bubble",
+      "kind": "component",
+      "source": "design-system/react/ui/bubble.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/bubble",
+      "example": "upstream"
+    },
+    {
+      "id": "message-scroller",
+      "kind": "component",
+      "source": "design-system/react/ui/message-scroller.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/message-scroller",
+      "example": "local"
+    },
+    {
+      "id": "questionnaire",
+      "kind": "component",
+      "source": "design-system/react/ui/questionnaire.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/questionnaire",
+      "example": "upstream"
+    },
+    {
+      "id": "marker",
+      "kind": "component",
+      "source": "design-system/react/ui/marker.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/marker",
+      "example": "upstream"
+    },
+    {
+      "id": "trace",
+      "kind": "component",
+      "source": "design-system/react/ui/trace.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/trace",
+      "example": "local"
+    },
+    {
+      "id": "code-block",
+      "kind": "component",
+      "source": "design-system/react/ui/code-block.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/code-block",
+      "example": "local"
+    },
+    {
+      "id": "message",
+      "kind": "component",
+      "source": "design-system/react/ui/message.tsx",
+      "docs": "https://ui.shadcn.com/docs/components/radix/message",
+      "example": "local"
+    }
+  ],
+  "excluded": [
+    {
+      "id": "form",
+      "reason": "Registry entry has no source; use Field and form composition."
+    },
+    {
+      "id": "toast",
+      "reason": "Deprecated upstream; replaced by Sonner."
+    }
+  ],
+  "files": [
+    {
+      "item": "accordion",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/accordion.json",
+      "target": "design-system/react/ui/accordion.tsx",
+      "upstreamSha256": "832d6737d43aa9c1457adb9c40d48a668d8a22263a0c77261bb378313b5c081a",
+      "sha256": "f8557e4e71fd520dbf107783b6484654fc49cebf773e1594c9ff5472b1d37fc9"
+    },
+    {
+      "item": "alert",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/alert.json",
+      "target": "design-system/react/ui/alert.tsx",
+      "upstreamSha256": "f253568242c1c69b343f12474002fdbe229f603158171c59e21c491ab79f2e6e",
+      "sha256": "8021cf2fcc4ecf3e86708b6fca817d13d5f5dfcd566b322253c931a1a45974e3"
+    },
+    {
+      "item": "alert-dialog",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/alert-dialog.json",
+      "target": "design-system/react/ui/alert-dialog.tsx",
+      "upstreamSha256": "dd761aac823fe89513e44f917b26691bfd20c0f31de717fb42450540dade2e9e",
+      "sha256": "a934c790679e21c5b8d05ba949aaaaa64a99af3dc03c0e80aff2b8d142bb1b30"
+    },
+    {
+      "item": "aspect-ratio",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/aspect-ratio.json",
+      "target": "design-system/react/ui/aspect-ratio.tsx",
+      "upstreamSha256": "b1c157886236782cb92d8fbcd4749532aaf6d8aabefd6e157ca40358f902f407",
+      "sha256": "b1c157886236782cb92d8fbcd4749532aaf6d8aabefd6e157ca40358f902f407"
+    },
+    {
+      "item": "avatar",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/avatar.json",
+      "target": "design-system/react/ui/avatar.tsx",
+      "upstreamSha256": "036b8f39d9f42962a9eedd097103c90450d58a50ea55c693896c4cea4b5953a4",
+      "sha256": "9b6ca42fc6f3d7c2117348e3c5e1bb7b2d1fd780567db2caea77b50abe3e36e6"
+    },
+    {
+      "item": "badge",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/badge.json",
+      "target": "design-system/react/ui/badge.tsx",
+      "upstreamSha256": "59953420d01d23d172b4e32583426db153ff09226e2d460d53526b9f25282801",
+      "sha256": "670330a00204177c58c6c931d70ee92da0186ee452b7b41215e26bd7360e7631"
+    },
+    {
+      "item": "breadcrumb",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/breadcrumb.json",
+      "target": "design-system/react/ui/breadcrumb.tsx",
+      "upstreamSha256": "4676c0c62a5699ed4f6b5079cb4e912149307d1150cb0d474c30bbc6e1817feb",
+      "sha256": "1b7998503963eea64f2a5cc18fe83e3f9fb2c7c67c3091bcd24db22805b305ea"
+    },
+    {
+      "item": "button",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/button.json",
+      "target": "design-system/react/ui/button.tsx",
+      "upstreamSha256": "08e5f87833c5db8436e89337ebde0f776bcdbf649d3de69fb89be6441ca2e366",
+      "sha256": "df92ddda266c00d0f210d19002d9c15f10e08d3003abb4ddd2824d69875a1ef5"
+    },
+    {
+      "item": "button-group",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/button-group.json",
+      "target": "design-system/react/ui/button-group.tsx",
+      "upstreamSha256": "91c87303e83e93095f9afcb8c0ed9c4f28d1938fafaeb12428a6d5f680eafdac",
+      "sha256": "f6e27117395d9444a4352ea84dce179f717a748228ab2faf6d44415c287874c7"
+    },
+    {
+      "item": "calendar",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/calendar.json",
+      "target": "design-system/react/ui/calendar.tsx",
+      "upstreamSha256": "4f245084e691dec10205b684d2ba6512831a6ebb4aa94e106d7f4e5c9537ab2f",
+      "sha256": "4dfdfe714b81e6fa389615ad6207c1c1ea6ac28826eae804679ec3f1fc3e9975"
+    },
+    {
+      "item": "card",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/card.json",
+      "target": "design-system/react/ui/card.tsx",
+      "upstreamSha256": "645c3d73e387a99f1492220cc619453b0c7f5454134ee3cd548be7a80f7eccde",
+      "sha256": "f1eb7d36e9875df10c1562a487df30dd40227fc2f60cfd913db4779dfebca0af"
+    },
+    {
+      "item": "carousel",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/carousel.json",
+      "target": "design-system/react/ui/carousel.tsx",
+      "upstreamSha256": "d82229fbca0f04ad1c7509a8e3540b136f6b979856623fcf1b0c895ac4323e19",
+      "sha256": "ade0e50527bbe6eef104b3ef6a661a78f0d12233577399f19a2cf3caa4591bf4"
+    },
+    {
+      "item": "chart",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/chart.json",
+      "target": "design-system/react/ui/chart.tsx",
+      "upstreamSha256": "1869f68f2eb0108071681c78f3827280fb38212ce7b145139d7ed5d65823ec40",
+      "sha256": "df54ef49626f5c72910bc4ff6d6f8cf26a6453b58f73a2c224bb5a992015ec60"
+    },
+    {
+      "item": "checkbox",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/checkbox.json",
+      "target": "design-system/react/ui/checkbox.tsx",
+      "upstreamSha256": "038e8d38fbea4d1c2f602938b00b095171d40a8371d7b60f772260c2eb8cb2cf",
+      "sha256": "25d31f1ed7a71ec9aa81eb09462150ed221402a17c05d0c899e4542b1afa3325"
+    },
+    {
+      "item": "collapsible",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/collapsible.json",
+      "target": "design-system/react/ui/collapsible.tsx",
+      "upstreamSha256": "c6598e5584f4258b5d9fefadbc5ad6a66888ad58729f4b634a0bb2d9c513188b",
+      "sha256": "c6598e5584f4258b5d9fefadbc5ad6a66888ad58729f4b634a0bb2d9c513188b"
+    },
+    {
+      "item": "combobox",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/combobox.json",
+      "target": "design-system/react/ui/combobox.tsx",
+      "upstreamSha256": "028a40a2b73c9c6e74da7d4ebd8441b9fc0d7ffbcff84df9f521a51c2ac057c8",
+      "sha256": "bd0b6178dae3d5dd3ed6bab39b27a1df27a40f5fa381a4d684cb48fb99d4cbc0"
+    },
+    {
+      "item": "command",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/command.json",
+      "target": "design-system/react/ui/command.tsx",
+      "upstreamSha256": "6a4539df6e8fb9900c49d353bcb4dfa2e675e27588b9060a8ed5ac7c46bc2ec8",
+      "sha256": "09d95750408a3f3d47ab47d5098ff9b0eaae531858a1bddc82ed8625dc2030e1"
+    },
+    {
+      "item": "context-menu",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/context-menu.json",
+      "target": "design-system/react/ui/context-menu.tsx",
+      "upstreamSha256": "5649aa6ce22e9eb5ff2b2653cb3ffa6edcc9c9f91ebc2da21a7795963201d7c5",
+      "sha256": "0750d9585fab65f85ac52baaeeaac69b73097cd15b01699122ead85f3136c06d"
+    },
+    {
+      "item": "dialog",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/dialog.json",
+      "target": "design-system/react/ui/dialog.tsx",
+      "upstreamSha256": "9a4690ab16c37b62c2dd5c023c28fb0fbb262e21fa981f07c679e53e8155acc3",
+      "sha256": "c8a6373ab127a01ba27c888e37b62259a8f1a2dc1a60ae803ac80e6e9e9ede44"
+    },
+    {
+      "item": "drawer",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/drawer.json",
+      "target": "design-system/react/ui/drawer.tsx",
+      "upstreamSha256": "2545f4af018ed767de966a3afa4936027e68ae63b596e8b5ea78ac32dfad795f",
+      "sha256": "dde5cf32c148491c88bd6ab67ac84e079407b028d85c778114a92e6e02045f2f"
+    },
+    {
+      "item": "dropdown-menu",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/dropdown-menu.json",
+      "target": "design-system/react/ui/dropdown-menu.tsx",
+      "upstreamSha256": "19964ff76e458e9ffd22da3e9669449e2ed044902a70fef88b957e20ddc5b314",
+      "sha256": "f081b00f96f3bf40dd36403cb91f309bacf5c531a17b570b9e88892e7f76f561"
+    },
+    {
+      "item": "empty",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/empty.json",
+      "target": "design-system/react/ui/empty.tsx",
+      "upstreamSha256": "5cac88b6f80f40cf4aa5e4c3d5a6810f43e132a24032d1c55a7aecdae446cf15",
+      "sha256": "34c11541824da2fb22235e6554f81f83749e26b33c8f3920171619816e9aaa85"
+    },
+    {
+      "item": "field",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/field.json",
+      "target": "design-system/react/ui/field.tsx",
+      "upstreamSha256": "a5deef8fa6d55baa9fa25d0e068137ef9db45b660d01a423321ddfc9c7cf3c7c",
+      "sha256": "b7705898e1c5f21679c3bd03d67fc03b669945d9d6c35efe7c7c885f9089f462"
+    },
+    {
+      "item": "hover-card",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/hover-card.json",
+      "target": "design-system/react/ui/hover-card.tsx",
+      "upstreamSha256": "24433d55fa0d15808a202820ba720f0ce3be52fba2bc3bf4f1c05f102343b56b",
+      "sha256": "d74aaa8277fc8372bb8c1e8b1f7eb22e149d5a1d5a5d1b1752aaa0be9ba8d07d"
+    },
+    {
+      "item": "input",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/input.json",
+      "target": "design-system/react/ui/input.tsx",
+      "upstreamSha256": "75418e030b2a54dd017ac0f4588db4bbdbabca7525e88bbc9d84cb3e18bcb905",
+      "sha256": "e75949a16d82668653c9ec009381bb8896f26354ddef952bd4c6513e47c05a84"
+    },
+    {
+      "item": "input-group",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/input-group.json",
+      "target": "design-system/react/ui/input-group.tsx",
+      "upstreamSha256": "3ba9524f746e9f5add361f685fbec41efef42068ef84c6e98b971dc93c86eaf8",
+      "sha256": "ac8d132945c1dcdb48bda4ff67df62e9a27d8ccd259195b70fa0e0d44c786228"
+    },
+    {
+      "item": "input-otp",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/input-otp.json",
+      "target": "design-system/react/ui/input-otp.tsx",
+      "upstreamSha256": "800f2398fc404a1fa529d7af8c7647e22553205c482a15bc0c26775f145a6465",
+      "sha256": "df987fd8d7eb6d34573ed030a7c359fcdc4be4f8cbaaa7ecc31777f7d0dbe738"
+    },
+    {
+      "item": "item",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/item.json",
+      "target": "design-system/react/ui/item.tsx",
+      "upstreamSha256": "6bab466798ad5bca030df773464cbe6c9dcc1dcc863d99e7091f75cd8d14a5eb",
+      "sha256": "94220ae0d766cdfaffeb2c0d08cb601f12ab52a7be1292e4e02d6c03db1eb726"
+    },
+    {
+      "item": "label",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/label.json",
+      "target": "design-system/react/ui/label.tsx",
+      "upstreamSha256": "344bde38b8531615dbf8e14af3895517c24d8ef6ce56ddeda7e2e6fe4b5d0c00",
+      "sha256": "f0b5ecb4692120a6fb3349418431e635f6d786513de2ecf9486e689e13322abb"
+    },
+    {
+      "item": "menubar",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/menubar.json",
+      "target": "design-system/react/ui/menubar.tsx",
+      "upstreamSha256": "33b024bfde0300bfe1bf57ae92a07dc3a632790d331f27d44d7d493256de2f11",
+      "sha256": "fb21dc2df91687deb6fa67c546f9c41f8e4ee24d50d9956696a330bbe9360423"
+    },
+    {
+      "item": "navigation-menu",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/navigation-menu.json",
+      "target": "design-system/react/ui/navigation-menu.tsx",
+      "upstreamSha256": "36fd420d70afc3e0568a48f5a8c76186c4adae13cbfdb274d760412214b437ba",
+      "sha256": "f6bd9d57d8cb7a8092cec5d89de41c3145210066458c148642271bf1b1116fda"
+    },
+    {
+      "item": "pagination",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/pagination.json",
+      "target": "design-system/react/ui/pagination.tsx",
+      "upstreamSha256": "80a7dcb83c56727a765f0a3775bc534b543b49c5dbf90c5f7f729db6ab01e813",
+      "sha256": "9b7f9aff3bc63c3a0e1b3d1058ebc0b43db2ed5d58f5e40587f68bc77b97016c"
+    },
+    {
+      "item": "popover",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/popover.json",
+      "target": "design-system/react/ui/popover.tsx",
+      "upstreamSha256": "61be62a441fb6b90e26ceaf93353f57411a4d114f305e0417b8f1122750b9018",
+      "sha256": "2418dd9fc8ea6e0fc4a8a7ed10c96bb12545da5e4dc554786e97788632500aca"
+    },
+    {
+      "item": "progress",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/progress.json",
+      "target": "design-system/react/ui/progress.tsx",
+      "upstreamSha256": "11470bfbc6c80a4b198a1c00b6ea6300f5b29990fdd2ac36921d1f30eb2d4aa4",
+      "sha256": "b62e0f710533fc065d98fdee90bba218f34cc9c8127e0bdf641b0dbcba4c4b66"
+    },
+    {
+      "item": "radio-group",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/radio-group.json",
+      "target": "design-system/react/ui/radio-group.tsx",
+      "upstreamSha256": "e36464d09f7339a1803610f5a016d7822aaa7ecab306230e6fc7c329ec799df9",
+      "sha256": "8d8026811d69665279b8ccb49c586c80be5769ca822378b685be0a77b2e12fa5"
+    },
+    {
+      "item": "resizable",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/resizable.json",
+      "target": "design-system/react/ui/resizable.tsx",
+      "upstreamSha256": "c45c4e1a32aefb83d60406366e2368b9d8a6e772406f8b964154e7202d6304f7",
+      "sha256": "ea027ea451bf5d4e30629d11c60508f54295f16da44d9db569f5dc3cb7d9d520"
+    },
+    {
+      "item": "scroll-area",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/scroll-area.json",
+      "target": "design-system/react/ui/scroll-area.tsx",
+      "upstreamSha256": "436777583f300e9fb0ca9df97ce9d1ca45443b7513273f39d27c6183b99db396",
+      "sha256": "a4819c36aba948e3197993f0f29883823a4a3c25b51d5ce6e2ad1ff1e2d8b7d0"
+    },
+    {
+      "item": "select",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/select.json",
+      "target": "design-system/react/ui/select.tsx",
+      "upstreamSha256": "d5b78764549e83e4f0deb49b1eb409b94aaa8d7eaca5edb659b6fde79701ff26",
+      "sha256": "287d1ac25f6925f228150ec5e75612752306188c1a1cfaa547f02ac7bea02be5"
+    },
+    {
+      "item": "separator",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/separator.json",
+      "target": "design-system/react/ui/separator.tsx",
+      "upstreamSha256": "b5b5460e5337c2d5f361c1512001615b2e5eacb38c7449a4418bb9ddb47c4bba",
+      "sha256": "28636ddacd3881b880bd91b5ea4c6b479255a0439f06679d297ea88e2b6c5d32"
+    },
+    {
+      "item": "sheet",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/sheet.json",
+      "target": "design-system/react/ui/sheet.tsx",
+      "upstreamSha256": "0598c3a868ef88da6e142d9e440fef56e0231b3d0c9644302ef4a931f6928d25",
+      "sha256": "671d8a6f3818cff17d5992e84d3db2ef6840ccc741a7c3f7f0e379c3691deff1"
+    },
+    {
+      "item": "sidebar",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/sidebar.json",
+      "target": "design-system/react/ui/sidebar.tsx",
+      "upstreamSha256": "9ca111074a4ce38aaa31627b2da1d3d46a4408f24ad9784558f31863106cbb8b",
+      "sha256": "f3274188dabcb65b666147e33195f7b05ca8cd310db0f21a0f7d7c4dcc0a8c30"
+    },
+    {
+      "item": "skeleton",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/skeleton.json",
+      "target": "design-system/react/ui/skeleton.tsx",
+      "upstreamSha256": "4c2af7fa9c645358a0fb188779deab6f0b981733b62befc25e18aaebea1350dc",
+      "sha256": "e0913b19dd29c941e695b41e73dcc4cc02a6a1b8333e8a8b235e408a8678d213"
+    },
+    {
+      "item": "slider",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/slider.json",
+      "target": "design-system/react/ui/slider.tsx",
+      "upstreamSha256": "c427312448882a4e504d0e8c9367cd309ebedb19c40d64b511b7fa02e62fd370",
+      "sha256": "657e15591ec86bc7f83a3238d5dfb18fa4b8112b10ccd3bf586c6dfc8731a39b"
+    },
+    {
+      "item": "sonner",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/sonner.json",
+      "target": "design-system/react/ui/sonner.tsx",
+      "upstreamSha256": "d5178ce4c7834d3f46d261698395b498b8f45fef29975585df7e26cb43aa3cc7",
+      "sha256": "b863647d6310e7844a4db9e5baa5444336c5fd4cb6109429884350bf2d222117"
+    },
+    {
+      "item": "spinner",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/spinner.json",
+      "target": "design-system/react/ui/spinner.tsx",
+      "upstreamSha256": "494f71fd2733709d0e43be44e3353d9df215b370137af0195251cbdfdcc9e17b",
+      "sha256": "1783c1750a98156dd9d15b8eb58c9e98d0b38f33a349101132c7c814b9160cc2"
+    },
+    {
+      "item": "switch",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/switch.json",
+      "target": "design-system/react/ui/switch.tsx",
+      "upstreamSha256": "afd5b6e6b9c2bcd42ee164a39ca18c342b2d7a2dfedd29da3065dc37021090e8",
+      "sha256": "4e002062f3b018a36618e2de77fc372f934c0b8c7e6764bf8c0da2ac84d76d5f"
+    },
+    {
+      "item": "table",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/table.json",
+      "target": "design-system/react/ui/table.tsx",
+      "upstreamSha256": "749b0501e97591f8d7c9ef81366d636e4b47857a15a28e6cf3b87841232e74bf",
+      "sha256": "109d3852f82ae5dcf83a414d490b81e8637947c60049890c95a287aa39a6bc1c"
+    },
+    {
+      "item": "tabs",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/tabs.json",
+      "target": "design-system/react/ui/tabs.tsx",
+      "upstreamSha256": "b977274550595594055d850a16775c75761765e1cd76b4827e101c2f432762df",
+      "sha256": "ee995c77b1e4ed7a7c507a0c7884c46bc742b76da1c85db4d7e865322cd9cf86"
+    },
+    {
+      "item": "textarea",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/textarea.json",
+      "target": "design-system/react/ui/textarea.tsx",
+      "upstreamSha256": "82601c91ffc6c727d924162c78d7cb853114bcced4e2eb922a68ca12d4239c0f",
+      "sha256": "2c1e391718a76a365ac66d9118bb2f410ced08125c8c1ae5c0e0ea70246e0290"
+    },
+    {
+      "item": "toggle",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/toggle.json",
+      "target": "design-system/react/ui/toggle.tsx",
+      "upstreamSha256": "5fb58fc5f5da383322cbad37bfe275eec4a1b035efed9f922b4fb28cd2851040",
+      "sha256": "dfe9a1d1ca3eac6ce83e26b844ce92ab0167b2ff6e45b1cbb9e43d472705d5f4"
+    },
+    {
+      "item": "toggle-group",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/toggle-group.json",
+      "target": "design-system/react/ui/toggle-group.tsx",
+      "upstreamSha256": "9851ca6ee2fa8f150f323c0e6a59a78b18a6f2667e507b9e854e109c4a68a2da",
+      "sha256": "8ec62cdd6a79f93595f1e0d2e107416b19e8765fc8b7383088598964fcd20143"
+    },
+    {
+      "item": "tooltip",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/tooltip.json",
+      "target": "design-system/react/ui/tooltip.tsx",
+      "upstreamSha256": "e94530dd6877132d5eda73f6fb0d217f345477232f140f2ca6e024d790177f6a",
+      "sha256": "9bb571c185062883c43ffefd37750a76f28696c807e8b10e9b62bbaf1b94aa13"
+    },
+    {
+      "item": "kbd",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/kbd.json",
+      "target": "design-system/react/ui/kbd.tsx",
+      "upstreamSha256": "d17724eb15923ea4f0432cd1cf22538addb14a386f4f9326661efcce7f97e33b",
+      "sha256": "e8043d7f0975527f77b2eb61c7d29312b6a69cf3e188ea84bb654fa9e69e3925"
+    },
+    {
+      "item": "native-select",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/native-select.json",
+      "target": "design-system/react/ui/native-select.tsx",
+      "upstreamSha256": "17552c2df3b8f5ee44675979c3c29a02f48454e9204f2a02b64f4b7f28bdfc2c",
+      "sha256": "339e00090eccd3eb6661673d5ce71fbded00fe514eb9cf1fda190e3c878db194"
+    },
+    {
+      "item": "direction",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/direction.json",
+      "target": "design-system/react/ui/direction.tsx",
+      "upstreamSha256": "84ae2ad658207f0e0f367978e5508cd8027cd00c29c41d3d13db21a708c3d1e6",
+      "sha256": "84ae2ad658207f0e0f367978e5508cd8027cd00c29c41d3d13db21a708c3d1e6"
+    },
+    {
+      "item": "attachment",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/attachment.json",
+      "target": "design-system/react/ui/attachment.tsx",
+      "upstreamSha256": "1def1ffa33178cd61ac2b47240f3707823acf85b9a55dcec01a8aacb5802b2e0",
+      "sha256": "845314a4a50a8081076d1669b29a6dc3a0b653d845c826924a4266dbc62e23c1"
+    },
+    {
+      "item": "bubble",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/bubble.json",
+      "target": "design-system/react/ui/bubble.tsx",
+      "upstreamSha256": "df1e461e33e835b7f69296939c2325e8cd76941b5ec69375d80d639793c5c4e2",
+      "sha256": "aed0c973764e0693ec5dc77cf035dabf346b7fa8b3f428b6bf2faac34f2330f9"
+    },
+    {
+      "item": "message-scroller",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/message-scroller.json",
+      "target": "design-system/react/ui/message-scroller.tsx",
+      "upstreamSha256": "b321ecf04da52d734a0af8485ab60fa9e083768feac13d395d17bcf4b73c4871",
+      "sha256": "b8fce8b17bceefde3d80a4c74e225ef34d92e05f8d03322d343ee9c9fa8624a1"
+    },
+    {
+      "item": "questionnaire",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/questionnaire.json",
+      "target": "design-system/react/ui/questionnaire.tsx",
+      "upstreamSha256": "acab176cf33c468e511765472d9c847fa52eb9165daf37ae84721ae92408f721",
+      "sha256": "f4dd0a9130364192b488a5cf28eef5fe8b9a11c90d36c859feca629ee8555760"
+    },
+    {
+      "item": "marker",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/marker.json",
+      "target": "design-system/react/ui/marker.tsx",
+      "upstreamSha256": "036277635df058b8dc6e6dbe5cb738bc595e5035b885be42c60f904263725424",
+      "sha256": "61718b4b4ac138b762c8771ccaf2e7646f6b7d0d8e7470a0431047873a8661c4"
+    },
+    {
+      "item": "trace",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/trace.json",
+      "target": "design-system/react/ui/trace.tsx",
+      "upstreamSha256": "17f86b0e19fcfc7a8277061efa8c1af9b8f779436f60e1adb70c95f3e20b4468",
+      "sha256": "3d5b16b8bb61e66ebc95e759ec32b0ed70fe5e0c4c395a884544abb098f3390c"
+    },
+    {
+      "item": "code-block",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/code-block.json",
+      "target": "design-system/react/ui/code-block.tsx",
+      "upstreamSha256": "24eb7eaf7af4a2fcc24b73e541a0ead1f7e2476346de571c8091b33bb55f06b7",
+      "sha256": "0c49e28cb269106b8c75cc2634b24e0332dc7d89e0e2c99f369d4b98963e4b57"
+    },
+    {
+      "item": "message",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/message.json",
+      "target": "design-system/react/ui/message.tsx",
+      "upstreamSha256": "64e9ae0f9d1e268b0ed7b738a53d374d273fe1e7e2dd7b35ad7417e50a9bbe6c",
+      "sha256": "aad71f2ed82f491efaaffd53d7aaca65dbf12948f1615ba84481bbcda207bdf9"
+    },
+    {
+      "item": "use-mobile",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/use-mobile.json",
+      "target": "design-system/react/hooks/use-mobile.ts",
+      "upstreamSha256": "ad0936f84f1df79d3697bfbff9c18f8ad58431c1cbaf2359c6a853b0fcc9f28b",
+      "sha256": "ad0936f84f1df79d3697bfbff9c18f8ad58431c1cbaf2359c6a853b0fcc9f28b"
+    },
+    {
+      "item": "use-highlighted-code",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/use-highlighted-code.json",
+      "target": "design-system/react/hooks/use-highlighted-code.ts",
+      "upstreamSha256": "9bad0ff624430de0574652a68dde8c3ccae071c8d2cda7f316dd7db3f726421a",
+      "sha256": "efa1ebd0027e615707379fb0c96b796baec5285bdb83dc2ce4ca0bcac14771c1"
+    },
+    {
+      "item": "use-highlighted-code",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/use-highlighted-code.json",
+      "target": "design-system/react/lib/highlighter.tsx",
+      "upstreamSha256": "ab3cfd4e09735bf90735e851dfe5bc4f17151f3f36b9d4d55e9cd809b1aa2b9c",
+      "sha256": "ab3cfd4e09735bf90735e851dfe5bc4f17151f3f36b9d4d55e9cd809b1aa2b9c"
+    },
+    {
+      "item": "accordion-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/accordion-example.json",
+      "target": "apps/lab/src/examples/upstream/accordion-example.tsx",
+      "upstreamSha256": "6cd38991fc0fc78f10762901fdaea705aa67dc0895c53474f2f991f264a00b53",
+      "sha256": "ca399137411cfe2a2e491d9a6d8dfd802a244b2b56e7a6b8c70ae47d6e725323"
+    },
+    {
+      "item": "alert-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/alert-example.json",
+      "target": "apps/lab/src/examples/upstream/alert-example.tsx",
+      "upstreamSha256": "7c9e981d4d703c88c075e27aa457779a268365449975949be722a85acf0b5326",
+      "sha256": "a844ed3b646a812824753e6da5f7e0bbc92c9c5223024d18c0e2d99d6144e0e1"
+    },
+    {
+      "item": "alert-dialog-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/alert-dialog-example.json",
+      "target": "apps/lab/src/examples/upstream/alert-dialog-example.tsx",
+      "upstreamSha256": "56ce6e0256365b03d835424b76caa77400a6f72009f84b14ed4209dc9a10cfde",
+      "sha256": "a3a4e63d55929128481aa9c8740e9c1134f1cefe068d5151baaa252fdad7ac48"
+    },
+    {
+      "item": "aspect-ratio-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/aspect-ratio-example.json",
+      "target": "apps/lab/src/examples/upstream/aspect-ratio-example.tsx",
+      "upstreamSha256": "466404fa46208df80fb5d7b235017f8c0c11296a4ab197306dd8a55046d137a5",
+      "sha256": "5cd9c3984a0a8f0be8d2fd54476265f6dcf925cd9311c6b7cdcbd8200c205310"
+    },
+    {
+      "item": "avatar-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/avatar-example.json",
+      "target": "apps/lab/src/examples/upstream/avatar-example.tsx",
+      "upstreamSha256": "373264a5f9e7a543a5f6d3b19575d76b4a2f471384b5fda19c634d62192ef81e",
+      "sha256": "65a2cf621f190b50562e3e835732821f9f7d1247d8733929069771d7de7399d7"
+    },
+    {
+      "item": "badge-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/badge-example.json",
+      "target": "apps/lab/src/examples/upstream/badge-example.tsx",
+      "upstreamSha256": "24c1eac440a969ceeff120ff8a06cd58c03aebcdedc51856530afe67a25c2ebf",
+      "sha256": "b94397220766940fa2b78bc9151edbaa5b61abe0850fd65695c7ad155687a6e6"
+    },
+    {
+      "item": "breadcrumb-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/breadcrumb-example.json",
+      "target": "apps/lab/src/examples/upstream/breadcrumb-example.tsx",
+      "upstreamSha256": "e3cdddaa08a00648935b19bac37195aa3347c890fad751b18ee094ef5ebcba51",
+      "sha256": "fddaf20840e5da8c5c1e3515eb2b24f103caaeaeba5189f25e729bd04623ed33"
+    },
+    {
+      "item": "button-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/button-example.json",
+      "target": "apps/lab/src/examples/upstream/button-example.tsx",
+      "upstreamSha256": "ec649e759cb9a2d4221cf419f2180d9a2c5f5c4075e841d591171b9701a8b4f7",
+      "sha256": "e1ed43fd1b56c3be1d5a9b560d3a31b4c67f1f6f412b9a78557cae4865c1a4cd"
+    },
+    {
+      "item": "button-group-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/button-group-example.json",
+      "target": "apps/lab/src/examples/upstream/button-group-example.tsx",
+      "upstreamSha256": "1336ee7c3046cc4f9983bfe54eab7ace2a8ecb8661a59d33bee15949834298b3",
+      "sha256": "ff75083b15b8145d2f49f5a8463cff965f16c2b1435d4108bf4b5f9544d8322f"
+    },
+    {
+      "item": "calendar-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/calendar-example.json",
+      "target": "apps/lab/src/examples/upstream/calendar-example.tsx",
+      "upstreamSha256": "172653d4bbc0e130f30a8b80597cda8b0c7f45059ab90d923a0f5c4a2678d260",
+      "sha256": "b3b9c88299359989619836e0689182a6dd8d8574be12edca985e14c0a1738999"
+    },
+    {
+      "item": "card-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/card-example.json",
+      "target": "apps/lab/src/examples/upstream/card-example.tsx",
+      "upstreamSha256": "17e05624621b953e33bd4a66005c76fb9757e476cc22749389df3790618502e7",
+      "sha256": "1b51a05e1d4ab082f52273ac44002edacb076abe501e853ac2a4a6d19ba4c709"
+    },
+    {
+      "item": "carousel-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/carousel-example.json",
+      "target": "apps/lab/src/examples/upstream/carousel-example.tsx",
+      "upstreamSha256": "06f3180ff641fc6c24f6bd01aea0e9e6d2b40758da49d389c9fab2ea1c71c820",
+      "sha256": "c37159a101afab589267358e38803211f123eb8543f08d08efef270f2dbc2e8b"
+    },
+    {
+      "item": "checkbox-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/checkbox-example.json",
+      "target": "apps/lab/src/examples/upstream/checkbox-example.tsx",
+      "upstreamSha256": "2dd1f7c76a4b4cfa0edfc6cdad861ee2ee65d69382abc565b1726261c2e5d80d",
+      "sha256": "5a92942cf8a271791517703bf4a6619dd66d577d76a8ac6cebad273278676e9e"
+    },
+    {
+      "item": "collapsible-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/collapsible-example.json",
+      "target": "apps/lab/src/examples/upstream/collapsible-example.tsx",
+      "upstreamSha256": "f0b461d6a9241a2f6126f5909e3829fdbf224c0fd235815dac977a06b19b3859",
+      "sha256": "fbbe1fb5fbce3b0d6e0fc1ffc651b26a0793949a027baef96b049921fef80730"
+    },
+    {
+      "item": "combobox-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/combobox-example.json",
+      "target": "apps/lab/src/examples/upstream/combobox-example.tsx",
+      "upstreamSha256": "35b700f6268212a6353451a9b47db1e01c6b2a7439ef68d9a7b726d27098dd63",
+      "sha256": "84ce724df0c76147fc06e0687a48e1345bf535c642b6cff7a9dfaad0d5ae3c72"
+    },
+    {
+      "item": "command-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/command-example.json",
+      "target": "apps/lab/src/examples/upstream/command-example.tsx",
+      "upstreamSha256": "5e50b08fc8839c60399a7d13a3889003aa80612e63a29b6ca2eb225ffa13c58c",
+      "sha256": "e585741789e163dbb33c16d4a75b8342cf1e12860322c3769076d8a09476bbea"
+    },
+    {
+      "item": "context-menu-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/context-menu-example.json",
+      "target": "apps/lab/src/examples/upstream/context-menu-example.tsx",
+      "upstreamSha256": "beca0b3bee051466534f9a2d28d829f1d53bd9f77d4ff29f7f4fe0b10e94f300",
+      "sha256": "9bad811848928a03f505f07ec60673d9dad5000d36a1a35a04c507d27f80a893"
+    },
+    {
+      "item": "dialog-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/dialog-example.json",
+      "target": "apps/lab/src/examples/upstream/dialog-example.tsx",
+      "upstreamSha256": "6346c70b5ef85f18c9bb80412ed3de20fcd8aecf8463121239b9b06c00728c7d",
+      "sha256": "35c4e775974fd05aaba15639c9558ae05a7896c890faba9750f1d13e2b26fcbd"
+    },
+    {
+      "item": "drawer-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/drawer-example.json",
+      "target": "apps/lab/src/examples/upstream/drawer-example.tsx",
+      "upstreamSha256": "0cd5f9ca6fbb44a7f5ccf82cc61cdd57dea8d7f0b631396f3e0e8c8ba294d962",
+      "sha256": "aadbf02ba46cac199bd07881bcb23e00b9d6c0b56f003302fdc61f7385032937"
+    },
+    {
+      "item": "dropdown-menu-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/dropdown-menu-example.json",
+      "target": "apps/lab/src/examples/upstream/dropdown-menu-example.tsx",
+      "upstreamSha256": "172be298973aaed5bd6de6b50d930956998756d2324a3d120d1a88d4d66cc283",
+      "sha256": "d58c21032b2d62da2c323aee6ed093101550045e8d7525afadf99650084ff573"
+    },
+    {
+      "item": "empty-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/empty-example.json",
+      "target": "apps/lab/src/examples/upstream/empty-example.tsx",
+      "upstreamSha256": "502aebe3e5ad2dbad509583f093ae0b27da402b86678127c5822a153ed1bba3a",
+      "sha256": "417da5a6530daa011e14b24544f756b0eaee6ba3eb73aa1a51c6276d2adaf99a"
+    },
+    {
+      "item": "field-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/field-example.json",
+      "target": "apps/lab/src/examples/upstream/field-example.tsx",
+      "upstreamSha256": "e3dc0921a972fab76421f14204ae99beeeafccae7b9df73692f1ef9dc217aa9a",
+      "sha256": "e07014e0bf4a503af20d3ee1dad1f730d1cc955132d4b0fc8530a5d2651e387f"
+    },
+    {
+      "item": "hover-card-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/hover-card-example.json",
+      "target": "apps/lab/src/examples/upstream/hover-card-example.tsx",
+      "upstreamSha256": "98a07cabace99f32ff0cd0f02bc4aca5ab7e727ead95bf3da7ed01915fe06a57",
+      "sha256": "3bbf7ab6f37f8aca78cf03ff574b4bae222fb683b8a0e519f4125082d56da92a"
+    },
+    {
+      "item": "input-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/input-example.json",
+      "target": "apps/lab/src/examples/upstream/input-example.tsx",
+      "upstreamSha256": "4709660389452d6bcdcb90f884507f902fa2b2a30f612d35300be2faea64d300",
+      "sha256": "d21ce596475fa2291421a628580ca3ac55e9422ad69b5f1fc0d186d3d8c9f742"
+    },
+    {
+      "item": "input-group-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/input-group-example.json",
+      "target": "apps/lab/src/examples/upstream/input-group-example.tsx",
+      "upstreamSha256": "39b3125573d22298f381728a85e95abe1a30dd9bbddb80ed6afe15f81c3b57a1",
+      "sha256": "41f5cd06e8b8561a8a5eea52d7c8450dd73b18f18463a04381cfe251dcd54eff"
+    },
+    {
+      "item": "input-otp-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/input-otp-example.json",
+      "target": "apps/lab/src/examples/upstream/input-otp-example.tsx",
+      "upstreamSha256": "a3090edc4d4cf7eb0ad0bcde8e5dbe57db837d3351e6155570fb8acb1cd7f500",
+      "sha256": "b661ddc17965c1d3eb29431ac75aeb66c4f500c43fe5046b616116b90cabfe31"
+    },
+    {
+      "item": "item-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/item-example.json",
+      "target": "apps/lab/src/examples/upstream/item-example.tsx",
+      "upstreamSha256": "5e0a67c4fc01f1b5950196ac1a490ac52d46b55ac4eff722eba367362656126c",
+      "sha256": "b820a8326eaac199111903aa830102a6adafd5ba63fa6cf1599f38d37e98b056"
+    },
+    {
+      "item": "kbd-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/kbd-example.json",
+      "target": "apps/lab/src/examples/upstream/kbd-example.tsx",
+      "upstreamSha256": "940f95fc38f66e99fb8c2e8b9a50639c2106e88e32db832693d9a2ab64c158c5",
+      "sha256": "8b5c8d0ba0efdb020e539d2b389381c954e379e36942d65d0dc7c4892e55e65d"
+    },
+    {
+      "item": "label-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/label-example.json",
+      "target": "apps/lab/src/examples/upstream/label-example.tsx",
+      "upstreamSha256": "4969c4b1520caa7c5dfd87c30bbd86837ca427db2b3cec6aa3575f2cfcb43776",
+      "sha256": "52f6f503686a3c3c4df987b293710882bf1df89ce8e340fdff122cb9b32955cb"
+    },
+    {
+      "item": "menubar-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/menubar-example.json",
+      "target": "apps/lab/src/examples/upstream/menubar-example.tsx",
+      "upstreamSha256": "b98775ae4e64f722d8aabe242d476bc246aaf86527be3148fdbde691bb15a491",
+      "sha256": "4798981560bba1241123646ca77423734877a1cdc4c9edcc00bff6f25b33385d"
+    },
+    {
+      "item": "native-select-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/native-select-example.json",
+      "target": "apps/lab/src/examples/upstream/native-select-example.tsx",
+      "upstreamSha256": "a7cf0d67cf5653e6dc01f969cd2241ab1e89887437192a13baf92f5b074993e0",
+      "sha256": "3f77734ac71260c92b0e2b5cd50c3a01f9c27e0dff0af4d42c38ea554270987b"
+    },
+    {
+      "item": "navigation-menu-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/navigation-menu-example.json",
+      "target": "apps/lab/src/examples/upstream/navigation-menu-example.tsx",
+      "upstreamSha256": "d0bf129fd682787c792d8d2cb688676f9ad38445718d0181b65a44a59b966030",
+      "sha256": "2e93e8d880d6b60ff9aa0f449a009909ef5982e97a9db00e68de191103b7a3c9"
+    },
+    {
+      "item": "pagination-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/pagination-example.json",
+      "target": "apps/lab/src/examples/upstream/pagination-example.tsx",
+      "upstreamSha256": "174d825f234376a229c536cf6852156fa05e8656985aefcdbd69b9f5e067d940",
+      "sha256": "e622e294de248622ba39d7406feb1cf807911797bf130fdb9d26e9a83cb6f899"
+    },
+    {
+      "item": "popover-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/popover-example.json",
+      "target": "apps/lab/src/examples/upstream/popover-example.tsx",
+      "upstreamSha256": "3ef5821a859af6b43c18aa8e94980581c457eea6407b621790e7a0a090f91956",
+      "sha256": "a4c5fa5dc179d51d57643fc1122293ca9189ec57bbc574cbafc05db3c2c0aa24"
+    },
+    {
+      "item": "progress-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/progress-example.json",
+      "target": "apps/lab/src/examples/upstream/progress-example.tsx",
+      "upstreamSha256": "5e54e4b13adb667bee8c672e2444e1c651c8bef4167ed3099fb47aa394cc84a0",
+      "sha256": "914e14aa38ac2fe5e933023021835c7e44ec167f80acb5ced6b024ffd0b0a94f"
+    },
+    {
+      "item": "radio-group-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/radio-group-example.json",
+      "target": "apps/lab/src/examples/upstream/radio-group-example.tsx",
+      "upstreamSha256": "28c914450dc2b4da80c406d5b625ed6b8c43578a20b21e8323a3e308f33f4f3c",
+      "sha256": "3fd8553499626cc14814ce524cc665d3377f2f450e3ace0379cc143f33996ca5"
+    },
+    {
+      "item": "resizable-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/resizable-example.json",
+      "target": "apps/lab/src/examples/upstream/resizable-example.tsx",
+      "upstreamSha256": "a7162dbe617c1260ccbb6944889b3cf752c3240be49cf22d9d8101d442a4102b",
+      "sha256": "8d9320eff2f0f1cd860e4c354c54f84171a99dc654a66be016c11181bb5df7df"
+    },
+    {
+      "item": "scroll-area-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/scroll-area-example.json",
+      "target": "apps/lab/src/examples/upstream/scroll-area-example.tsx",
+      "upstreamSha256": "d3b4416bf6f8fb739a488cbdbfb465b3714cfa389c570c2c57ac4ad94500f134",
+      "sha256": "30c01fefa809c284c4ffa502d4d3a94f84b7bc3d1a9497d6132fe1563145d080"
+    },
+    {
+      "item": "select-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/select-example.json",
+      "target": "apps/lab/src/examples/upstream/select-example.tsx",
+      "upstreamSha256": "756b9f6697f22304d68f4686a8f7c5a5c26e900de06353daa9951003e9c71cf6",
+      "sha256": "7a4ce9c6b73be36eb7bf0eb31f3a89160d56a1b8207939bbfff8fc1641db0ff3"
+    },
+    {
+      "item": "separator-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/separator-example.json",
+      "target": "apps/lab/src/examples/upstream/separator-example.tsx",
+      "upstreamSha256": "6a21bfed186495648407c9fe53cdd5ce3959b70d89cc9c4eb9a8315f78880b60",
+      "sha256": "f80cf6352cff45a7b788b56382350e2764118fe6858e4237968045aedf793d9b"
+    },
+    {
+      "item": "sheet-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/sheet-example.json",
+      "target": "apps/lab/src/examples/upstream/sheet-example.tsx",
+      "upstreamSha256": "922069494bbaf3efd7db2c84ee83b24a569fe8b955d4ef42ab9a5064c52bab8a",
+      "sha256": "4409a0534d89d13679cf1927896afa73327f02f5505364f58ddbc01938a2cbec"
+    },
+    {
+      "item": "skeleton-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/skeleton-example.json",
+      "target": "apps/lab/src/examples/upstream/skeleton-example.tsx",
+      "upstreamSha256": "8382156d9a8f1696daebcd6be4b0623a39af2b55e903a7c75b3325b8583363b4",
+      "sha256": "f1eb670c5a0ebac0eab2f5892f5138ffdad4587f9a8c817f91cfaf325a16f4a4"
+    },
+    {
+      "item": "slider-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/slider-example.json",
+      "target": "apps/lab/src/examples/upstream/slider-example.tsx",
+      "upstreamSha256": "b00c1bf4448233126729b523b06984a65377f3a8e9af5fbf88788b860fcd1a66",
+      "sha256": "addcf51c70c8134a3dd3458b3b78088fa904ada7d5fca58e448f51897022f21c"
+    },
+    {
+      "item": "sonner-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/sonner-example.json",
+      "target": "apps/lab/src/examples/upstream/sonner-example.tsx",
+      "upstreamSha256": "2b1e09fb844aa4917748d9cdecf6c07bbf6b833a4e09692e294a64075866d054",
+      "sha256": "8b6da7366e6696f491159618310f10c9673d5d8e6e6b909b6e7bc27b2b7aaeec"
+    },
+    {
+      "item": "spinner-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/spinner-example.json",
+      "target": "apps/lab/src/examples/upstream/spinner-example.tsx",
+      "upstreamSha256": "5f839d76b2b03faec9f19b44cefcd2f959bf631a4f3ab3b4d7d12c5d7053c3da",
+      "sha256": "aaf1793b0bc73d4d803e21b63323a285ff7460f6a91fd3d8deed6df031c324c4"
+    },
+    {
+      "item": "switch-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/switch-example.json",
+      "target": "apps/lab/src/examples/upstream/switch-example.tsx",
+      "upstreamSha256": "7f6c50e39fc3b3736683413a4f297285f10ee292cec953a4d233168018190de1",
+      "sha256": "25f6aad9de8c526946cab7dd5ba2871883ff8389a8715ee657455d684f1474d4"
+    },
+    {
+      "item": "table-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/table-example.json",
+      "target": "apps/lab/src/examples/upstream/table-example.tsx",
+      "upstreamSha256": "76028447124f0a1ce4cb8848c2aa85c8d28358c033265625fc6d32104a5c3cf1",
+      "sha256": "d04a4ec805faa3b31b0e294b0fa74efae49fa2cc05bfd8cd55909498835c2498"
+    },
+    {
+      "item": "tabs-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/tabs-example.json",
+      "target": "apps/lab/src/examples/upstream/tabs-example.tsx",
+      "upstreamSha256": "12c635d6166c4db4d7255dff5aa68370b7d6b03881b64327c77a154785afe4ab",
+      "sha256": "20fefc935a3970ca295e678bd7f3ac17b7c083816c97f715c3c322516608e9dc"
+    },
+    {
+      "item": "textarea-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/textarea-example.json",
+      "target": "apps/lab/src/examples/upstream/textarea-example.tsx",
+      "upstreamSha256": "5e78e13da2de66cd0d5b24d37759dd5caf0712ab723e569c343b5da087a35eb0",
+      "sha256": "be65f3ef02f7d66d827a33b4c60c1d33df04736abc3b4a935e61b4dd4b649a9e"
+    },
+    {
+      "item": "toggle-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/toggle-example.json",
+      "target": "apps/lab/src/examples/upstream/toggle-example.tsx",
+      "upstreamSha256": "612df74feda10da00f668aea7b0df0c8506c086b74729c0e3b0dbc4917a12ae7",
+      "sha256": "2387d407c04b603a71e821fee910365197f4efe50eb132cafa49331da51eff1b"
+    },
+    {
+      "item": "toggle-group-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/toggle-group-example.json",
+      "target": "apps/lab/src/examples/upstream/toggle-group-example.tsx",
+      "upstreamSha256": "320add84d46835e267519ef01ec7b8797c052a61807b5a1d33176d1fa006778f",
+      "sha256": "b511317f33a40b8760243d127fe4571b14d78823f236f95dacaf018a36facdbe"
+    },
+    {
+      "item": "tooltip-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/tooltip-example.json",
+      "target": "apps/lab/src/examples/upstream/tooltip-example.tsx",
+      "upstreamSha256": "4be0818fa0156122f0209964e591317723a2cfe3633855a0c768366a51cad2b8",
+      "sha256": "2716587250e12c3955b1be0de467a4dfa9223b428b2687bae4bcb95686e3ecd5"
+    },
+    {
+      "item": "attachment-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/attachment-example.json",
+      "target": "apps/lab/src/examples/upstream/attachment-example.tsx",
+      "upstreamSha256": "4c5be67c5e20c95a316c81e18770d51944c9e9566c54bc25cc4396a0ec444dc4",
+      "sha256": "1b6fce12ab7888b0c6b0d63d30ca547c15ad76efbd7448a2adc7c254786fe7f2"
+    },
+    {
+      "item": "bubble-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/bubble-example.json",
+      "target": "apps/lab/src/examples/upstream/bubble-example.tsx",
+      "upstreamSha256": "4c48855e956c6caeb199914aa2f7fefe9812189b3795d36230b47e16bdc300ff",
+      "sha256": "73a78f2a7bb4c54bf06cba3b0f16b9fe146e2411d12ed22927dd15cdcff9e428"
+    },
+    {
+      "item": "questionnaire-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/questionnaire-example.json",
+      "target": "apps/lab/src/examples/upstream/questionnaire-example.tsx",
+      "upstreamSha256": "80447ff7f8c994960bd0d97ac9634b5be71fdaa466056d4f1ebf92279fc8cf56",
+      "sha256": "b590710c49873be21f834d53622eda2130a49ebdc54bb3713226f0b1c7c75069"
+    },
+    {
+      "item": "marker-example",
+      "url": "https://ui.shadcn.com/r/styles/radix-nova/marker-example.json",
+      "target": "apps/lab/src/examples/upstream/marker-example.tsx",
+      "upstreamSha256": "f4969f403399dd2fb951281ba367010ed22e18c801e873b8b7689fa79773a83d",
+      "sha256": "3622ad68ff0330e676477a6005b2b3731668f4fd486a6be7b23c954169ec961b"
+    }
+  ]
+}

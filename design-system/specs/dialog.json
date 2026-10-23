@@ -1,11 +1,11 @@
 {
   "id": "dialog",
-  "status": "specified",
+  "status": "historical",
   "description": "需要集中处理的确认或编辑",
   "avoid": "普通提示、非阻断信息",
   "implementations": {
-    "react": "experimental",
-    "vue": "planned"
+    "react": "upstream",
+    "vue": "not-in-scope"
   },
   "props": {
     "open": "boolean",
@@ -23,7 +23,6 @@
   "sources": ["docs/references/sources.md"],
   "validatedProjects": [],
   "limitations": [
-    "React 实验实现已接入展示站，完整状态与业务项目验收待完成。",
-    "Vue 尚未实现。"
+    "历史设计研究记录，不再约束官方组件 API 或交互。当前基线见 adapters/shadcn/upstream-lock.json。"
   ]
 }
