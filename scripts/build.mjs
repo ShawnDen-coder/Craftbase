@@ -19,7 +19,18 @@ export function validateTheme(theme) {
 }
 export async function generate() {
   const base = await read('design-system/tokens/base.json');
-  const theme = await read('design-system/themes/macos/tokens.json');
+  const semantic = await read('design-system/tokens/semantic.json');
+  const reference = await read('design-system/themes/macos/tokens.json');
+  const theme = {
+    material: reference.material,
+    density: semantic.density,
+    appearance: Object.fromEntries(
+      Object.entries(semantic.appearance).map(([mode, values]) => [
+        mode,
+        { ...values, ...reference.appearance[mode] },
+      ]),
+    ),
+  };
   validateTheme(theme);
   const names = [
     ...Object.keys(base.tokens),

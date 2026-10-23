@@ -9,6 +9,9 @@ import './site-material.css';
 const Catalog = lazy(() =>
   import('./pages/catalog').then((m) => ({ default: m.Catalog })),
 );
+const ShadcnPreview = lazy(() =>
+  import('./pages/shadcn').then((m) => ({ default: m.ShadcnPreview })),
+);
 const Detail = lazy(() =>
   import('./pages/detail').then((m) => ({ default: m.Detail })),
 );
@@ -90,6 +93,12 @@ function App() {
               ShowCase
             </a>
             <a
+              href="#/shadcn"
+              aria-current={route === '/shadcn' ? 'page' : undefined}
+            >
+              shadcn/ui
+            </a>
+            <a
               href="#/docs/introduction"
               aria-current={isDocs ? 'page' : undefined}
             >
@@ -133,7 +142,9 @@ function App() {
           </main>
         }
       >
-        {route === '/' || route === '/components' ? (
+        {route === '/shadcn' ? (
+          <ShadcnPreview prefs={prefs} update={update} />
+        ) : route === '/' || route === '/components' ? (
           <Catalog prefs={prefs} update={update} />
         ) : selected ? (
           <Detail key={selected.id} item={selected} />
@@ -158,21 +169,23 @@ function App() {
           </main>
         )}
       </Suspense>
-      <footer className="site-footer site-container">
-        <div>
-          <a className="brand" href="#/">
-            <Layers2 size={20} />
-            <strong>Craftbase</strong>
-          </a>
+      <footer className="site-footer">
+        <div className="site-footer-inner site-container">
+          <div>
+            <a className="brand" href="#/">
+              <Layers2 size={20} />
+              <strong>Craftbase</strong>
+            </a>
+          </div>
+          <div className="footer-links">
+            <a href="#/">ShowCase</a>
+            <a href="#/docs/introduction">Docs</a>
+            <a href="https://www.figma.com/design/OU1BDEU71XD2Dc5l2ZAAVD/macOS-27--Community-">
+              Figma 参考 ↗
+            </a>
+          </div>
+          <p>Personal Design Foundations</p>
         </div>
-        <div className="footer-links">
-          <a href="#/">ShowCase</a>
-          <a href="#/docs/introduction">Docs</a>
-          <a href="https://www.figma.com/design/OU1BDEU71XD2Dc5l2ZAAVD/macOS-27--Community-">
-            Figma 参考 ↗
-          </a>
-        </div>
-        <p>macOS Design Reference</p>
       </footer>
     </>
   );

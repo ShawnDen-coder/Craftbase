@@ -1,10 +1,10 @@
 # Craftbase
 
-macOS 材质与样式规则的桌面网页参考。
+沉淀个人基础设计，并将设计规则应用到真实界面。
 
-从透色、模糊和层级，到语义色彩、文字与空间，Craftbase 把设计规则放进可观察、可切换的页面。仅保留 macOS 风格，支持浅色、深色、跟随系统及舒适／紧凑密度。
+Craftbase 整理自己的语义色彩、字体层级、空间尺度、尺寸、状态和材质规则，通过展示站观察效果，通过适配层应用到 shadcn/ui 等现有组件中。支持浅色、深色、跟随系统及舒适／紧凑密度。macOS 是当前的设计研究参考之一，不限定项目的设计方向。
 
-可在展示站观察材质与控件，也可以将共享 CSS 和实验性 React 组件复制到自己的项目。当前没有发布 npm 包或可安装 Registry。
+可在展示站观察材质与控件，也可以将基础样式和适配层复制到自己的项目；仓库内 React 样例用于验证设计。当前没有发布 npm 包或可安装 Registry。
 
 ## 快速开始
 
@@ -21,17 +21,22 @@ pnpm dev
 
 打开终端显示的本地地址即可进入 ShowCase，通过 Docs 浏览材质与设计规则。左侧可切换材质、配色、密度与字体，设置自动保存在浏览器中。
 
+### 适配已有 shadcn/ui 项目
+
+顶部 **shadcn/ui** 入口（`#/shadcn`）展示按钮、输入框、菜单和弹窗的样式适配，可切换明暗和密度。保留已有组件源码的接入方式见 [shadcn 样式适配说明](design-system/adapters/shadcn/README.md)。
+
 ### 接入 React 项目
 
 以下示例面向已经配置好 **React、TypeScript 和 Tailwind CSS v4** 的项目。
 
-**1. 复制共享源码。** 将本仓库的三个目录复制到业务项目，保留目录结构、`styles/assets/`、`tokens.css` 和 React 目录内的许可证文件：
+**1. 复制共享源码。** 将本仓库的四个目录复制到业务项目，保留目录结构、`styles/assets/`、`tokens.css` 和 React 目录内的许可证文件：
 
 ```text
 本仓库                          业务项目
  design-system/styles/    →     src/craftbase/styles/
  design-system/tailwind/  →     src/craftbase/tailwind/
  design-system/react/    →     src/craftbase/react/
+ design-system/adapters/ →     src/craftbase/adapters/
 ```
 
 **2. 安装依赖。** 在业务项目根目录执行；已验证的依赖版本见本仓库 [package.json](package.json)。
@@ -57,7 +62,6 @@ pnpm add radix-ui lucide-react class-variance-authority clsx tailwind-merge tabb
 <html
   lang="zh-CN"
   class="cb-root"
-  data-theme="macos"
   data-appearance="light"
   data-density="comfortable"
 >

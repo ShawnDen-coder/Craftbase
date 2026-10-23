@@ -1,0 +1,351 @@
+@custom-variant dark (&:where(.dark, .dark *));
+@theme inline {
+  --color-card: var(--cb-surface-panel);
+  --color-card-foreground: var(--cb-text-primary);
+  --color-sidebar: var(--cb-surface-canvas);
+  --color-sidebar-foreground: var(--cb-text-primary);
+  --color-sidebar-primary: var(--cb-action-primary);
+  --color-sidebar-primary-foreground: var(--cb-action-on-primary);
+  --color-sidebar-accent: var(--cb-selection-background);
+  --color-sidebar-accent-foreground: var(--cb-selection-text);
+  --color-sidebar-border: var(--cb-border-subtle);
+  --color-sidebar-ring: var(--cb-focus-ring);
+  --color-background: var(--cb-surface-panel);
+  --color-foreground: var(--cb-text-primary);
+  --color-primary: var(--cb-action-primary);
+  --color-primary-foreground: var(--cb-action-on-primary);
+  --color-secondary: var(--cb-button-secondary-fill);
+  --color-secondary-foreground: var(--cb-text-primary);
+  --color-muted: var(--cb-surface-canvas);
+  --color-muted-foreground: var(--cb-text-secondary);
+  --color-accent: var(--cb-selection-background);
+  --color-accent-foreground: var(--cb-selection-text);
+  --color-popover: var(--cb-surface-overlay);
+  --color-popover-foreground: var(--cb-text-primary);
+  --color-border: var(--cb-border-subtle);
+  --color-input: var(--cb-field-border);
+  --color-ring: var(--cb-focus-ring);
+  --color-destructive-foreground: var(--cb-status-on-danger);
+  --color-destructive: var(--cb-status-danger);
+  --radius-md: var(--cb-radius-control);
+  --radius-lg: var(--cb-radius-panel);
+}
+:is([data-cb-button], [data-slot="button"]),
+[data-slot="input"] {
+  height: var(--cb-control-height);
+  border-radius: var(--cb-radius-control);
+  padding-inline: var(--cb-control-padding-inline);
+  font-size: 14px;
+  box-shadow: none;
+}
+[data-slot="input"] {
+  background: var(--cb-field-fill);
+}
+:is([data-cb-button], [data-slot="button"]):focus-visible {
+  outline: 2px solid var(--cb-focus-ring);
+  outline-offset: 3px;
+  box-shadow: none;
+}
+[data-slot="dialog-content"] {
+  border-radius: var(--cb-radius-panel);
+  background: var(--cb-surface-overlay);
+  box-shadow: var(--cb-material-window-shadow);
+}
+[data-slot="dialog-footer"] {
+  margin-top: 24px;
+}
+
+:is([data-cb-button], [data-slot="button"])[data-size="small"],
+:is([data-cb-button], [data-slot="button"])[data-size="sm"],
+[data-slot="input"][data-size="small"] {
+  height: var(--cb-control-height-small);
+}
+:is([data-cb-button], [data-slot="button"])[data-variant="default"]:hover:not(
+  :disabled
+),
+:is([data-cb-button], [data-slot="button"])[data-variant="primary"]:hover:not(
+  :disabled
+) {
+  background: var(--cb-action-hover);
+}
+:is([data-cb-button], [data-slot="button"]):active:not(:disabled) {
+  transform: translateY(1px);
+}
+:is([data-cb-button], [data-slot="button"])[aria-busy="true"] {
+  cursor: progress;
+  text-decoration: underline dotted;
+  text-underline-offset: 4px;
+}
+[data-slot="dropdown-menu-item"],
+[data-slot="dropdown-menu-checkbox-item"],
+[data-slot="dropdown-menu-radio-item"] {
+  min-height: var(--cb-control-height);
+}
+[data-slot="dialog-content"] {
+  max-height: calc(100dvh - 2rem);
+  overflow-y: auto;
+}
+@media (prefers-reduced-motion: reduce) {
+  :is([data-cb-button], [data-slot="button"]):active:not(:disabled) {
+    transform: none;
+  }
+}
+:where([data-motion="reduced"])
+  :is([data-cb-button], [data-slot="button"]):active:not(:disabled) {
+  transform: none;
+}
+@media (forced-colors: active) {
+  :is([data-cb-button], [data-slot="button"]),
+  [data-slot="input"] {
+    border: 1px solid ButtonText;
+  }
+  :is([data-cb-button], [data-slot="button"]):focus-visible,
+  [data-slot="input"]:focus-visible {
+    outline-color: Highlight;
+  }
+  [data-slot="dialog-content"],
+  [data-slot="dropdown-menu-content"] {
+    background: Canvas;
+    color: CanvasText;
+    box-shadow: none;
+    border: 1px solid CanvasText;
+  }
+}
+
+:is([data-cb-button], [data-slot="button"])[data-variant="secondary"] {
+  background: var(--cb-button-secondary-fill);
+  border: 1px solid transparent;
+}
+
+:is([data-cb-button], [data-slot="button"]) {
+  border-radius: var(--cb-button-radius-xl);
+  padding-inline: var(--cb-button-padding-inline);
+}
+[data-slot="input"] {
+  border-radius: var(--cb-input-radius-xl);
+  padding-inline: var(--cb-input-padding-inline);
+}
+:is([data-cb-button], [data-slot="button"])[data-variant="secondary"]:hover:not(
+  :disabled
+) {
+  background: var(--cb-button-secondary-hover);
+}
+:where([data-activity="inactive"])
+  :is([data-cb-button], [data-slot="button"]):not(:disabled) {
+  color: var(--cb-text-primary);
+  background: var(--cb-button-secondary-fill);
+}
+:is([data-cb-button], [data-slot="button"])[data-native-size="mini"],
+[data-slot="input"][data-native-size="mini"] {
+  height: var(--cb-control-size-mini);
+  font-size: 13px;
+  padding-block: 0;
+}
+:is([data-cb-button], [data-slot="button"])[data-native-size="mini"] {
+  border-radius: var(--cb-button-radius-mini);
+}
+[data-slot="input"][data-native-size="mini"] {
+  border-radius: var(--cb-input-radius-mini);
+}
+:is([data-cb-button], [data-slot="button"])[data-native-size="small"],
+[data-slot="input"][data-native-size="small"] {
+  height: var(--cb-control-size-small);
+  font-size: 13px;
+  padding-block: 0;
+}
+:is([data-cb-button], [data-slot="button"])[data-native-size="small"] {
+  border-radius: var(--cb-button-radius-small);
+}
+[data-slot="input"][data-native-size="small"] {
+  border-radius: var(--cb-input-radius-small);
+}
+:is([data-cb-button], [data-slot="button"])[data-native-size="medium"],
+[data-slot="input"][data-native-size="medium"] {
+  height: var(--cb-control-size-medium);
+  font-size: 13px;
+  padding-block: 0;
+}
+:is([data-cb-button], [data-slot="button"])[data-native-size="medium"] {
+  border-radius: var(--cb-button-radius-medium);
+}
+[data-slot="input"][data-native-size="medium"] {
+  border-radius: var(--cb-input-radius-medium);
+}
+:is([data-cb-button], [data-slot="button"])[data-native-size="large"],
+[data-slot="input"][data-native-size="large"] {
+  height: var(--cb-control-size-large);
+  font-size: 13px;
+  padding-block: 0;
+}
+:is([data-cb-button], [data-slot="button"])[data-native-size="large"] {
+  border-radius: var(--cb-button-radius-large);
+}
+[data-slot="input"][data-native-size="large"] {
+  border-radius: var(--cb-input-radius-large);
+}
+:is([data-cb-button], [data-slot="button"])[data-native-size="xl"],
+[data-slot="input"][data-native-size="xl"] {
+  height: var(--cb-control-size-xl);
+  font-size: 13px;
+  padding-block: 0;
+}
+:is([data-cb-button], [data-slot="button"])[data-native-size="xl"] {
+  border-radius: var(--cb-button-radius-xl);
+}
+[data-slot="input"][data-native-size="xl"] {
+  border-radius: var(--cb-input-radius-xl);
+}
+@media (forced-colors: active) {
+  :is([data-cb-button], [data-slot="button"])[data-variant="secondary"] {
+    border-color: ButtonText;
+    background: ButtonFace;
+    color: ButtonText;
+  }
+}
+
+@media (prefers-contrast: more) {
+  [data-slot="input"] {
+    border-color: var(--cb-border-control);
+  }
+}
+
+/* Figma input focus is one contiguous translucent ring, not an offset outline. */
+[data-slot="input"]:focus-visible {
+  outline: 3.5px solid
+    color-mix(in srgb, var(--cb-control-accent) 50%, transparent);
+  outline-offset: 0;
+  border-color: color-mix(in srgb, var(--cb-control-accent) 50%, transparent);
+  box-shadow: none;
+}
+[data-slot="input"][aria-invalid="true"] {
+  border-color: var(--cb-status-danger);
+}
+@media (forced-colors: active) {
+  [data-slot="input"]:focus-visible {
+    outline-color: Highlight;
+    border-color: Highlight;
+  }
+}
+
+/* Standard shadcn variables are available to CSS and external components too. */
+.cb-root {
+  --background: var(--cb-surface-panel);
+  --foreground: var(--cb-text-primary);
+  --card: var(--cb-surface-panel);
+  --card-foreground: var(--cb-text-primary);
+  --popover: var(--cb-surface-overlay);
+  --popover-foreground: var(--cb-text-primary);
+  --primary: var(--cb-action-primary);
+  --primary-foreground: var(--cb-action-on-primary);
+  --secondary: var(--cb-button-secondary-fill);
+  --secondary-foreground: var(--cb-text-primary);
+  --muted: var(--cb-surface-canvas);
+  --muted-foreground: var(--cb-text-secondary);
+  --accent: var(--cb-selection-background);
+  --accent-foreground: var(--cb-selection-text);
+  --destructive: var(--cb-status-danger);
+  --destructive-foreground: var(--cb-status-on-danger);
+  --border: var(--cb-border-subtle);
+  --input: var(--cb-field-border);
+  --ring: var(--cb-focus-ring);
+  --radius: var(--cb-radius-control);
+  --sidebar: var(--cb-surface-canvas);
+  --sidebar-foreground: var(--cb-text-primary);
+  --sidebar-primary: var(--cb-action-primary);
+  --sidebar-primary-foreground: var(--cb-action-on-primary);
+  --sidebar-accent: var(--cb-selection-background);
+  --sidebar-accent-foreground: var(--cb-selection-text);
+  --sidebar-border: var(--cb-border-subtle);
+  --sidebar-ring: var(--cb-focus-ring);
+}
+/* Upstream new-york buttons expose data-slot without Craftbase data attributes. */
+[data-slot="button"]:where(.bg-primary):hover:not(:disabled) {
+  background: var(--cb-action-hover);
+}
+[data-slot="button"]:where(.bg-secondary) {
+  background: var(--cb-button-secondary-fill);
+}
+[data-slot="button"]:where(.bg-secondary):hover:not(:disabled) {
+  background: var(--cb-button-secondary-hover);
+}
+[data-slot="button"]:where(.bg-destructive) {
+  color: var(--cb-status-on-danger);
+}
+[data-slot="button"][data-size^="icon"] {
+  width: var(--cb-control-height);
+  padding-inline: 0;
+}
+[data-slot="button"][data-size="icon-sm"] {
+  width: var(--cb-control-height-small);
+  height: var(--cb-control-height-small);
+}
+[data-slot="button"][data-size="lg"] {
+  height: 40px;
+}
+[data-slot="button"][data-size="icon-lg"] {
+  width: 40px;
+  height: 40px;
+}
+[data-slot="input"][type="file"] {
+  padding-block: 0;
+  line-height: var(--cb-control-height);
+}
+[data-slot="input"][type="file"]::file-selector-button {
+  height: 100%;
+  margin-right: 8px;
+}
+:is(
+  [data-slot="dropdown-menu-content"],
+  [data-slot="dropdown-menu-sub-content"]
+) {
+  padding: 4px;
+  border-radius: var(--cb-radius-control);
+  background: var(--cb-surface-overlay);
+  color: var(--cb-text-primary);
+  box-shadow: var(--cb-material-overlay-shadow);
+  font: 14px / 1.5 var(--cb-font-body);
+}
+:is(
+  [data-slot="dropdown-menu-item"],
+  [data-slot="dropdown-menu-checkbox-item"],
+  [data-slot="dropdown-menu-radio-item"],
+  [data-slot="dropdown-menu-sub-trigger"]
+)[data-highlighted] {
+  background: var(--cb-selection-background);
+  color: var(--cb-selection-text);
+}
+[data-slot="dropdown-menu-item"][data-variant="destructive"] {
+  color: var(--cb-status-danger);
+}
+[data-slot="dropdown-menu-item"] svg {
+  color: inherit;
+}
+[data-slot="dialog-content"] {
+  font: 14px / 1.5 var(--cb-font-body);
+  color: var(--cb-text-primary);
+}
+@media (forced-colors: active) {
+  [data-slot="dropdown-menu-sub-content"] {
+    background: Canvas;
+    color: CanvasText;
+    border: 1px solid CanvasText;
+  }
+  :is(
+    [data-slot="dropdown-menu-item"],
+    [data-slot="dropdown-menu-checkbox-item"],
+    [data-slot="dropdown-menu-radio-item"],
+    [data-slot="dropdown-menu-sub-trigger"]
+  )[data-highlighted] {
+    background: Highlight;
+    color: HighlightText;
+  }
+}
+[data-slot="button"][data-size="xs"],
+[data-slot="button"][data-size="icon-xs"] {
+  height: var(--cb-control-size-medium);
+  padding-inline: 8px;
+}
+[data-slot="button"][data-size="icon-xs"] {
+  width: var(--cb-control-size-medium);
+  padding-inline: 0;
+}

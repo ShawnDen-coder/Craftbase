@@ -1,17 +1,23 @@
 /* 1440px: 48px margins + 192px controls + 32px gutter + 1168px canvas.
    Canvas: three equal columns with two 20px gutters. Desktop only. */
 .specimen-layout {
+  width: 100%;
   max-width: 1728px;
-  margin: auto;
+  margin-inline: auto;
   padding: 24px 32px 48px;
   display: grid;
   grid-template-columns: 192px minmax(0, 1fr);
   gap: 32px;
+  align-content: start;
 }
 .specimen-settings {
   position: sticky;
   top: 32px;
   align-self: start;
+  max-height: calc(100dvh - 64px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-gutter: stable;
 }
 .specimen-settings h1 {
   font-size: 22px;
@@ -35,9 +41,56 @@
   color: var(--cb-text-primary);
   font-weight: 500;
 }
-.specimen-setting select {
+.specimen-setting label {
+  margin: 0;
+}
+.preference-select {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-height: var(--cb-control-height);
+  border: 1px solid var(--cb-field-border);
+  border-radius: var(--cb-radius-control);
+  padding: 6px 8px;
+  background: var(--cb-button-secondary-fill);
+  color: var(--cb-text-primary);
   font-size: 13px;
   width: 100%;
+  text-align: left;
+}
+.preference-menu {
+  z-index: 50;
+  min-width: var(--radix-select-trigger-width);
+  max-height: var(--radix-select-content-available-height);
+  overflow: hidden;
+  padding: 4px;
+  border: 1px solid var(--cb-field-border);
+  border-radius: var(--cb-radius-control);
+  background: var(--cb-surface-overlay);
+  color: var(--cb-text-primary);
+  box-shadow: var(--cb-material-overlay-shadow);
+  font: 13px / 1.6 var(--cb-font-body);
+}
+.preference-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 32px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+}
+.preference-option[data-highlighted] {
+  background: var(--cb-selection-background);
+  color: var(--cb-selection-text);
+}
+.preference-scroll {
+  display: grid;
+  place-items: center;
+  height: 24px;
 }
 .specimen-settings nav {
   display: grid;
@@ -332,8 +385,11 @@
 }
 
 body:has(.specimen-layout) .site-header-inner,
-body:has(.specimen-layout) .site-footer {
+body:has(.specimen-layout) .site-footer-inner {
   max-width: 1728px;
+}
+body:has(.specimen-layout) .site-footer {
+  margin-top: auto;
 }
 .specimen-notes {
   margin-top: 20px;
@@ -424,4 +480,28 @@ body:has(.specimen-layout) .site-header-inner {
   .specimen-tabs [role="tab"][data-state="active"] {
     outline: 1px solid Highlight;
   }
+}
+
+.shadcn-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  align-items: start;
+}
+.shadcn-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+.shadcn-fields {
+  display: grid;
+  gap: 8px;
+  margin-top: 24px;
+}
+.shadcn-fields label {
+  margin: 8px 0 0;
+}
+.specimen-canvas {
+  min-width: 0;
 }

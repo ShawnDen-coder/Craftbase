@@ -3,11 +3,25 @@ import { readFile } from 'node:fs/promises';
 import test from 'node:test';
 import { generate, validateTheme } from '../scripts/build.mjs';
 
-const theme = JSON.parse(
+const reference = JSON.parse(
   await readFile(
     new URL('../design-system/themes/macos/tokens.json', import.meta.url),
   ),
 );
+const semantic = JSON.parse(
+  await readFile(
+    new URL('../design-system/tokens/semantic.json', import.meta.url),
+  ),
+);
+const theme = {
+  density: semantic.density,
+  appearance: Object.fromEntries(
+    Object.entries(semantic.appearance).map(([mode, values]) => [
+      mode,
+      { ...values, ...reference.appearance[mode] },
+    ]),
+  ),
+};
 const luminance = (hex) => {
   const rgb = hex
     .slice(1)

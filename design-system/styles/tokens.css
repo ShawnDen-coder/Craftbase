@@ -104,9 +104,14 @@
   --cb-selection-text: #00478f;
   --cb-status-danger: #b42318;
   --cb-focus-ring: #005ac1;
+  --cb-status-on-danger: #ffffff;
+  --cb-button-secondary-fill: rgb(0 0 0 / 8%);
+  --cb-button-secondary-hover: rgb(0 0 0 / 14%);
+  --cb-control-accent: #0088ff;
+  --cb-field-border: rgb(0 0 0 / 8%);
+  --cb-field-fill: #ffffff;
   --cb-material-overlay-tint: rgb(255 255 255 / 70%);
   --cb-material-overlay-shadow: 0 0 0 0.5px rgb(0 0 0 / 22%), 0 18px 48px rgb(0 0 0 / 25%);
-  --cb-status-on-danger: #ffffff;
   --cb-material-regular-tint: rgb(255 255 255 / 88%);
   --cb-material-glass-edge: rgb(255 255 255 / 85%);
   --cb-material-glass-inner: rgb(40 40 40 / 30%);
@@ -116,8 +121,6 @@
   --cb-material-regular-medium: rgb(246 246 246 / 60%);
   --cb-material-regular-thick: rgb(246 246 246 / 72%);
   --cb-material-regular-ultra-thick: rgb(236 236 236 / 88%);
-  --cb-button-secondary-fill: rgb(0 0 0 / 8%);
-  --cb-button-secondary-hover: rgb(0 0 0 / 14%);
   --cb-material-glass-small-shadow: 0 0 0 0.5px rgb(0 0 0 / 18%), 0 8px 15px rgb(0 0 0 / 2%);
   --cb-material-scroll-tint: rgb(255 255 255 / 85%);
   --cb-material-scroll-border: rgb(0 0 0 / 5%);
@@ -135,9 +138,6 @@
   --cb-material-reference-small-edge: #e8e8e8;
   --cb-material-reference-small-side: #d0d0d0;
   --cb-material-reference-ultrathick-blend: #333333;
-  --cb-control-accent: #0088ff;
-  --cb-field-border: rgb(0 0 0 / 8%);
-  --cb-field-fill: #ffffff;
   --cb-material-reference-shadow: rgb(0 0 0 / 25%);
   --cb-material-reference-small-shadow: rgb(0 0 0 / 2%);
 }
@@ -156,9 +156,14 @@
   --cb-selection-text: #c5ddff;
   --cb-status-danger: #ffb4ab;
   --cb-focus-ring: #9ac3ff;
+  --cb-status-on-danger: #35100b;
+  --cb-button-secondary-fill: rgb(255 255 255 / 10%);
+  --cb-button-secondary-hover: rgb(255 255 255 / 18%);
+  --cb-control-accent: #0091ff;
+  --cb-field-border: rgb(255 255 255 / 4%);
+  --cb-field-fill: #1e1e1e;
   --cb-material-overlay-tint: rgb(26 26 26 / 90%);
   --cb-material-overlay-shadow: 0 0 0 0.5px rgb(166 166 166 / 32%), 0 18px 48px rgb(0 0 0 / 45%);
-  --cb-status-on-danger: #35100b;
   --cb-material-regular-tint: rgb(26 26 26 / 88%);
   --cb-material-glass-edge: rgb(166 166 166 / 45%);
   --cb-material-glass-inner: rgb(0 0 0 / 55%);
@@ -168,8 +173,6 @@
   --cb-material-regular-medium: rgb(0 0 0 / 29%);
   --cb-material-regular-thick: rgb(0 0 0 / 40%);
   --cb-material-regular-ultra-thick: rgb(0 0 0 / 50%);
-  --cb-button-secondary-fill: rgb(255 255 255 / 10%);
-  --cb-button-secondary-hover: rgb(255 255 255 / 18%);
   --cb-material-glass-small-shadow: 0 0 0 0.5px rgb(166 166 166 / 55%), 0 8px 15px rgb(0 0 0 / 4%);
   --cb-material-scroll-tint: rgb(31 31 31 / 88%);
   --cb-material-scroll-border: rgb(255 255 255 / 10%);
@@ -187,9 +190,6 @@
   --cb-material-reference-small-edge: #a6a6a6;
   --cb-material-reference-small-side: #a6a6a6;
   --cb-material-reference-ultrathick-blend: transparent;
-  --cb-control-accent: #0091ff;
-  --cb-field-border: rgb(255 255 255 / 4%);
-  --cb-field-fill: #1e1e1e;
   --cb-material-reference-shadow: rgb(0 0 0 / 45%);
   --cb-material-reference-small-shadow: rgb(0 0 0 / 4%);
 }
