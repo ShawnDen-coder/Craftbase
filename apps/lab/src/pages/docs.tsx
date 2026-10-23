@@ -1,93 +1,103 @@
+import { AppearanceSettings } from '../components/appearance-settings';
+import './catalog.css';
 import type { Preferences } from '../lib/preferences';
+import { docGroups, docTopics } from '../registry/docs';
 import { Materials } from '../sections/materials';
 import { StateGallery } from '../sections/states';
 import { Foundations } from './foundations';
-export const topics = [
-  { id: 'introduction', title: '阅读指南' },
-  { id: 'foundations', title: '设计基础' },
-  { id: 'states', title: '状态与尺寸' },
-  { id: 'materials', title: '材质与层级' },
-];
+
 export function Docs({
   topic,
   prefs,
   appearance,
+  update,
 }: {
   topic: string;
   prefs: Preferences;
   appearance: 'light' | 'dark';
+  update: (key: keyof Preferences, value: string) => void;
 }) {
+  const current = docTopics.find((item) => item.id === topic);
+  const link = (item: { id: string; title: string }) => (
+    <a
+      className="doc-link"
+      href={`#/docs/${item.id}`}
+      aria-current={topic === item.id ? 'page' : undefined}
+    >
+      {item.title}
+    </a>
+  );
   return (
     <div className="site-container docs-layout">
       <aside className="docs-sidebar">
-        <p>文档</p>
         <nav aria-label="文档导航">
-          {topics.map((item) => (
-            <a
-              className="doc-link"
-              key={item.id}
-              href={`#/docs/${item.id}`}
-              aria-current={topic === item.id ? 'page' : undefined}
-            >
-              {item.title}
-            </a>
+          {docGroups.map((group) => (
+            <div className="docs-nav-group" key={group.title}>
+              <p className="docs-nav-label">{group.title}</p>
+              {group.items.map((item) => (
+                <div key={item.id}>
+                  {link(item)}
+                  {item.children && (
+                    <div className="docs-nav-children">
+                      {item.children.map((child) => (
+                        <div key={child.id}>{link(child)}</div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
           ))}
         </nav>
+        <AppearanceSettings prefs={prefs} update={update} />
       </aside>
       <main className="docs-content" id="main" tabIndex={-1}>
+        <nav className="docs-breadcrumb" aria-label="当前位置">
+          <a href="#/docs/introduction">文档</a>
+          <span>/</span>
+          <span>{current?.group}</span>
+          <span>/</span>
+          <span>{current?.title}</span>
+        </nav>
         {topic === 'introduction' && (
           <>
-            <h1>个人设计基础</h1>
-            <p className="page-description">材质、色彩、字体与空间。</p>
+            <h1>阅读指南</h1>
+            <p className="page-description">
+              从共同规则，到设计体系，再到组件实现。
+            </p>
             <section className="prose">
-              <h2>内容索引</h2>
               <p>
                 Craftbase
-                用来沉淀个人基础设计：语义色彩、文字层级、空间尺度、尺寸、状态与材质规则。展示站帮助观察设计选择，适配层让这些规则应用到现有组件库。
-              </p>
-              <p>
-                展示页左侧的外观设置会同步改变整站。切换浅色、深色或密度，观察同一套规则如何作用于表面、文字与控件。
+                用来沉淀可复用的设计基础，并在真实组件和业务场景中验证。文档按三个层级组织，设计体系可以持续扩展。
               </p>
               <div className="reading-index">
-                <a href="#/docs/materials">
-                  <strong>材质与层级</strong>
-                  <span>比较实色、普通材质与玻璃，观察不同背景下的表现。</span>
-                </a>
                 <a href="#/docs/foundations">
-                  <strong>设计基础</strong>
-                  <span>查看语义色板、文字层级与空间尺度。</span>
+                  <strong>01 · 基础设计</strong>
+                  <span>共享的语义色彩、文字角色、空间、密度与交互状态。</span>
                 </a>
-                <a href="#/docs/states">
-                  <strong>状态与尺寸</strong>
-                  <span>区分尺寸、密度、窗口状态和交互反馈。</span>
+                <a href="#/docs/systems">
+                  <strong>02 · 设计体系</strong>
+                  <span>
+                    各体系独立记录视觉语言、来源与适用范围。macOS 是其中之一。
+                  </span>
                 </a>
-                <a href="#/components">
-                  <strong>ShowCase</strong>
-                  <span>用按钮、输入框、菜单和对话框观察当前外观。</span>
-                </a>
-                <a href="#/shadcn">
-                  <strong>样式适配</strong>
-                  <span>观察基础设计在 shadcn/ui 组件上的表现。</span>
+                <a href="#/docs/adapters/shadcn">
+                  <strong>03 · 组件适配</strong>
+                  <span>
+                    使用 shadcn/ui 官方组件，以 Token 和 CSS 映射设计规则。
+                  </span>
                 </a>
               </div>
-              <h2>基础设计、参考研究与组件适配</h2>
+              <h2>如何使用展示站</h2>
               <p>
-                macOS 27 Community
-                是当前材质与控件外观的一项参考，不代表项目只服务于
-                macOS。参考值与自己的 Web 设计值分开保留。当前展板默认使用 Ultra
-                Thin，通过降低背景对比保持文字清晰；原稿样片保留各自的材质参数。Liquid
-                Glass 通过透色、模糊、高光与阴影呈现 Web 近似。
+                先在 ShowCase
+                查看真实场景，再到组件目录检查单个组件。左侧外观设置同步影响整站；默认使用实色，半透明材质可按需开启。
               </p>
+              <h2>参考与实现</h2>
               <p>
-                组件样例用于验证设计规则与状态。当前提供 shadcn/ui
-                样式适配；未来可根据实际需要扩展其他组件库，基础设计不绑定某个组件实现。
+                设计参考值与 Web
+                实现值分别标注。体系专有的色板、字号和材质研究保留在对应体系下，组件适配层负责将设计规则应用到交互实现。
               </p>
-              <a
-                className="text-link"
-                href="https://www.figma.com/design/OU1BDEU71XD2Dc5l2ZAAVD/macOS-27--Community-"
-              >
-                查看 Figma 参考 ↗
-              </a>
             </section>
           </>
         )}
@@ -95,7 +105,103 @@ export function Docs({
           <Foundations prefs={prefs} appearance={appearance} />
         )}
         {topic === 'states' && <StateGallery />}
-        {topic === 'materials' && <Materials />}
+        {topic === 'systems' && (
+          <>
+            <h1>设计体系</h1>
+            <p className="page-description">共同基础之上的独立视觉语言。</p>
+            <section className="prose">
+              <p>
+                每个体系独立记录设计来源、色彩、排版、控件和材质规则。共享语义
+                Token 提供一致的用途命名，具体视觉选择由各体系定义。
+              </p>
+              <div className="reading-index">
+                <a href="#/docs/systems/macos">
+                  <strong>macOS</strong>
+                  <span>当前已收录：色彩与字号参考、材质与层级研究。</span>
+                </a>
+              </div>
+              <h2>扩展约定</h2>
+              <p>
+                新增体系时，在设计体系下建立独立入口，再补充基础映射与组件适配。当前站点尚未提供完整的设计体系切换器；外观、密度和材质选项只调整现有展示。
+              </p>
+            </section>
+          </>
+        )}
+        {topic === 'systems/macos' && (
+          <>
+            <h1>macOS</h1>
+            <p className="page-description">设计体系 / macOS</p>
+            <section className="prose">
+              <p>
+                以 macOS 27 Community
+                为设计参考，研究系统色彩、文字角色与半透明材质。参考样片与 Web
+                近似实现分别保留，便于核对差异。
+              </p>
+              <div className="reading-index">
+                <a href="#/docs/systems/macos/foundations">
+                  <strong>色彩与字号参考</strong>
+                  <span>系统色板、原稿字号与 Web 设计值对照。</span>
+                </a>
+                <a href="#/docs/systems/macos/materials">
+                  <strong>材质与层级</strong>
+                  <span>实色、普通材质、Liquid Glass 与可访问性降级。</span>
+                </a>
+              </div>
+              <p>
+                Liquid Glass 使用透色、模糊、高光与阴影呈现 Web
+                近似；本站默认表面为实色。SF Pro 字体不随项目分发。
+              </p>
+              <a
+                className="text-link"
+                href="https://www.figma.com/design/OU1BDEU71XD2Dc5l2ZAAVD/macOS-27--Community-"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                macOS Figma 参考 ↗
+              </a>
+            </section>
+          </>
+        )}
+        {topic === 'systems/macos/foundations' && (
+          <Foundations prefs={prefs} appearance={appearance} reference />
+        )}
+        {topic === 'systems/macos/materials' && <Materials />}
+        {topic === 'adapters/shadcn' && (
+          <>
+            <h1>shadcn/ui</h1>
+            <p className="page-description">
+              官方组件源码 + 语义 Token + 外部样式覆盖。
+            </p>
+            <section className="prose">
+              <h2>接入方式</h2>
+              <p>
+                通过官方 registry
+                引入组件源码，保留交互、键盘行为和可访问性结构。页面直接引用这些组件；主题映射与样式规则统一放在适配层。
+              </p>
+              <h2>覆盖顺序</h2>
+              <p>
+                基础 Token → shadcn 语义变量 → 控件与表面样式 →
+                可选材质。优先调整变量，只有变量无法表达的形态才增加受作用域限制的
+                CSS 规则。
+              </p>
+              <h2>更新与验证</h2>
+              <p>
+                上游文件有独立来源与哈希记录，通过显式同步更新。组件目录覆盖 66
+                个展示项，ShowCase 验证表单、表格、图表和设置等组合场景。
+              </p>
+              <div className="reading-index">
+                <a href="#/components">
+                  <strong>组件目录</strong>
+                  <span>浏览组件与交互状态。</span>
+                </a>
+                <a href="#/">
+                  <strong>ShowCase</strong>
+                  <span>检查真实场景中的统一样式。</span>
+                </a>
+              </div>
+            </section>
+          </>
+        )}
       </main>
     </div>
   );

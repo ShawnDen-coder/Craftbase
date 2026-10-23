@@ -1,48 +1,50 @@
 # Craftbase × shadcn/ui
 
-Craftbase 的样式适配层。保留业务项目已有的 shadcn/ui 组件及交互，用 Craftbase 设计变量和 CSS 配方统一外观。无需导入本项目的 React 组件。
+使用官方组件，通过外部 CSS 应用 Craftbase 的基础设计。当前锁定和验证的基线是 **radix-nova + Tailwind CSS v4**。
 
-## 接入
+## 接入已有项目
 
-适用于 Tailwind CSS v4、采用完整颜色值变量的 shadcn 项目。把本目录及 `design-system/styles/` 复制到项目中，在主 CSS 的现有 Tailwind import 后、业务覆盖样式前引入：
+保留项目里的官方 shadcn 组件，复制 `design-system/styles/` 和整个 `design-system/adapters/shadcn/`。主 CSS 按以下顺序组织；现有 Tailwind、动画与 shadcn import 只保留一份：
 
 ```css
+@layer theme, base, components, utilities, craftbase, preview;
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 @import "./design-system/styles/index.css";
 @import "./design-system/adapters/shadcn/theme.css";
 @source "./components/ui";
 ```
 
-路径按业务项目调整；已有 Tailwind import 保留一份。适配文件含 `@theme inline`，需要经过 Tailwind 编译，不应直接用浏览器 `<link>` 加载。它接管页面的 shadcn 语义主题变量及本轮组件的 slot 样式。
+业务局部覆盖可放在 `@layer preview` 中；不要用全局标签规则覆盖组件。适配入口需要 Tailwind 编译，不能作为普通浏览器 link 样式表直接使用。
 
-把主题放到 `html`，保证 Portal 中的菜单和弹窗继承相同变量：
+将主题属性放在 html 上，以覆盖 Portal 浮层：
 
 ```html
 <html class="cb-root" data-appearance="light" data-density="comfortable">
 ```
 
-深色模式同时使用 `class="cb-root dark"` 与 `data-appearance="dark"`。紧凑模式改为 `data-density="compact"`。跟随系统时，由业务应用的主题管理器同步这两项，不需要引入本站的 preferences 模块。
-
-组件继续按业务项目原来的方式使用：
+深色同时设置 `.dark` 和 `data-appearance="dark"`。跟随系统由应用现有主题管理器同步。继续直接使用官方 API：
 
 ```tsx
-<Button>保存修改</Button>
-<Button variant="secondary">取消</Button>
-<Input placeholder="项目名称" />
+<Button variant="default">保存修改</Button>
+<Button variant="outline">取消</Button>
+<Input aria-invalid={hasError} />
 ```
 
-## 本轮支持边界
+## 样式职责
 
-- Button：标准 `data-slot="button"`，default / secondary / outline / ghost / destructive / link；默认高度跟随密度。带 `data-size` 的 sm、lg 和 icon 尺寸单独处理。
-- Input：字段填充、边界、占位文字、焦点、错误、只读和禁用；普通输入框跟随密度。
-- DropdownMenu：菜单表面、子菜单表面、行高、高亮、危险项及图标继承。交互由业务项目原有 Radix / Base UI 实现负责。
-- Dialog：表面、文字、圆角、窗口阴影和滚动限制。关闭和焦点行为由已有组件负责。
-- 颜色映射包含 card、popover 和 sidebar 语义；这只提供基础色彩，不表示已完成这些组件的全部样式验收。图表色板未提供。
+- `theme.css`：Craftbase Token → shadcn 语义变量及 Tailwind 映射，包括 chart 和 sidebar。
+- `recipes/controls.css`：控件尺寸、密度、焦点、错误和参考尺寸。
+- `recipes/surfaces.css`：卡片、菜单、弹窗等承载表面。
+- 展示站 `site-material.css`：可选透明材质环境，不属于业务接入的必要依赖。
 
-当前用仓库已有的 new-york-v4 样例及不带 Craftbase 自定义属性的按钮验证。Nova / Base UI 等变体可使用语义颜色映射；其不同的 slot、尺寸和交互结构还未逐项验证，不能视为完整兼容认证。缺少 `data-slot` 的旧组件需要补标记或单独适配。旧版 `hsl(var(--primary))` 形式也需要先迁移为完整颜色值主题。
+所有配方限定在 `.cb-root` 下，基于官方公开 slot 和状态属性。组件尺寸和密度分别表达；日历单元格保留官方尺寸，不强制套用普通按钮高度。
 
-普通内容默认使用实色，便于移植和确保可读性。展示站的壁纸及五档整站透明材质属于独立演示背景，不是接入此适配层的必要依赖。
+## 展示与维护
 
-## 本地预览
+`#/` 展示四个组合场景，`#/components` 提供完整组件浏览，旧 `#/shadcn` 链接继续有效。默认实色，可选择五档材质。颜色、密度及中英字体偏好在浏览器内持久化。
 
-运行 `pnpm dev`，打开 `#/shadcn`。可切换明暗、密度及演示材质，操作六种按钮、输入校验、菜单和弹窗。顶部导航提供入口。`design-system/react/theme.css` 保留为旧入口的兼容转发。
+[官方源码清单](upstream-lock.json)记录 63 个组件；展示目录额外包含 Date Picker、Data Table 和 Typography 组合示例。Form 空 Registry 条目由 Field 表单组合替代，弃用 Toast 由 Sonner 替代。AI Elements 独立集合及全部 Blocks 不在范围内。
+
+当前支持范围以固定基线和测试为准；不承诺所有 shadcn 风格、历史 HSL 变量格式及其他底层实现兼容。原有 specs 是历史研究记录，不再约束官方组件 API。

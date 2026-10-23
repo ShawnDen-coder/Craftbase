@@ -42,3 +42,13 @@ Figma 原始证据保留在参考文档中，不参与运行时生成。新增 T
 构建路径通过 Pages 返回的 `base_path` 自动设置，兼容 `/Craftbase/` 仓库路径和自定义域名。页面使用 hash 路由，直接访问或刷新 `#/docs/materials` 等页面无需服务器重写。运行时图片使用 Vite 的 `BASE_URL`，CSS 内的图片与字体路径由 Vite 在构建时转换。
 
 本地模拟仓库子路径构建：`SITE_BASE_PATH=/Craftbase/ pnpm build:site`。默认构建仍使用相对路径。站点完全静态，外观偏好保存在访问者浏览器的 localStorage 中。
+
+## shadcn 上游与浏览器检查
+
+- `pnpm check:upstream`：检查锁定官方源码的 SHA-256；不访问网络。
+- `node scripts/sync-shadcn.mjs --refresh`：显式同步官方 radix-nova 组件与示例。需要网络；审阅新增依赖、清单和所有差异，更新展示元数据后验收。
+- 官方源码目录和导入的示例不由 Biome 重写；本地样式、组合和工具仍执行完整检查。
+- `pnpm exec playwright install chromium` 后运行 `pnpm test:browser`。测试使用本地 43180 端口，覆盖全目录四种配色／密度组合、表单、浮层、筛选、桌面布局和材质切换。
+- CI 自动安装 Chromium 并运行浏览器测试，失败时上传 artifacts。
+
+仅完成源码接入时将条目标为 integrated；可安装组件库和跨基线兼容仍不作承诺。

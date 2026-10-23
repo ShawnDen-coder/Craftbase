@@ -21,7 +21,14 @@
       "button.secondary.hover": "rgb(0 0 0 / 14%)",
       "control.accent": "#0088ff",
       "field.border": "rgb(0 0 0 / 8%)",
-      "field.fill": "#ffffff"
+      "field.fill": "#ffffff",
+      "chart.1": "#005ac1",
+      "chart.2": "#287d6c",
+      "chart.3": "#8d640f",
+      "chart.4": "#8552a1",
+      "chart.5": "#b95135",
+      "status.success": "#24704f",
+      "status.warning": "#8d640f"
     },
     "dark": {
       "surface.canvas": "#18191c",
@@ -43,7 +50,14 @@
       "button.secondary.hover": "rgb(255 255 255 / 18%)",
       "control.accent": "#0091ff",
       "field.border": "rgb(255 255 255 / 4%)",
-      "field.fill": "#1e1e1e"
+      "field.fill": "#1e1e1e",
+      "chart.1": "#9ac3ff",
+      "chart.2": "#7cc9b7",
+      "chart.3": "#e5bf70",
+      "chart.4": "#c5a4e5",
+      "chart.5": "#f2aa94",
+      "status.success": "#8fd5ad",
+      "status.warning": "#e5bf70"
     }
   },
   "density": {

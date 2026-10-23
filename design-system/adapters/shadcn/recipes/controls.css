@@ -1,0 +1,146 @@
+/* Public slots only. Explicit component sizes stay distinct from global density. */
+.cb-root
+  :where(
+    [data-slot="button"][data-size="default"],
+    [data-slot="input"],
+    [data-slot="select-trigger"][data-size="default"],
+    [data-slot="native-select"]
+  ) {
+  min-height: var(--cb-control-height);
+  height: var(--cb-control-height);
+  font-size: 14px;
+  padding-inline: var(--cb-control-padding-inline);
+  border-radius: var(--cb-radius-control);
+}
+.cb-root
+  :where(
+    [data-slot="button"][data-size="sm"],
+    [data-slot="select-trigger"][data-size="sm"],
+    .cb-input-small
+  ) {
+  height: var(--cb-control-height-small);
+  min-height: var(--cb-control-height-small);
+}
+.cb-root :where([data-slot="button"][data-size="icon"]:not([data-day])) {
+  width: var(--cb-control-height);
+  height: var(--cb-control-height);
+}
+.cb-root :where([data-slot="button"][data-size="icon-sm"]) {
+  width: var(--cb-control-height-small);
+  height: var(--cb-control-height-small);
+}
+.cb-root
+  :where(
+    [data-slot="input"],
+    [data-slot="textarea"],
+    [data-slot="native-select"],
+    [data-slot="input-group"]
+  ) {
+  background: var(--cb-field-fill);
+}
+.cb-root :where([data-slot="textarea"]) {
+  border-radius: var(--cb-radius-control);
+  padding: 10px var(--cb-control-padding-inline);
+}
+.cb-root [data-slot="input-group"] [data-slot="input"] {
+  border-radius: inherit;
+  background: transparent;
+  height: auto;
+  min-height: 0;
+  padding-inline: 0;
+}
+.cb-root
+  :where([data-slot="button"][data-variant="default"]):hover:not(:disabled) {
+  background: var(--cb-action-hover);
+}
+.cb-root
+  :where([data-slot="button"][data-variant="secondary"]):hover:not(:disabled) {
+  background: var(--cb-button-secondary-hover);
+}
+.cb-root
+  :where(
+    [data-slot="input"],
+    [data-slot="textarea"],
+    [data-slot="button"],
+    [data-slot="select-trigger"],
+    [data-slot="native-select"]
+  ):focus-visible {
+  outline: 2px solid var(--cb-focus-ring);
+  outline-offset: 2px;
+  box-shadow: none;
+}
+.cb-root
+  :where([data-slot="input"], [data-slot="textarea"])[aria-invalid="true"] {
+  border-color: var(--cb-status-danger);
+}
+.cb-root [data-slot="button"][aria-busy="true"] {
+  cursor: progress;
+}
+.cb-root
+  :where(
+    [data-slot="dropdown-menu-item"],
+    [data-slot="dropdown-menu-checkbox-item"],
+    [data-slot="dropdown-menu-radio-item"],
+    [data-slot="context-menu-item"],
+    [data-slot="select-item"],
+    [data-slot="command-item"]
+  ) {
+  min-height: var(--cb-control-height);
+}
+.cb-root :where([data-slot="table-cell"], [data-slot="table-head"]) {
+  height: var(--cb-row-height);
+}
+.cb-root [data-slot="table-row"] {
+  font-variant-numeric: tabular-nums;
+}
+/* Reference-only examples use native data attributes instead of custom component APIs. */
+.cb-root [data-reference-size="mini"] {
+  height: var(--cb-control-size-mini);
+  min-height: 0;
+}
+.cb-root [data-reference-size="small"] {
+  height: var(--cb-control-size-small);
+  min-height: 0;
+}
+.cb-root [data-reference-size="medium"] {
+  height: var(--cb-control-size-medium);
+  min-height: 0;
+}
+.cb-root [data-reference-size="large"] {
+  height: var(--cb-control-size-large);
+  min-height: 0;
+}
+.cb-root [data-reference-size="xl"] {
+  height: var(--cb-control-size-xl);
+  min-height: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  .cb-root [data-slot] {
+    animation-duration: 0.01ms;
+    transition-duration: 0.01ms;
+  }
+  .cb-root [data-slot="button"]:active {
+    transform: none;
+  }
+}
+@media (forced-colors: active) {
+  .cb-root
+    :where(
+      [data-slot="button"],
+      [data-slot="input"],
+      [data-slot="textarea"],
+      [data-slot="select-trigger"],
+      [data-slot="checkbox"],
+      [data-slot="switch"]
+    ) {
+    border: 1px solid ButtonText;
+  }
+  .cb-root
+    :where([data-slot="checkbox"], [data-slot="switch"])[data-state="checked"] {
+    background: Highlight;
+    color: HighlightText;
+  }
+  .cb-root [data-slot]:focus-visible {
+    outline: 2px solid Highlight;
+  }
+}

@@ -110,6 +110,13 @@
   --cb-control-accent: #0088ff;
   --cb-field-border: rgb(0 0 0 / 8%);
   --cb-field-fill: #ffffff;
+  --cb-chart-1: #005ac1;
+  --cb-chart-2: #287d6c;
+  --cb-chart-3: #8d640f;
+  --cb-chart-4: #8552a1;
+  --cb-chart-5: #b95135;
+  --cb-status-success: #24704f;
+  --cb-status-warning: #8d640f;
   --cb-material-overlay-tint: rgb(255 255 255 / 70%);
   --cb-material-overlay-shadow: 0 0 0 0.5px rgb(0 0 0 / 22%), 0 18px 48px rgb(0 0 0 / 25%);
   --cb-material-regular-tint: rgb(255 255 255 / 88%);
@@ -162,6 +169,13 @@
   --cb-control-accent: #0091ff;
   --cb-field-border: rgb(255 255 255 / 4%);
   --cb-field-fill: #1e1e1e;
+  --cb-chart-1: #9ac3ff;
+  --cb-chart-2: #7cc9b7;
+  --cb-chart-3: #e5bf70;
+  --cb-chart-4: #c5a4e5;
+  --cb-chart-5: #f2aa94;
+  --cb-status-success: #8fd5ad;
+  --cb-status-warning: #e5bf70;
   --cb-material-overlay-tint: rgb(26 26 26 / 90%);
   --cb-material-overlay-shadow: 0 0 0 0.5px rgb(166 166 166 / 32%), 0 18px 48px rgb(0 0 0 / 45%);
   --cb-material-regular-tint: rgb(26 26 26 / 88%);

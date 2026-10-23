@@ -1,310 +1,236 @@
-import { Check, FileText, Folder, Search, Volume2 } from 'lucide-react';
-import { Checkbox, Slider, Switch, Tabs } from 'radix-ui';
-import { useState } from 'react';
+import { lazy, Suspense, useState } from 'react';
+import { toast } from 'sonner';
 import { GlassSwatch } from '../../../../design-system/react/material-swatch';
 import { Button } from '../../../../design-system/react/ui/button';
+import { Checkbox } from '../../../../design-system/react/ui/checkbox';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from '../../../../design-system/react/ui/dialog';
+import {
+  Field,
+  FieldDescription,
+  FieldError,
+  FieldLabel,
+} from '../../../../design-system/react/ui/field';
 import { Input } from '../../../../design-system/react/ui/input';
-import { PreferenceSelect } from '../components/preference-select';
-import { Preview } from '../components/preview';
-import { materials, type Preferences } from '../lib/preferences';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '../../../../design-system/react/ui/select';
+import { Slider } from '../../../../design-system/react/ui/slider';
+import { Switch } from '../../../../design-system/react/ui/switch';
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from '../../../../design-system/react/ui/tabs';
+import { Textarea } from '../../../../design-system/react/ui/textarea';
+import {
+  type AppearanceProps,
+  AppearanceSettings,
+} from '../components/appearance-settings';
+import DataTableExample from '../examples/local/data-table';
 import './catalog.css';
+import './component-directory.css';
 
-export function Catalog({
-  prefs,
-  update,
-}: {
-  prefs: Preferences;
-  update: (key: keyof Preferences, value: string) => void;
-}) {
+const ChartExample = lazy(() => import('../examples/local/chart'));
+export function Catalog(props: AppearanceProps) {
   const [notifications, setNotifications] = useState(true);
-  const [sync, setSync] = useState(false);
-  const [volume, setVolume] = useState([64]);
-  const [selected, setSelected] = useState('材质研究');
-  const [query, setQuery] = useState('');
-  const [feedback, setFeedback] = useState('');
-  const files = ['材质研究', '色彩规范', '文字层级', '空间与布局'].filter(
-    (name) => name.includes(query),
-  );
+  const [volume, setVolume] = useState([60]);
+  const [name, setName] = useState('Craftbase');
+  const [error, setError] = useState('');
+  const [saved, setSaved] = useState(false);
   return (
-    <main className="specimen-layout" id="main" tabIndex={-1}>
-      <aside className="specimen-settings" aria-label="ShowCase 外观">
+    <main id="main" tabIndex={-1} className="specimen-layout">
+      <aside className="specimen-settings">
         <h1>ShowCase</h1>
-        <p>基础设计 · {materials[prefs.material]}</p>
-        <div className="specimen-setting">
-          <span>设计基础</span>
-          <strong>Craftbase</strong>
-        </div>
-        <PreferenceSelect
-          label="材质"
-          ariaLabel="网站材质"
-          value={prefs.material}
-          onValueChange={(value) => update('material', value)}
-          options={materials}
-        />
-        <PreferenceSelect
-          label="配色"
-          ariaLabel="ShowCase 外观"
-          value={prefs.appearance}
-          onValueChange={(value) => update('appearance', value)}
-          options={{ system: '跟随系统', light: '浅色', dark: '深色' }}
-        />
-        <PreferenceSelect
-          label="密度"
-          ariaLabel="ShowCase 密度"
-          value={prefs.density}
-          onValueChange={(value) => update('density', value)}
-          options={{ comfortable: '舒适', compact: '紧凑' }}
-        />
-        <PreferenceSelect
-          label="英文字体"
-          ariaLabel="英文字体"
-          value={prefs.fontLatin}
-          onValueChange={(value) => update('fontLatin', value)}
-          options={{
-            system: 'System',
-            jetbrains: 'JetBrains Mono',
-            sarasa: 'Sarasa Term SC',
-          }}
-        />
-        <PreferenceSelect
-          label="中文字体"
-          ariaLabel="中文字体"
-          value={prefs.fontCjk}
-          onValueChange={(value) => update('fontCjk', value)}
-          options={{ system: 'System', sarasa: 'Sarasa Term SC' }}
-        />
+        <p>在真实组合中观察基础设计。</p>
+        <AppearanceSettings {...props} />
         <nav aria-label="设计参考">
-          <a href="#/docs/materials">材质与层级 ↗</a>
+          <a href="#/components">浏览全部组件 →</a>
           <a href="#/docs/foundations">色彩与文字 ↗</a>
+          <a href="#/docs/materials">材质与层级 ↗</a>
           <a href="#/docs/states">状态与尺寸 ↗</a>
         </nav>
-        <p className="specimen-note">示例内容不保存。</p>
+        <p className="specimen-note">场景使用本地示例数据。</p>
       </aside>
       <div className="specimen-canvas">
-        <div className="specimen-grid">
-          <div className="specimen-column">
-            <section className="specimen-panel">
-              <header>
-                <h2>偏好设置</h2>
-                <p>开关、滑块与分段选择</p>
-              </header>
-              <Tabs.Root defaultValue="general" className="specimen-tabs">
-                <Tabs.List aria-label="偏好分类">
-                  <Tabs.Trigger value="general">通用</Tabs.Trigger>
-                  <Tabs.Trigger value="sound">声音</Tabs.Trigger>
-                </Tabs.List>
-                <Tabs.Content value="general">
-                  <div className="specimen-switch-row">
-                    <label htmlFor="preview-notifications">
-                      允许通知<span>显示提醒与横幅</span>
-                    </label>
-                    <Switch.Root
-                      id="preview-notifications"
-                      className="specimen-switch"
-                      checked={notifications}
-                      onCheckedChange={setNotifications}
-                    >
-                      <Switch.Thumb />
-                    </Switch.Root>
-                  </div>
-                  <div className="specimen-switch-row">
-                    <label htmlFor="preview-sync">
-                      自动同步<span>在设备间保持一致</span>
-                    </label>
-                    <Switch.Root
-                      id="preview-sync"
-                      className="specimen-switch"
-                      checked={sync}
-                      onCheckedChange={setSync}
-                    >
-                      <Switch.Thumb />
-                    </Switch.Root>
-                  </div>
-                </Tabs.Content>
-                <Tabs.Content value="sound">
-                  <p className="specimen-explanation">
-                    拖动下方滑块，观察轨道与手柄的状态。
-                  </p>
-                  <label className="specimen-check" htmlFor="preview-sound">
-                    <Checkbox.Root
-                      id="preview-sound"
-                      className="specimen-checkbox"
-                      defaultChecked
-                    >
-                      <Checkbox.Indicator>
-                        <Check size={12} />
-                      </Checkbox.Indicator>
-                    </Checkbox.Root>
-                    播放提示音
-                  </label>
-                </Tabs.Content>
-              </Tabs.Root>
-              <div className="specimen-volume">
-                <Volume2 size={16} />
-                <span>提醒音量</span>
-                <output>{volume[0]}%</output>
-              </div>
-              <Slider.Root
-                className="specimen-slider"
-                value={volume}
-                onValueChange={setVolume}
-                max={100}
-                step={1}
-              >
-                <Slider.Track>
-                  <Slider.Range />
-                </Slider.Track>
-                <Slider.Thumb aria-label="提醒音量" />
-              </Slider.Root>
-            </section>
-            <section className="specimen-panel">
-              <header>
-                <h2>输入与校验</h2>
-                <p>标签、输入边界与焦点</p>
-              </header>
-              <Preview id="input" />
-              <label className="specimen-notes" htmlFor="specimen-notes">
-                设计说明
-              </label>
-              <textarea
-                id="specimen-notes"
-                defaultValue="切换材质和配色，观察控件的状态与边界。"
-                rows={3}
-              />
-              <label className="specimen-check" htmlFor="specimen-readonly">
-                只读字段
-              </label>
-              <Input
-                id="specimen-readonly"
-                readOnly
-                value="Craftbase 设计基础"
-              />
-            </section>
+        <header className="directory-heading">
+          <div>
+            <h2>样式与场景</h2>
+            <p>同一套组件，不同的表面、密度与字体。</p>
           </div>
-          <div className="specimen-column">
-            <section className="specimen-panel specimen-glass-panel">
-              <header>
-                <h2>玻璃与浮层</h2>
-                <p>透色、高光与悬浮层级</p>
-              </header>
-              <div className="specimen-glass-stage">
-                <GlassSwatch size="small" />
-                <div
-                  className="cb-overlay specimen-glass-caption"
-                  data-material="glass"
-                >
-                  <strong>Liquid Glass</strong>
-                  <span>功能层材质</span>
-                </div>
-              </div>
-              <Preview id="menu" />
-            </section>
-            <section className="specimen-panel specimen-files">
-              <header>
-                <h2>列表与选择</h2>
-                <p>搜索、选择与空状态</p>
-              </header>
-              <div className="specimen-search">
-                <Search size={15} />
+          <a className="text-link" href="#/components">
+            全部组件 ↗
+          </a>
+        </header>
+        <div className="showcase-grid">
+          <section className="specimen-panel">
+            <header>
+              <h2>偏好设置</h2>
+              <a href="#/components/switch">Switch / Slider ↗</a>
+            </header>
+            <Tabs defaultValue="general">
+              <TabsList aria-label="偏好分类">
+                <TabsTrigger value="general">通用</TabsTrigger>
+                <TabsTrigger value="sound">声音</TabsTrigger>
+              </TabsList>
+              <TabsContent value="general" className="grid gap-6 mt-6">
+                <Field orientation="horizontal">
+                  <FieldLabel htmlFor="notifications">允许通知</FieldLabel>
+                  <Switch
+                    id="notifications"
+                    checked={notifications}
+                    onCheckedChange={setNotifications}
+                  />
+                </Field>
+                <Field orientation="horizontal">
+                  <FieldLabel htmlFor="sync">自动同步</FieldLabel>
+                  <Switch id="sync" defaultChecked />
+                </Field>
+                <Field orientation="horizontal">
+                  <Checkbox id="preview-tips" defaultChecked />
+                  <FieldLabel htmlFor="preview-tips">显示操作提示</FieldLabel>
+                </Field>
+              </TabsContent>
+              <TabsContent value="sound" className="grid gap-6 mt-6">
+                <Field>
+                  <div className="scene-row">
+                    <FieldLabel>提醒音量</FieldLabel>
+                    <output>{volume[0]}%</output>
+                  </div>
+                  <Slider
+                    aria-label="提醒音量"
+                    value={volume}
+                    onValueChange={setVolume}
+                  />
+                </Field>
+                <Field orientation="horizontal">
+                  <Checkbox id="sound" defaultChecked />
+                  <FieldLabel htmlFor="sound">播放提示音</FieldLabel>
+                </Field>
+              </TabsContent>
+            </Tabs>
+            <div className="mt-6">
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button variant="outline">打开设置弹窗</Button>
+                </DialogTrigger>
+                <DialogContent>
+                  <DialogHeader>
+                    <DialogTitle>通知设置</DialogTitle>
+                    <DialogDescription>
+                      浮层继承当前配色、字体与材质。
+                    </DialogDescription>
+                  </DialogHeader>
+                  <Select defaultValue="important">
+                    <SelectTrigger aria-label="通知频率">
+                      <SelectValue />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="all">全部通知</SelectItem>
+                      <SelectItem value="important">仅重要通知</SelectItem>
+                      <SelectItem value="none">关闭通知</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </DialogContent>
+              </Dialog>
+            </div>
+          </section>
+          <section className="specimen-panel">
+            <header>
+              <h2>表单与校验</h2>
+              <a href="#/components/field">Field / Input ↗</a>
+            </header>
+            <form
+              className="grid gap-6"
+              noValidate
+              onSubmit={(event) => {
+                event.preventDefault();
+                if (!name.trim()) {
+                  setError('请输入项目名称。');
+                  setSaved(false);
+                  return;
+                }
+                setError('');
+                setSaved(true);
+                toast.success('示例已保存');
+              }}
+            >
+              <Field data-invalid={Boolean(error)}>
+                <FieldLabel htmlFor="project-name">项目名称</FieldLabel>
                 <Input
-                  aria-label="搜索示例文件"
-                  placeholder="搜索文件…"
-                  value={query}
-                  onChange={(e) => setQuery(e.target.value)}
+                  id="project-name"
+                  value={name}
+                  onChange={(e) => {
+                    setName(e.target.value);
+                    setSaved(false);
+                  }}
+                  aria-invalid={Boolean(error)}
+                  aria-describedby={error ? 'project-error' : 'project-help'}
                 />
+                <FieldDescription id="project-help">
+                  用于识别当前设计工作区。
+                </FieldDescription>
+                {error && <FieldError id="project-error">{error}</FieldError>}
+              </Field>
+              <Field>
+                <FieldLabel htmlFor="project-notes">设计说明</FieldLabel>
+                <Textarea
+                  id="project-notes"
+                  defaultValue="提炼自己的颜色、文字、空间与状态规则。"
+                  rows={3}
+                />
+              </Field>
+              <div className="scene-row">
+                <Button type="submit">保存示例</Button>
+                <span role="status" className="muted">
+                  {saved ? '已保存到本次演示' : '内容仅用于样式观察'}
+                </span>
               </div>
-              <div className="specimen-file-list">
-                {files.map((name) => (
-                  <button
-                    type="button"
-                    key={name}
-                    aria-pressed={selected === name}
-                    onClick={() => setSelected(name)}
-                  >
-                    <FileText size={17} />
-                    <span>{name}</span>
-                    {selected === name && <Check size={15} />}
-                  </button>
-                ))}
-                {files.length === 0 && (
-                  <div className="specimen-empty">
-                    <p>没有匹配的文件</p>
-                    <Button variant="quiet" onClick={() => setQuery('')}>
-                      清除搜索
-                    </Button>
-                  </div>
-                )}
-              </div>
-              <p className="specimen-selection">当前选择：{selected}</p>
-            </section>
-          </div>
-          <div className="specimen-column">
-            <section className="specimen-panel">
-              <header>
-                <h2>操作与反馈</h2>
-                <p>主要、次要与不可用状态</p>
-              </header>
-              <Preview id="button" />
-              <div className="specimen-size-row">
-                {(['mini', 'small', 'medium', 'large'] as const).map((size) => (
-                  <Button
-                    key={size}
-                    nativeSize={size}
-                    variant="secondary"
-                    onClick={() => setFeedback(`已观察 ${size} 按钮`)}
-                  >
-                    {size}
-                  </Button>
-                ))}
-              </div>
-              <div className="specimen-secondary-actions">
-                <Button variant="secondary" disabled>
-                  暂不可用
-                </Button>
-                <label className="specimen-check" htmlFor="preview-keep">
-                  <Checkbox.Root
-                    id="preview-keep"
-                    className="specimen-checkbox"
-                    defaultChecked
-                  >
-                    <Checkbox.Indicator>
-                      <Check size={12} />
-                    </Checkbox.Indicator>
-                  </Checkbox.Root>
-                  保留当前选择
-                </label>
-              </div>
-            </section>
-            <section className="specimen-panel">
-              <header>
-                <h2>窗口与确认</h2>
-                <p>{materials[prefs.material]} 承载内容，阴影表达层级</p>
-              </header>
-              <div className="specimen-window-copy">
-                <strong>项目设置</strong>
-                <p>修改名称后，观察窗口中的输入边界、焦点和主次操作。</p>
-              </div>
-              <Preview id="dialog" />
-              <div className="specimen-folder">
-                <Folder size={22} />
-                <div>
-                  <strong>设计资料</strong>
-                  <span>本地示例文件夹</span>
-                </div>
-                <Button
-                  variant="quiet"
-                  size="small"
-                  onClick={() => setFeedback('已选择“设计资料”作为示例位置')}
-                >
-                  选择
-                </Button>
-              </div>
-              <p className="specimen-feedback" role="status">
-                {feedback}
-              </p>
-            </section>
-          </div>
+            </form>
+          </section>
+          <section className="specimen-panel">
+            <header>
+              <h2>设计资产</h2>
+              <a href="#/components/data-table">Data Table ↗</a>
+            </header>
+            <DataTableExample />
+          </section>
+          <section className="specimen-panel">
+            <header>
+              <h2>数据概览</h2>
+              <a href="#/components/chart">Chart ↗</a>
+            </header>
+            <Suspense fallback={<p role="status">正在加载图表…</p>}>
+              <ChartExample />
+            </Suspense>
+          </section>
         </div>
+        <section className="specimen-panel scene-reference">
+          <header>
+            <h2>材质参考</h2>
+            <p>材质作为可选环境，与基础控件样式分开观察。</p>
+          </header>
+          <div className="flex items-center gap-8">
+            <GlassSwatch size="small" />
+            <div>
+              <p>实色承载内容，浮层通过材质与阴影表达层级。</p>
+              <a className="text-link" href="#/docs/materials">
+                查看材质样片与配方 →
+              </a>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
   );

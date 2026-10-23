@@ -4,7 +4,7 @@
 
 Craftbase 整理自己的语义色彩、字体层级、空间尺度、尺寸、状态和材质规则，通过展示站观察效果，通过适配层应用到 shadcn/ui 等现有组件中。支持浅色、深色、跟随系统及舒适／紧凑密度。macOS 是当前的设计研究参考之一，不限定项目的设计方向。
 
-可在展示站观察材质与控件，也可以将基础样式和适配层复制到自己的项目；仓库内 React 样例用于验证设计。当前没有发布 npm 包或可安装 Registry。
+可在展示站观察材质与控件，也可以将基础样式和适配层复制到自己的项目；仓库内 React 样例用于验证设计。默认以实色观察，透明材质可选。当前没有发布 npm 包或可安装 Registry。
 
 ## 快速开始
 
@@ -23,11 +23,11 @@ pnpm dev
 
 ### 适配已有 shadcn/ui 项目
 
-顶部 **shadcn/ui** 入口（`#/shadcn`）展示按钮、输入框、菜单和弹窗的样式适配，可切换明暗和密度。保留已有组件源码的接入方式见 [shadcn 样式适配说明](design-system/adapters/shadcn/README.md)。
+顶部 **组件** 入口（`#/components`，兼容 `#/shadcn`）展示 63 个官方组件及 3 个组合示例，可切换明暗、密度、材质和字体。保留已有组件源码的接入方式见 [shadcn 样式适配说明](design-system/adapters/shadcn/README.md)。
 
 ### 接入 React 项目
 
-以下示例面向已经配置好 **React、TypeScript 和 Tailwind CSS v4** 的项目。
+已有 shadcn 项目优先使用上面的样式适配方式。以下最小 Button/Input 示例面向已经配置好 **React、TypeScript 和 Tailwind CSS v4** 的项目。
 
 **1. 复制共享源码。** 将本仓库的四个目录复制到业务项目，保留目录结构、`styles/assets/`、`tokens.css` 和 React 目录内的许可证文件：
 
@@ -42,13 +42,16 @@ pnpm dev
 **2. 安装依赖。** 在业务项目根目录执行；已验证的依赖版本见本仓库 [package.json](package.json)。
 
 ```sh
-pnpm add radix-ui lucide-react class-variance-authority clsx tailwind-merge tabbable
+pnpm add radix-ui lucide-react class-variance-authority clsx tailwind-merge tw-animate-css shadcn
 ```
 
 **3. 引入样式。** 在业务项目的 `src/index.css` 中按顺序加入，并确保应用入口导入该样式表：
 
 ```css
+@layer theme, base, components, utilities, craftbase, preview;
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 @import "./craftbase/styles/index.css";
 @import "./craftbase/tailwind/theme.css";
 @import "./craftbase/react/theme.css";
@@ -72,7 +75,8 @@ pnpm add radix-ui lucide-react class-variance-authority clsx tailwind-merge tabb
 **5. 使用组件。** 在 `src/App.tsx` 中加入：
 
 ```tsx
-import { Button, Input } from './craftbase/react';
+import { Button } from './craftbase/react/ui/button';
+import { Input } from './craftbase/react/ui/input';
 
 export default function App() {
   return (
@@ -82,7 +86,7 @@ export default function App() {
       </h1>
       <label htmlFor="project-name">项目名称</label>
       <Input id="project-name" defaultValue="My project" />
-      <Button variant="primary" onClick={() => alert('已点击保存')}>
+      <Button variant="default" onClick={() => alert('已点击保存')}>
         保存
       </Button>
     </section>
@@ -103,7 +107,7 @@ export default function App() {
 
 ## 使用边界
 
-React 共享组件目前包含 Button、Input、Dialog 和 DropdownMenu，状态为 experimental，接入真实业务后仍需验证键盘、辅助技术与对比度。ShowCase 中的其他演示控件、布局、壁纸和字体资源不包含在上述快速接入范围内。展示站面向桌面浏览器，不维护独立手机布局。
+React 目录保存官方 radix-nova 源码，Craftbase 只维护样式适配。完整依赖以 package.json 与锁文件为准；上述安装命令仅覆盖最小 Button/Input 示例。接入业务仍需验证实际内容与可访问性。展示站布局、壁纸和字体资源不包含在基础样式接入范围内。展示站面向桌面浏览器，不维护独立手机布局。
 
 复制的源码不会自动随本仓库更新。已有 shadcn 或 Tailwind 主题的项目需检查 `react/theme.css` 中的全局语义变量映射，避免覆盖现有主题。Vue 适配尚未实现。
 

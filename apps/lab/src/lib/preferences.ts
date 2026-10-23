@@ -1,4 +1,5 @@
 export const materials = {
+  solid: '实色',
   'ultra-thin': 'Ultra Thin',
   thin: 'Thin',
   medium: 'Medium',
@@ -14,7 +15,7 @@ export type Preferences = {
   density: 'comfortable' | 'compact';
 };
 const defaults: Preferences = {
-  material: 'ultra-thin',
+  material: 'solid',
   fontLatin: 'system',
   fontCjk: 'system',
   appearance: 'system',
@@ -24,9 +25,7 @@ function readPreferences(): Preferences {
   try {
     const p = JSON.parse(localStorage.getItem('craftbase-preferences') ?? '{}');
     return {
-      material: Object.hasOwn(materials, p.material)
-        ? p.material
-        : 'ultra-thin',
+      material: Object.hasOwn(materials, p.material) ? p.material : 'solid',
       fontLatin: ['system', 'jetbrains', 'sarasa'].includes(p.fontLatin)
         ? p.fontLatin
         : ['jetbrains', 'sarasa'].includes(p.font)

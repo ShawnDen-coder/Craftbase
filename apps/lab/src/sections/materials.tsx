@@ -16,7 +16,7 @@ export function Materials() {
         <div>
           <h1>材质与层级</h1>
           <p>
-            本站主要表面默认使用 Ultra Thin，可在 ShowCase
+            本站主要表面默认使用实色，Ultra Thin 为可选参考材质，可在 ShowCase
             切换。下方对照不同材质，并保留实色回退。
           </p>
         </div>
@@ -93,7 +93,7 @@ export function Materials() {
             <p>长文本、表单和内容需要稳定的背景。</p>
             <Button
               variant="secondary"
-              size="small"
+              size="sm"
               onClick={() => setFeedback('内容层操作已触发')}
             >
               内容操作
@@ -110,10 +110,7 @@ export function Materials() {
           >
             <strong>功能层 · Liquid Glass</strong>
             <p>透色、边缘高光与内阴影共同表现悬浮层级。</p>
-            <Button
-              size="small"
-              onClick={() => setFeedback('功能层操作已触发')}
-            >
+            <Button size="sm" onClick={() => setFeedback('功能层操作已触发')}>
               功能操作
             </Button>
           </div>

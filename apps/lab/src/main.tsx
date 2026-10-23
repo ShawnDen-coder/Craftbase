@@ -3,14 +3,19 @@ import { lazy, StrictMode, Suspense, useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { apply, initial, type Preferences } from './lib/preferences';
 import { catalog } from './registry/catalog';
+import { docTopics } from './registry/docs';
 import './styles.css';
 import './site-material.css';
+import { Toaster } from '../../../design-system/react/ui/sonner';
+import { TooltipProvider } from '../../../design-system/react/ui/tooltip';
 
 const Catalog = lazy(() =>
   import('./pages/catalog').then((m) => ({ default: m.Catalog })),
 );
-const ShadcnPreview = lazy(() =>
-  import('./pages/shadcn').then((m) => ({ default: m.ShadcnPreview })),
+const ComponentDirectory = lazy(() =>
+  import('./pages/component-directory').then((m) => ({
+    default: m.ComponentDirectory,
+  })),
 );
 const Detail = lazy(() =>
   import('./pages/detail').then((m) => ({ default: m.Detail })),
@@ -18,7 +23,7 @@ const Detail = lazy(() =>
 const Docs = lazy(() =>
   import('./pages/docs').then((m) => ({ default: m.Docs })),
 );
-const docIds = ['introduction', 'foundations', 'states', 'materials'];
+const docIds = docTopics.map((item) => item.id);
 function readRoute() {
   const legacy: Record<string, string> = {
     foundation: '/',
@@ -30,8 +35,12 @@ function readRoute() {
     patterns: '/docs/materials',
   };
   const hash = location.hash.slice(1);
-  if (hash === '/docs/patterns') return '/docs/materials';
-  return legacy[hash] ?? (hash || '/');
+  if (hash === '/shadcn') return '/components';
+  if (hash === '/components/menu') return '/components/dropdown-menu';
+  const route = legacy[hash] ?? (hash || '/');
+  if (['/docs/patterns', '/docs/materials'].includes(route))
+    return '/docs/systems/macos/materials';
+  return route;
 }
 function App() {
   const [route, setRoute] = useState(readRoute);
@@ -43,8 +52,10 @@ function App() {
     return () => window.removeEventListener('hashchange', sync);
   }, []);
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'instant' });
-    document.title = `${route.startsWith('/docs') ? 'Docs' : 'ShowCase'} · Craftbase`;
+    document
+      .querySelector('.site-scroll-region')
+      ?.scrollTo({ top: 0, behavior: 'instant' });
+    document.title = `${route.startsWith('/docs') ? 'Docs' : route.startsWith('/components') ? '组件' : 'ShowCase'} · Craftbase`;
   }, [route]);
   useEffect(() => {
     const sync = () => setAppearance(apply(prefs));
@@ -82,21 +93,16 @@ function App() {
             <strong>Craftbase</strong>
           </a>
           <nav className="top-nav" aria-label="主导航">
-            <a
-              href="#/"
-              aria-current={
-                route === '/' || route.startsWith('/components')
-                  ? 'page'
-                  : undefined
-              }
-            >
+            <a href="#/" aria-current={route === '/' ? 'page' : undefined}>
               ShowCase
             </a>
             <a
-              href="#/shadcn"
-              aria-current={route === '/shadcn' ? 'page' : undefined}
+              href="#/components"
+              aria-current={
+                route.startsWith('/components') ? 'page' : undefined
+              }
             >
-              shadcn/ui
+              组件
             </a>
             <a
               href="#/docs/introduction"
@@ -106,18 +112,9 @@ function App() {
             </a>
           </nav>
           <nav className="resource-nav" aria-label="项目资源">
-            <a
-              href="https://www.figma.com/design/OU1BDEU71XD2Dc5l2ZAAVD/macOS-27--Community-"
-              aria-label="Figma 设计参考"
-              title="Figma 设计参考"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span className="sr-only">Figma 设计参考</span>
-              <span
-                className="brand-icon brand-icon-figma"
-                aria-hidden="true"
-              />
+            <a href="#/docs/systems" aria-label="设计体系" title="设计体系">
+              <span className="sr-only">设计体系</span>
+              <Layers2 size={18} aria-hidden="true" />
             </a>
             <a
               href="https://github.com/ShawnDen-coder/Craftbase"
@@ -135,40 +132,53 @@ function App() {
           </nav>
         </div>
       </header>
-      <Suspense
-        fallback={
-          <main className="site-container loading-page" id="main" tabIndex={-1}>
-            <p role="status">正在加载页面…</p>
-          </main>
-        }
-      >
-        {route === '/shadcn' ? (
-          <ShadcnPreview prefs={prefs} update={update} />
-        ) : route === '/' || route === '/components' ? (
-          <Catalog prefs={prefs} update={update} />
-        ) : selected ? (
-          <Detail key={selected.id} item={selected} />
-        ) : isDocs ? (
-          <Docs
-            key={topic}
-            topic={topic}
-            prefs={prefs}
-            appearance={appearance}
-          />
-        ) : (
-          <main
-            className="site-container empty-results"
-            id="main"
-            tabIndex={-1}
-          >
-            <h1>这个页面不存在</h1>
-            <p>可以从Docs重新开始。</p>
-            <a className="primary-link" href="#/">
-              浏览ShowCase
-            </a>
-          </main>
-        )}
-      </Suspense>
+      <div className="site-scroll-region">
+        <Suspense
+          fallback={
+            <main
+              className="site-container loading-page"
+              id="main"
+              tabIndex={-1}
+            >
+              <p role="status">正在加载页面…</p>
+            </main>
+          }
+        >
+          {route === '/components' ? (
+            <ComponentDirectory prefs={prefs} update={update} />
+          ) : route === '/' ? (
+            <Catalog prefs={prefs} update={update} />
+          ) : selected ? (
+            <Detail
+              key={selected.id}
+              item={selected}
+              prefs={prefs}
+              update={update}
+            />
+          ) : isDocs ? (
+            <Docs
+              key={topic}
+              topic={topic}
+              prefs={prefs}
+              appearance={appearance}
+              update={update}
+            />
+          ) : (
+            <main
+              className="site-container empty-results"
+              id="main"
+              tabIndex={-1}
+            >
+              <h1>这个页面不存在</h1>
+              <p>可以从Docs重新开始。</p>
+              <a className="primary-link" href="#/">
+                浏览ShowCase
+              </a>
+            </main>
+          )}
+        </Suspense>
+      </div>
+      <Toaster theme={appearance} />
       <footer className="site-footer">
         <div className="site-footer-inner site-container">
           <div>
@@ -180,9 +190,7 @@ function App() {
           <div className="footer-links">
             <a href="#/">ShowCase</a>
             <a href="#/docs/introduction">Docs</a>
-            <a href="https://www.figma.com/design/OU1BDEU71XD2Dc5l2ZAAVD/macOS-27--Community-">
-              Figma 参考 ↗
-            </a>
+            <a href="#/docs/systems">设计体系</a>
           </div>
           <p>Personal Design Foundations</p>
         </div>
@@ -194,6 +202,8 @@ const root = document.getElementById('root');
 if (root)
   createRoot(root).render(
     <StrictMode>
-      <App />
+      <TooltipProvider>
+        <App />
+      </TooltipProvider>
     </StrictMode>,
   );

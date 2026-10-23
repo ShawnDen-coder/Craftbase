@@ -1,0 +1,48 @@
+.cb-root :where([data-slot="card"], [data-slot="empty"]) {
+  box-shadow: none;
+  border-radius: var(--cb-radius-panel);
+}
+.cb-root
+  :where(
+    [data-slot="dialog-content"],
+    [data-slot="alert-dialog-content"],
+    [data-slot="sheet-content"],
+    [data-slot="drawer-content"]
+  ) {
+  background: var(--cb-surface-overlay);
+  color: var(--cb-text-primary);
+  box-shadow: var(--cb-material-window-shadow);
+  font-family: var(--cb-font-body);
+  max-height: calc(100dvh - 2rem);
+  overflow-y: auto;
+}
+.cb-root
+  :where([data-slot="dialog-content"], [data-slot="alert-dialog-content"]) {
+  border-radius: var(--cb-radius-panel);
+}
+.cb-root
+  :where(
+    [data-slot="dropdown-menu-content"],
+    [data-slot="dropdown-menu-sub-content"],
+    [data-slot="context-menu-content"],
+    [data-slot="context-menu-sub-content"],
+    [data-slot="select-content"],
+    [data-slot="popover-content"],
+    [data-slot="hover-card-content"],
+    [data-slot="menubar-content"],
+    [data-slot="combobox-content"]
+  ) {
+  background: var(--cb-surface-overlay);
+  color: var(--cb-text-primary);
+  border-radius: var(--cb-radius-control);
+  box-shadow: var(--cb-material-overlay-shadow);
+  font-family: var(--cb-font-body);
+}
+@media (forced-colors: active) {
+  .cb-root :where([data-slot$="content"], [data-slot="card"]) {
+    background: Canvas;
+    color: CanvasText;
+    border-color: CanvasText;
+    box-shadow: none;
+  }
+}

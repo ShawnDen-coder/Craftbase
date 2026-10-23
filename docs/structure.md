@@ -6,7 +6,7 @@
 craftbase/
 ├── design-system/            # 可复用的设计系统资产
 │   ├── adapters/             # 组件库样式适配（当前 shadcn/ui）
-│   ├── react/                # shadcn / Radix 实验组件及主题适配
+│   ├── react/                # 官方 radix-nova 源码及辅助工具
 │   ├── tokens/               # 框架无关的尺度、语义颜色与密度源
 │   ├── themes/               # 参考风格配方：当前收录 macOS 材质
 │   ├── specs/                # 框架无关的组件行为与状态规格
@@ -55,7 +55,7 @@ Registry 中的 `spec` 和组件规格中的 `sources` 均是**相对仓库根�
 
 当前是单个私有 pnpm 项目，不创建仅用于占位的 packages、apps 或 workspace 配置。
 
-React 实验实现已位于 `design-system/react/`，展示站位于 `apps/lab/`；Vue 后续进入 `design-system/vue/`，共享 specs。页面模式进入 `design-system/patterns/`；起始模板有可运行内容后再引入 starters。需要独立依赖、版本或发布边界时，再将对应资产迁入 workspace packages。
+官方 React 源码已位于 `design-system/react/`，展示站位于 `apps/lab/`；Vue 后续进入 `design-system/vue/`，共享 specs。页面模式进入 `design-system/patterns/`；起始模板有可运行内容后再引入 starters。需要独立依赖、版本或发布边界时，再将对应资产迁入 workspace packages。
 
 ## 展示站组织
 
@@ -73,12 +73,17 @@ apps/lab/src/
 
 design-system/react/ui/
 ├── button.tsx
-├── button.meta.json         # 与组件共置的网站元数据
 └── ...
 ```
 
-元数据记录名称、分类、说明与源文件；交互规格仍读取 `design-system/specs/`，不在网站重复维护。新增组件时增加对应 `.meta.json` 和 `examples/<id>.tsx`，目录自动发现；`pnpm test` 校验元数据、规格与示例之间的引用。
+元数据集中在 `apps/lab/src/registry/components.json`，记录组件名称、分类、官方来源、示例入口和观察要点。官方源码不混入站点元数据；上游校验由 `design-system/adapters/shadcn/upstream-lock.json` 管理。历史 specs 不再要求与展示目录一一对应。
 
-首页 `#/` 直接展示 ShowCase，`#/components` 是兼容入口，`#/components/<id>` 保留单项外观观察，`#/docs/<topic>` 是阅读文档。使用 hash URL 支持静态托管与子目录预览。旧的列表详情入口转向材质规则。
+首页 `#/` 展示组合场景；`#/components` 为完整目录；`#/components/<id>` 观察组件；`#/docs/<topic>` 阅读规则。`#/shadcn` 兼容目录入口，旧 menu 详情映射至 dropdown-menu。hash URL 支持静态托管和子目录部署。
 
-展板用 Radix 的无样式交互基础与项目共享样式呈现控件，不提供源码浏览、安装或 API 教程。`artifacts/` 保存本地测试工具与截图，已被 Git 忽略，不参与构建与发布。
+官方示例位于 `examples/upstream/`，本地组合在 `examples/local/`。预览按需加载；`artifacts/` 保存浏览器测试截图和失败 trace，不参与发布。
+
+### 展示站文档层级
+
+文档导航由 `apps/lab/src/registry/docs.ts` 统一定义：基础设计包含通用 Web 色彩、文字、空间与状态；设计体系下按体系组织参考，当前已收录 macOS 的色彩、字号与材质；组件适配单独记录 shadcn/ui 接入。macOS 不代表整个 Craftbase，当前外观设置也不是完整的体系切换器。
+
+旧 `/docs/materials` 与 `/docs/patterns` 链接兼容映射到 `/docs/systems/macos/materials`。页面采用固定视口外壳，头部与页脚始终可见，正文在独立内容区滚动，切换路由重置正文滚动位置。

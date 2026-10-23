@@ -1,7 +1,11 @@
-import { Check, ChevronDown, ChevronUp } from 'lucide-react';
-import { Select } from 'radix-ui';
 import { useId } from 'react';
-
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '../../../../design-system/react/ui/select';
 export function PreferenceSelect({
   label,
   ariaLabel,
@@ -19,47 +23,18 @@ export function PreferenceSelect({
   return (
     <div className="specimen-setting">
       <label htmlFor={id}>{label}</label>
-      <Select.Root value={value} onValueChange={onValueChange}>
-        <Select.Trigger
-          id={id}
-          className="preference-select"
-          aria-label={ariaLabel}
-        >
-          <Select.Value />
-          <Select.Icon>
-            <ChevronDown size={14} />
-          </Select.Icon>
-        </Select.Trigger>
-        <Select.Portal>
-          <Select.Content
-            className="preference-menu"
-            position="popper"
-            sideOffset={6}
-            collisionPadding={12}
-          >
-            <Select.ScrollUpButton className="preference-scroll">
-              <ChevronUp size={14} />
-            </Select.ScrollUpButton>
-            <Select.Viewport>
-              {Object.entries(options).map(([key, text]) => (
-                <Select.Item
-                  key={key}
-                  value={key}
-                  className="preference-option"
-                >
-                  <Select.ItemText>{text}</Select.ItemText>
-                  <Select.ItemIndicator>
-                    <Check size={14} />
-                  </Select.ItemIndicator>
-                </Select.Item>
-              ))}
-            </Select.Viewport>
-            <Select.ScrollDownButton className="preference-scroll">
-              <ChevronDown size={14} />
-            </Select.ScrollDownButton>
-          </Select.Content>
-        </Select.Portal>
-      </Select.Root>
+      <Select value={value} onValueChange={onValueChange}>
+        <SelectTrigger id={id} aria-label={ariaLabel} className="w-full">
+          <SelectValue />
+        </SelectTrigger>
+        <SelectContent>
+          {Object.entries(options).map(([key, text]) => (
+            <SelectItem key={key} value={key}>
+              {text}
+            </SelectItem>
+          ))}
+        </SelectContent>
+      </Select>
     </div>
   );
 }

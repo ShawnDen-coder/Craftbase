@@ -6,40 +6,40 @@
     {
       "id": "button",
       "description": "触发即时操作",
-      "status": "specified",
+      "status": "historical",
       "implementations": {
-        "react": "experimental",
-        "vue": "planned"
+        "react": "upstream",
+        "vue": "not-in-scope"
       },
       "spec": "design-system/specs/button.json"
     },
     {
       "id": "dialog",
       "description": "需要集中处理的确认或编辑",
-      "status": "specified",
+      "status": "historical",
       "implementations": {
-        "react": "experimental",
-        "vue": "planned"
+        "react": "upstream",
+        "vue": "not-in-scope"
       },
       "spec": "design-system/specs/dialog.json"
     },
     {
       "id": "input",
       "description": "输入单行文本",
-      "status": "specified",
+      "status": "historical",
       "implementations": {
-        "react": "experimental",
-        "vue": "planned"
+        "react": "upstream",
+        "vue": "not-in-scope"
       },
       "spec": "design-system/specs/input.json"
     },
     {
       "id": "menu",
       "description": "呈现一组操作",
-      "status": "specified",
+      "status": "historical",
       "implementations": {
-        "react": "experimental",
-        "vue": "planned"
+        "react": "upstream",
+        "vue": "not-in-scope"
       },
       "spec": "design-system/specs/menu.json"
     }
