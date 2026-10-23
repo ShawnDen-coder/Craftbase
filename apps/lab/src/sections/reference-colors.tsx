@@ -41,7 +41,12 @@ export function ReferenceColors() {
                       key={mode}
                     >
                       {group.id.toLowerCase().includes('labels') ? (
-                        <img src={row[mode]} alt="" width="56" height="60" />
+                        <img
+                          src={`${import.meta.env.BASE_URL}${row[mode].replace(/^\//, '')}`}
+                          alt=""
+                          width="56"
+                          height="60"
+                        />
                       ) : (
                         <>
                           {group.id === 'vibrantAccents' && (

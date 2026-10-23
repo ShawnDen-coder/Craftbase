@@ -1,8 +1,6 @@
-# 内部实现参考（历史接入说明）
-
-本文保留早期实现记录，供仓库维护者查询依赖与样式结构。当前网站是桌面样式参考，不提供对外组件接入。浏览方式见 [README](../README.md)。
-
 # 接入指南
+
+首次使用见 [README 快速开始](../README.md#快速开始)。本文说明源码接入的主题属性、样式配方与实验性 React 组件接口。
 
 当前提供基础 CSS、变量与 React 实验组件；Vue 尚未实现。可先将 `design-system/styles/` 复制到业务项目的 `craftbase/styles/`，保留 `index.css` 与生成的 `tokens.css` 相邻。项目主样式表导入 `./craftbase/styles/index.css`。
 
@@ -78,7 +76,7 @@
 | Menu                                        | `DropdownMenu`、Trigger、Content、Item；触发器承担 disabled       |
 | Dialog open / dismissible                   | Root 的 `open` / `onOpenChange`；Content 的 `dismissible`         |
 
-标签、错误说明及不可恢复操作的确认由消费端提供，组件不会根据占位文字推断可访问名称。状态与密度分别配置；手机演示站为触控将输入和按钮最小高度提高到 44px。
+标签、错误说明及不可恢复操作的确认由消费端提供，组件不会根据占位文字推断可访问名称。状态与密度分别配置；触屏项目需要自行评估并调整控件的点击区域。
 
 ## macOS 尺寸与材质
 

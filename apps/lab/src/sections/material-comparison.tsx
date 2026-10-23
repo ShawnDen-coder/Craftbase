@@ -81,7 +81,7 @@ export function MaterialComparison() {
         >
           <img
             className="regular-comparison-wallpaper"
-            src={`/figma/materials/wallpaper-${mode}.webp`}
+            src={`${import.meta.env.BASE_URL}figma/materials/wallpaper-${mode}.webp`}
             alt=""
           />
           <figcaption>{mode === 'light' ? 'Light' : 'Dark'}</figcaption>

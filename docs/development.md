@@ -1,6 +1,6 @@
 # 开发指南
 
-环境要求和首次运行命令见 [README](../README.md#本地运行)。本项目统一使用 pnpm，依赖版本由 `pnpm-lock.yaml` 固定。
+环境要求和首次运行命令见 [README](../README.md#本地预览)。本项目统一使用 pnpm，依赖版本由 `pnpm-lock.yaml` 固定。
 
 ## 修改流程
 
@@ -34,3 +34,11 @@ Figma 原始证据保留在参考文档中，不参与运行时生成。新增 T
 ## 展示站
 
 `pnpm dev` 启动 Vite 展示站；`pnpm build:site` 执行类型检查并输出 `dist/`。运行时代码在 `apps/lab/`，复用组件和主题适配在 `design-system/react/`。`pnpm-lock.yaml` 由 pnpm 管理，Biome 不重排锁文件。
+
+### GitHub Pages
+
+在仓库 Settings → Pages → Build and deployment 中将 Source 设为 GitHub Actions。将改动合入默认分支后，[部署工作流](../.github/workflows/pages.yml) 会执行 `pnpm verify`，通过后将 `dist/` 发布到 Pages；也可在默认分支手动运行工作流。
+
+构建路径通过 Pages 返回的 `base_path` 自动设置，兼容 `/Craftbase/` 仓库路径和自定义域名。页面使用 hash 路由，直接访问或刷新 `#/docs/materials` 等页面无需服务器重写。运行时图片使用 Vite 的 `BASE_URL`，CSS 内的图片与字体路径由 Vite 在构建时转换。
+
+本地模拟仓库子路径构建：`SITE_BASE_PATH=/Craftbase/ pnpm build:site`。默认构建仍使用相对路径。站点完全静态，外观偏好保存在访问者浏览器的 localStorage 中。
